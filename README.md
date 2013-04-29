@@ -17,3 +17,11 @@ All requests start with the `https://{subdomain}.resourceguruapp.com/api/{versio
 
 To make a request for all the Resources on the ACME account, you would append the `/resources` path
 to the base URL: `https://acme.resourceguruapp.com/api/v1/resources`
+
+## Authentication
+
+## Limits
+
+## Response Codes
+
+## Endpoints
