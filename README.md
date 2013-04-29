@@ -1,3 +1,3 @@
-# Resource Guru
+# Resource Guru API
 
-This is REST-base API that uses serialized JSON and Token-based authentication.
+This is REST-style API that uses serialized JSON and OAuth 2 authentication.
