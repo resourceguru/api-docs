@@ -2,8 +2,8 @@
 
 ## Get Resources
 
-* {GET /resources} returns all active Resources.
-* {GET /resources/archived} returns all archived Resources.
+* `GET /resources` returns all active Resources.
+* `GET /resources/archived` returns all archived Resources.
 
 ```json
 [
@@ -20,7 +20,7 @@
 
 ## Get Resource
 
-* {GET /resources/1} returns the specified Resource.
+* `GET /resources/1` returns the specified Resource.
 
 ```json
 {
