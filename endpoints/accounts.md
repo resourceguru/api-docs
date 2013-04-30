@@ -36,3 +36,14 @@
   }
 }
 ```
+
+### Response
+
+* **id** Account identifier
+* **name** Account name
+* **subdomain** Account subdomain. The subdomain gets used for all other requests
+* **owner** Account owner
+  * **name** Account owner's first name and last name
+  * **email** Account owner's email address
+  * **image** Account owner's profile image
+  * **timezone** Account owner's timezone
