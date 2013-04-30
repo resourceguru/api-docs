@@ -31,3 +31,4 @@ something like this `https://api.resourceguruapp.com/v1/example-corp/resources`.
 * [Accounts](./endpoints/accounts.md)
 * [Clients](./endpoints/clients.md)
 * [Resources](./endpoints/resources.md)
+* [Projects](./endpoints/projects.md)
