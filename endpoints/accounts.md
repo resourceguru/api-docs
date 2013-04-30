@@ -21,7 +21,7 @@
 
 ## Get Account
 
-* `GET /account/1` returns the specified Account.
+* `GET /accounts/1` returns the specified Account.
 
 ```json
 {
