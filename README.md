@@ -28,6 +28,6 @@ something like this `https://api.resourceguruapp.com/v1/example-corp/resources`.
 
 ## Endpoints
 
-* [Accounts](./blob/master/endpoints/accounts.md)
-* [Clients](./blob/master/endpoints/clients.md)
-* [Resources](./blob/master/endpoints/resources.md)
+* [Accounts](./endpoints/accounts.md)
+* [Clients](./endpoints/clients.md)
+* [Resources](./endpoints/resources.md)
