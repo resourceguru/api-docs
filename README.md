@@ -14,10 +14,10 @@ All requests start with the `https://api.resourceguruapp.com/{version}` base URL
 
 ### Making a Basic Request
 
-With the exception of **Accounts** all requests must be appended with the `account subdomain`
+With the exception of [Accounts](./endpoints/accounts.md) all requests must be appended with the `account subdomain`
 and the path.
 
-To make a request for all the **Resources** on the Example Corp account, the request URL will look
+To make a request for all the [Resources](./endpoints/resources.md) on the Example Corp account, the request URL will look
 something like this `https://api.resourceguruapp.com/v1/example-corp/resources`.
 
 ## Authentication
