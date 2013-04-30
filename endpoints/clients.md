@@ -2,7 +2,7 @@
 
 ## Get Clients
 
-* `GET /{subdomain}/client` returns an `Array` of active Clients.
+* `GET /{subdomain}/clients` returns an `Array` of active Clients.
 * `GET /{subdomain}/clients/archived` returns an `Array` of archived Clients.
 
 ```json
