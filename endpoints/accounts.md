@@ -31,6 +31,8 @@
   "owner": {
     "name": "John Doe"
     "email": "johndoe@example.com"
+    "image": "https://resourceguru.s3.amazonaws.com/images/user/1/image/card_69cb-7f96ae8b2e17.png"
+    "timezone": "London"
   }
 }
 ```
