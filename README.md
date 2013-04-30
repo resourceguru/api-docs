@@ -27,3 +27,7 @@ something like this `https://api.resourceguruapp.com/v1/example-corp/resources`.
 ## Response Codes
 
 ## Endpoints
+
+* [Accounts](./tree/master/endpoints/accounts.md)
+* [Clients](./tree/master/endpoints/clients.md)
+* [Resources](./tree/master/endpoints/resources.md)
