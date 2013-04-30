@@ -34,13 +34,13 @@
   "notes:" "Some notes",
   "updated_at": "2013-04-30T12:00:00Z",
   "account": {
-    "id": 1
-    "name": "Example Corp"
+    "id": 1,
+    "name": "Example Corp",
     "url": "https://api.resourceguruapp.com/v1/accounts/1"
   },
   "client": {
-    "id": 1
-    "name": "Client A"
+    "id": 1,
+    "name": "Client A",
     "url": "https://api.resourceguruapp.com/v1/example-corp/clients/1"
   }
 }
