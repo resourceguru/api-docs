@@ -45,3 +45,7 @@
   }
 }
 ```
+
+### Notes
+
+* `Projects` that don't have a `Client` **will not** have `client` attribute.
