@@ -2,32 +2,43 @@
 
 ## Get Accounts
 
-* `GET /accounts` returns an `Array` of active Accounts.
+* `GET /accounts` returns an `Array` of **Active Accounts**.
+
+### Response
 
 ```json
 [
   {
     "id": 1,
     "name": "Example Corp",
-    "url": "/accounts/1"
+    "url": "https://api.resourceguruapp.com/v1/accounts/1"
   },
   {
     "id": 2,
     "name": "ACME",
-    "url": "/accounts/2"
+    "url": "https://api.resourceguruapp.com/v1/accounts/2"
   }
 ]
 ```
 
+Key | Type | Description
+--- | --- | ---
+id | integer | Unique identifier for an Account.
+name | string | Name of an Account.
+url | string | URL to view an Account.
+
 ## Get Account
 
 * `GET /accounts/1` returns the specified Account.
+
+### Response
 
 ```json
 {
   "id": 1,
   "name": "Example Corp",
   "subdomain": "example-corp",
+  "updated_at": "2013-04-30T12:00:00+00:00",
   "owner": {
     "name": "John Doe",
     "email": "johndoe@example.com",
@@ -37,13 +48,20 @@
 }
 ```
 
-### Response
+Key | Type | Description
+--- | --- | ---
+id | integer | Unique identifier for this Account.
+name | string | Name of this Account.
+subdomain | string | Subdomain for this Account.
+updated_at | string | Last updated date and time in ISO 8601.
+owner | hash | Owner of this Account. [(Details)](#owner-key)
 
-* **id** Account identifier
-* **name** Account name
-* **subdomain** Account subdomain. The subdomain gets used for all other requests
-* **owner** Account owner
-  * **name** Account owner's first name and last name
-  * **email** Account owner's email address
-  * **image** Account owner's profile image
-  * **timezone** Account owner's timezone
+#### Owner Key
+
+Key | Type | Description
+--- | --- | ---
+name | string | Name of the Account Owner.
+email | string | Email address of the Account Owner.
+image | string | Profile image of the Account Owner.
+timezone | string | Timezone of the Account Owner.
+
