@@ -20,6 +20,8 @@ https://api.resourceguruapp.com/v1/example-corp/projects?limit=30&offset=30
 
 The above example will return the next 30 Projects.
 
+### Response
+
 ```json
 [
   {
@@ -43,8 +45,6 @@ The above example will return the next 30 Projects.
 ]
 ```
 
-### Response
-
 Attribute | Type | Description
 --- | --- | ---
 id | integer | Unique identifier for a Project.
@@ -58,6 +58,8 @@ client_id | integer | [Client] a Project belongs to.
 ## Get Project
 
 * `GET /:subdomain/projects/1` returns the specified Project.
+
+### Response
 
 ```json
 {
@@ -80,8 +82,6 @@ client_id | integer | [Client] a Project belongs to.
 }
 ```
 
-### Response
-
 Key | Type | Description
 --- | --- | ---
 id | integer | Unique identifier for this Project.
@@ -90,15 +90,19 @@ color | string | Color used to highlight this Project.
 name | string | Name of this Project.
 notes | string | Notes about this Project.
 updated_at | string | Last updated date and time in ISO 8601.
+account | hash | [Account] this Project belongs to. (Details below)
+client | hash | [Client] this Project belongs to. (Details below)
 
-#### Account Key - the [Account] this Project belongs to.
+#### Account Key
+
 Key | Type | Description
 --- | --- | ---
 id | integer | Unique identifier for this Account.
 name | string | Name of this Account.
 url | string | URL shortcut to view this Account.
 
-#### Client Key - the [Client] this Project belongs to.
+#### Client Key
+
 *No `client` key will be returned if a Project has no Client.*
 
 Key | Type | Description
@@ -107,5 +111,5 @@ id | integer | Unique identifier for this Account.
 name | string | Name of this Account.
 url | string | URL shortcut to view this Client.
 
-[Account]: ../endpoints/accounts.md "Account documentation"
-[Client]: ../endpoints/clients.md   "Client documentation"
+[Account]: ../endpoints/accounts.md "Account Documentation"
+[Client]: ../endpoints/clients.md "Client Documentation"
