@@ -10,7 +10,7 @@
 Paramater | Default | Description
 --- | --- | --- | ---
 `limit` | `50` | Limit the number of results returned. To retrieve all the results use `0`.
-`offset` | `0` | Return `limit` results starting on a specific record.
+`offset` | `0` | Offset the results for pagination, starting from the given record number.
 
 **Example:**
 
@@ -59,4 +59,4 @@ Attribute | Type | Description
 `color` | `string` | Color used to highlight this Client.
 `name` | `string` | Name of this Client.
 `notes` | `string` | Notes about this Client.
-`updated_at` | `string` | Last updated time in ISO 8601.
+`updated_at` | `string` | Last updated date and time in ISO 8601.
