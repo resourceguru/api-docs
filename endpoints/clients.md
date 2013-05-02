@@ -9,8 +9,8 @@
 
 Paramater | Default | Description
 --- | --- | --- | ---
-`limit` | `50` | Limit the number of results returned. To retrieve all the results use `0`.
-`offset` | `0` | Offset the results for pagination, starting from the given record number.
+limit | 50 | Limit the number of results returned for pagination. To retrieve all the results use `0`.
+offset | 0 | Offset the results for pagination, starting from the given record number.
 
 **Example:**
 
@@ -35,6 +35,15 @@ https://api.resourceguruapp.com/v1/example-corp/clients?limit=30&offset=10
 ]
 ```
 
+### Response
+
+Attribute | Type | Description
+--- | --- | ---
+id | integer | Unique identifier for a Client.
+name | string | Name of a Client.
+updated_at | string | Last updated date and time in ISO 8601.
+url | string | URL shortcut to view a Client.
+
 ## Get Client
 
 * `GET /:subdomain/clients/1` returns the specified Client.
@@ -54,9 +63,9 @@ https://api.resourceguruapp.com/v1/example-corp/clients?limit=30&offset=10
 
 Attribute | Type | Description
 --- | --- | ---
-`id` | `integer` | Unique identifier of this Client.
-`archived` | `boolean` | If `true`, then this Client is archived.
-`color` | `string` | Color used to highlight this Client.
-`name` | `string` | Name of this Client.
-`notes` | `string` | Notes about this Client.
-`updated_at` | `string` | Last updated date and time in ISO 8601.
+id | integer | Unique identifier for this Client.
+archived | boolean | If `true`, then this Client is archived.
+color | string | Color used to highlight this Client.
+name | string | Name of this Client.
+notes | string | Notes about this Client.
+updated_at | string | Last updated date and time in ISO 8601.
