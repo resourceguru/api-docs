@@ -51,7 +51,7 @@ id | integer | Unique identifier for a Project.
 color | string | Color used to highlight a Project.
 name | string | Name of a Project.
 updated_at | string | Last updated date and time in ISO 8601.
-url | string | URL shortcut to view a Project.
+url | string | URL for more details of the specific project.
 account_id | integer | [Account] a Project belongs to.
 client_id | integer | [Client] a Project belongs to.
 
