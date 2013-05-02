@@ -5,6 +5,21 @@
 * `GET /:subdomain/projects` returns an `Array` of **Active Projects**.
 * `GET /:subdomain/projects/archived` returns an `Array` of **Archived Projects**.
 
+### Query String Paramaters
+
+Paramater | Default | Description
+--- | --- | --- | ---
+limit | 50 | Limit the number of results returned for pagination. To retrieve all the results use `0`.
+offset | 0 | Offset the results for pagination, starting from the given record number.
+
+**Example:**
+
+```
+https://api.resourceguruapp.com/v1/example-corp/projects?limit=30&offset=30
+```
+
+The above example will return the next 30 Projects.
+
 ```json
 [
   {
@@ -27,6 +42,18 @@
   }
 ]
 ```
+
+### Response
+
+Attribute | Type | Description
+--- | --- | ---
+id | integer | Unique identifier for a Project.
+color | string | Color used to highlight a Project.
+name | string | Name of a Project.
+updated_at | string | Last updated date and time in ISO 8601.
+url | string | URL shortcut to view a Project.
+account_id | integer | [Account](../endpoints/accounts.md) a Project belongs to.
+client_id | integer | [Client](../endpoints/clients.md) a Project belongs to.
 
 ## Get Project
 
@@ -53,6 +80,21 @@
 }
 ```
 
-### Notes
+### Response
 
-* `Projects` that don't have a `Client` **will not** have `client` attribute.
+Attribute | Type | Description
+--- | --- | ---
+id | integer | Unique identifier for this Project.
+archived | boolean | If `true`, then this Project is archived.
+color | string | Color used to highlight this Project.
+name | string | Name of this Project.
+notes | string | Notes about this Project.
+updated_at | string | Last updated date and time in ISO 8601.
+account | hash | [Account](../endpoints/accounts.md) this Project belongs to.
+account.id | integer | Unique identifier for this Account.
+account.name | string | Name of this Account.
+account.url | string | URL shortcut to view this Account.
+client | hash | [Client](../endpoints/accounts.md) this Project belongs to. No `client` attribute will be returned if a Project has no Client.
+client.id | integer | Unique identifier for this Account.
+client.name | string | Name of this Account.
+client.url | string | URL shortcut to view this Client.
