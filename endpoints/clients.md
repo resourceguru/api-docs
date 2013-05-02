@@ -20,6 +20,8 @@ https://api.resourceguruapp.com/v1/example-corp/clients?limit=30&offset=30
 
 The above example will return the next 30 Clients.
 
+### Response
+
 ```json
 [
   {
@@ -37,18 +39,18 @@ The above example will return the next 30 Clients.
 ]
 ```
 
-### Response
-
-Attribute | Type | Description
+Key | Type | Description
 --- | --- | ---
 id | integer | Unique identifier for a Client.
 name | string | Name of a Client.
 updated_at | string | Last updated date and time in ISO 8601.
-url | string | URL shortcut to view a Client.
+url | string | URL to view a Client.
 
 ## Get Client
 
 * `GET /:subdomain/clients/1` returns the specified Client.
+
+### Response
 
 ```json
 {
@@ -61,9 +63,7 @@ url | string | URL shortcut to view a Client.
 }
 ```
 
-### Response
-
-Attribute | Type | Description
+Key | Type | Description
 --- | --- | ---
 id | integer | Unique identifier for this Client.
 archived | boolean | If `true`, then this Client is archived.
