@@ -2,29 +2,35 @@
 
 ## Get Projects
 
-* `GET /{subdomain}/projects` returns an `Array` of active Projects.
-* `GET /{subdomain}/projects/archived` returns an `Array` of archived Projects.
+* `GET /:subdomain/projects` returns an `Array` of **Active Projects**.
+* `GET /:subdomain/projects/archived` returns an `Array` of **Archived Projects**.
 
 ```json
 [
   {
     "id": 1,
+    "color": "#FFCC00",
     "name": "Project A",
     "updated_at": "2013-04-30T12:00:00Z",
-    "url": "https://api.resourceguruapp.com/v1/example-corp/projects/1"
+    "url": "https://api.resourceguruapp.com/v1/example-corp/projects/1",
+    "account_id": 1,
+    "client_id": 1
   },
   {
     "id": 2,
+    "color": "#CCFF00",
     "name": "Project B",
     "updated_at": "2013-04-30T12:00:00Z",
-    "url": "https://api.resourceguruapp.com/v1/example-corp/projects/2"
+    "url": "https://api.resourceguruapp.com/v1/example-corp/projects/2",
+    "account_id": 1,
+    "client_id": 1
   }
 ]
 ```
 
 ## Get Project
 
-* `GET /{subdomain}/projects/1` returns the specified Project.
+* `GET /:subdomain/projects/1` returns the specified Project.
 
 ```json
 {
