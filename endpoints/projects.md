@@ -29,6 +29,7 @@
 ```json
 {
   "id": 1,
+  "archived": false,
   "color:" "#FFCC00",
   "name": "Project A",
   "notes:" "Some notes",
