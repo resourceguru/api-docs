@@ -10,13 +10,13 @@
   {
     "id": 1,
     "name": "Client A",
-    "updated_at": "2013-04-30T12:00:00Z",
+    "updated_at": "2013-04-30T12:00:00+00:00",
     "url": "https://api.resourceguruapp.com/v1/example-corp/clients/1"
   },
   {
     "id": 2,
     "name": "Client B",
-    "updated_at": "2013-04-30T12:00:00Z",
+    "updated_at": "2013-04-30T12:00:00+00:00",
     "url": "https://api.resourceguruapp.com/v1/example-corp/clients/2"
   }
 ]
@@ -33,6 +33,6 @@
   "color:" "#FFCC00",
   "name": "Client A",
   "notes:" "Some notes",
-  "updated_at": "2013-04-30T12:00:00Z"
+  "updated_at": "2013-04-30T12:00:00+00:00"
 }
 ```

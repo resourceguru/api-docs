@@ -11,7 +11,7 @@
     "id": 1,
     "color": "#FFCC00",
     "name": "Project A",
-    "updated_at": "2013-04-30T12:00:00Z",
+    "updated_at": "2013-04-30T12:00:00+00:00",
     "url": "https://api.resourceguruapp.com/v1/example-corp/projects/1",
     "account_id": 1,
     "client_id": 1
@@ -20,7 +20,7 @@
     "id": 2,
     "color": "#CCFF00",
     "name": "Project B",
-    "updated_at": "2013-04-30T12:00:00Z",
+    "updated_at": "2013-04-30T12:00:00+00:00",
     "url": "https://api.resourceguruapp.com/v1/example-corp/projects/2",
     "account_id": 1,
     "client_id": 1
@@ -39,7 +39,7 @@
   "color:" "#FFCC00",
   "name": "Project A",
   "notes:" "Some notes",
-  "updated_at": "2013-04-30T12:00:00Z",
+  "updated_at": "2013-04-30T12:00:00+00:00",
   "account": {
     "id": 1,
     "name": "Example Corp",
