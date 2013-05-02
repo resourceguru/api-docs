@@ -90,8 +90,8 @@ color | string | Color used to highlight this Project.
 name | string | Name of this Project.
 notes | string | Notes about this Project.
 updated_at | string | Last updated date and time in ISO 8601.
-account | hash | [Account] this Project belongs to. (Details below)
-client | hash | [Client] this Project belongs to. (Details below)
+account | hash | [Account] this Project belongs to. [(Details)](#account-key)
+client | hash | [Client] this Project belongs to. [(Details)](#client-key)
 
 #### Account Key
 
