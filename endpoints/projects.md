@@ -91,10 +91,10 @@ name | string | Name of this Project.
 notes | string | Notes about this Project.
 updated_at | string | Last updated date and time in ISO 8601.
 account | hash | [Account](../endpoints/accounts.md) this Project belongs to.
-account.id | integer | Unique identifier for this Account.
-account.name | string | Name of this Account.
-account.url | string | URL shortcut to view this Account.
+- id | integer | Unique identifier for this Account.
+- name | string | Name of this Account.
+- url | string | URL shortcut to view this Account.
 client | hash | [Client](../endpoints/accounts.md) this Project belongs to. No `client` attribute will be returned if a Project has no Client.
-client.id | integer | Unique identifier for this Account.
-client.name | string | Name of this Account.
-client.url | string | URL shortcut to view this Client.
+- id | integer | Unique identifier for this Account.
+- name | string | Name of this Account.
+- url | string | URL shortcut to view this Client.
