@@ -2,8 +2,8 @@
 
 ## Get Clients
 
-* `GET /:subdomain/clients` returns an `Array` of active Clients.
-* `GET /:subdomain/clients/archived` returns an `Array` of archived Clients.
+* `GET /:subdomain/clients` returns an `Array` of **Active Clients**.
+* `GET /:subdomain/clients/archived` returns an `Array` of **Archived Clients**.
 
 ### Query String Paramaters
 
@@ -18,7 +18,7 @@ offset | 0 | Offset the results for pagination, starting from the given record n
 https://api.resourceguruapp.com/v1/example-corp/clients?limit=30&offset=30
 ```
 
-The above example will return the next 30 results.
+The above example will return the next 30 Clients.
 
 ```json
 [
