@@ -50,7 +50,7 @@ Key | Type | Description
 id | integer | Unique identifier for a Project.
 color | string | Color used to highlight a Project.
 name | string | Name of a Project.
-updated_at | string | Last updated date and time in ISO 8601.
+updated_at | timestamp | Last updated date and time in ISO 8601.
 url | string | URL to view a Project.
 account_id | integer | [Account] a Project belongs to.
 client_id | integer | [Client] a Project belongs to.

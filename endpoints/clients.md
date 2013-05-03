@@ -43,7 +43,7 @@ Key | Type | Description
 --- | --- | ---
 id | integer | Unique identifier for a Client.
 name | string | Name of a Client.
-updated_at | string | Last updated date and time in ISO 8601.
+updated_at | timestamp | Last updated date and time in ISO 8601.
 url | string | URL to view a Client.
 
 ## Get Client

@@ -53,7 +53,7 @@ Key | Type | Description
 id | integer | Unique identifier for this Account.
 name | string | Name of this Account.
 subdomain | string | Subdomain for this Account.
-updated_at | string | Last updated date and time in ISO 8601.
+updated_at | timestamp | Last updated date and time in ISO 8601.
 owner | hash | Owner of this Account. [(Details)](#owner-key)
 
 #### Owner Key
