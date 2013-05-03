@@ -2,7 +2,7 @@
 
 ## Get Accounts
 
-* `GET /accounts` returns an `Array` of **Active Accounts**.
+* `GET /v1/accounts` returns an `Array` of **Active Accounts**.
 
 ### Response
 
@@ -29,7 +29,7 @@ url | string | URL to view an Account.
 
 ## Get Account
 
-* `GET /accounts/1` returns the specified Account.
+* `GET /v1/accounts/1` returns the specified Account.
 
 ### Response
 
@@ -42,7 +42,7 @@ url | string | URL to view an Account.
   "owner": {
     "name": "John Doe",
     "email": "johndoe@example.com",
-    "image": "https://resourceguru.s3.amazonaws.com/images/user/1/image/card_69cb-7f96ae8b2e17.png",
+    "image": "https://resourceguru.s3.amazonaws.com/images/card_69cb-7f96ae8b2e17.png",
     "timezone": "London"
   }
 }

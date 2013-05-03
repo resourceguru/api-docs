@@ -2,8 +2,8 @@
 
 ## Get Clients
 
-* `GET /:subdomain/clients` returns an `Array` of **Active Clients**.
-* `GET /:subdomain/clients/archived` returns an `Array` of **Archived Clients**.
+* `GET /v1/:subdomain/clients` returns an `Array` of **Active Clients**.
+* `GET /v1/:subdomain/clients/archived` returns an `Array` of **Archived Clients**.
 
 ### Query String Paramaters
 
@@ -48,7 +48,7 @@ url | string | URL to view a Client.
 
 ## Get Client
 
-* `GET /:subdomain/clients/1` returns the specified Client.
+* `GET /v1/:subdomain/clients/1` returns the specified Client.
 
 ### Response
 

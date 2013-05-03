@@ -2,8 +2,8 @@
 
 ## Get Projects
 
-* `GET /:subdomain/projects` returns an `Array` of **Active Projects**.
-* `GET /:subdomain/projects/archived` returns an `Array` of **Archived Projects**.
+* `GET /v1/:subdomain/projects` returns an `Array` of **Active Projects**.
+* `GET /v1/:subdomain/projects/archived` returns an `Array` of **Archived Projects**.
 
 ### Query String Paramaters
 
@@ -57,7 +57,7 @@ client_id | integer | [Client] a Project belongs to.
 
 ## Get Project
 
-* `GET /:subdomain/projects/1` returns the specified Project.
+* `GET /v1/:subdomain/projects/1` returns the specified Project.
 
 ### Response
 
@@ -89,7 +89,7 @@ archived | boolean | If `true`, then this Project is archived.
 color | string | Color used to highlight this Project.
 name | string | Name of this Project.
 notes | string | Notes about this Project.
-updated_at | string | Last updated date and time in ISO 8601.
+updated_at | timestamp | Last updated date and time in ISO 8601.
 account | hash | [Account] this Project belongs to. [(Details)](#account-key)
 client | hash | [Client] this Project belongs to. [(Details)](#client-key)
 
