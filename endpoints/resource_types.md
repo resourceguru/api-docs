@@ -13,7 +13,7 @@
     "id": 1,
     "name": "Need a good example here?",
     "human": true,
-    "custom_fields" = [
+    "custom_fields": [
       {
         "id": 1,
         "name": "Need a good example here?",
@@ -52,7 +52,7 @@ Key | Type | Description
 id | integer | Unique identifier for a Resource Type.
 name | string | Name of a Resouce Type.
 human | boolean | If `true`, then this Resource Type is a person.
-custom_fields | array | -
+custom_fields | array | Custom Fields for this Resource Type. [(Details)](#custom-fields-key)
 
 #### Custom Fields Key
 
@@ -60,9 +60,9 @@ Key | Type | Description
 --- | --- | ---
 id | integer | Unique identifier for a Custom Field.
 name | string | Name of a Custom Field.
-custom_field_options | array | -
+custom_field_options | array | Custom Field Options for this Custom Field. [(Details)](#custom-field-options-key)
 
-#### Custom Field Options
+#### Custom Field Options Key
 
 Key | Type | Description
 --- | --- | ---
