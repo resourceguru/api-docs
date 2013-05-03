@@ -11,34 +11,20 @@
 [
   {
     "id": 1,
-    "name": "Need a good example here?",
-    "human": true,
+    "name": "Meeting Room",
+    "human": false,
     "custom_fields": [
       {
         "id": 1,
-        "name": "Need a good example here?",
+        "name": "Facilities",
         "custom_field_options": [
           {
             "id": 1,
-            "value": "Need a good example here?"
+            "value": "Projector"
           }
           {
             "id": 2,
-            "value": "Need a good example here?"
-          }
-        ]
-      },
-      {
-        "id": 2,
-        "name": "Need a good example here?",
-        "custom_field_options": [
-          {
-            "id": 3,
-            "value": "Need a good example here?"
-          }
-          {
-            "id": 4,
-            "value": "Need a good example here?"
+            "value": "Whiteboard"
           }
         ]
       }
