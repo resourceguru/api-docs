@@ -112,11 +112,11 @@ offset | integer | Offset in minutes from UTC
   "selected_custom_field_options": [
     {
       id: 1,
-      value: "CF 1"
+      value: "Projector"
     },
     {
       id: 2,
-      value: "CF 2"
+      value: "Whiteboard"
     }
   ],
   "timezone": {
@@ -131,9 +131,9 @@ Key | Type | Description
 id | integer | Unique identifier for this Resource.
 archived | boolean | If `true`, then this Resource is archived.
 color | string | Color used to highlight this Resource.
-email | string | Email address for this Resource. Only applicable to human Resources.
+email | string | Email address for this Resource. Only applicable to Resources linked to User Accounts.
 image | string | Image of this Resource.
-job_title | string | Job title on this Resource. Only applicable to human Resources.
+job_title | string | Job title on this Resource. Only applicable to Resources linked to User Accounts.
 name | string | Name of this Resource.
 notes | string | Notes about this Resource.
 updated_at | timestamp | Last updated date and time in ISO 8601.
