@@ -31,6 +31,7 @@ https://api.resourceguruapp.com/v1/example-corp/reports/resources?start_date=201
   "resources": [
     {
       "name": "John Doe",
+      "image": "https://resourceguru.s3.amazonaws.com/images/card_69cb-7f96ae8b2e17.png",
       "booked": 0,
       "unbooked": 2400,
       "availability": 2400,
@@ -40,6 +41,7 @@ https://api.resourceguruapp.com/v1/example-corp/reports/resources?start_date=201
     },
     {
       "name": "Joe Soap",
+      "image": "https://resourceguru.s3.amazonaws.com/images/card_12cb-7f968wehjfi2e17.png",
       "booked": 2400,
       "unbooked": 0,
       "availability": 2400,
@@ -64,6 +66,8 @@ resources | array | Report breakdown per Resource. [(Details)](#resource-key)
 
 Key | Type | Description
 --- | --- | ---
+name | string | Name of this Resource.
+image | string | Image of this Resource.
 booked | integer | Time booked in minutes for this Resource.
 unbooked | integer | Time unbooked in minutes for this Resource.
 availability | integer | Availability in minutes for this Resource: `booked + unbooked`.
