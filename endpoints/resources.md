@@ -92,6 +92,15 @@ offset | integer | Offset in minutes from UTC
 {
   "id": 2,
   "archived": false,
+  "available_periods": [
+    {
+      "week_day": 0,
+      "start_time": 540,
+      "end_time": 600,
+      "valid_from": 2013-01-01,
+      "valid_until": null
+    }
+  ],
   "color": "#CCFF00",
   "email": "joesoap@example.com",
   "image": "https://resourceguru.s3.amazonaws.com/images/card_69cb-7f96ae8b2e17.png",
