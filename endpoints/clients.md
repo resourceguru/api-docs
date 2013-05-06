@@ -5,9 +5,9 @@
 * `GET /v1/:subdomain/clients` returns an `Array` of **Active Clients**.
 * `GET /v1/:subdomain/clients/archived` returns an `Array` of **Archived Clients**.
 
-### Query String Paramaters
+### Query String Parameters
 
-Paramater | Default | Description
+Parameter | Default | Description
 --- | --- | --- | ---
 limit | 50 | Limit the number of results returned for pagination. To retrieve all the results use `0`.
 offset | 0 | Offset the results for pagination, starting from the given record number.
