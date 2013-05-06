@@ -107,8 +107,8 @@ url | string | URL shortcut to view this Account.
 
 Key | Type | Description
 --- | --- | ---
-id | integer | Unique identifier for this Account.
-name | string | Name of this Account.
+id | integer | Unique identifier for this Client.
+name | string | Name of this Client.
 url | string | URL shortcut to view this Client.
 
 [Account]: ../endpoints/accounts.md "Account Documentation"
