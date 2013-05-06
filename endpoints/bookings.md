@@ -4,12 +4,10 @@
 [
   {
     "id": 1,
-    "client_id": 1,
-    "date": "2013-01-01",
-    "duration": 180,
+    "client_id": null,
+    "project_id": 1,
     "notes": "Some notes",
     "resource_id": 1,
-    "start_time": 540,
     "durations": [
       {
         "date": "2013-01-01",
