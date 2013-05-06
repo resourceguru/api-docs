@@ -29,6 +29,9 @@ something like this `https://api.resourceguruapp.com/v1/example-corp/resources`.
 ## Endpoints
 
 * [Accounts](./endpoints/accounts.md)
+* Bookings
 * [Clients](./endpoints/clients.md)
-* [Resources](./endpoints/resources.md)
 * [Projects](./endpoints/projects.md)
+* [Resources](./endpoints/resources.md)
+* [Resource Types](./endpoints/resource_types.md)
+* [Reports](./endpoints/reports.md)
