@@ -26,6 +26,12 @@ something like this `https://api.resourceguruapp.com/v1/example-corp/resources`.
 
 ## Response Codes
 
+* 200 OK
+* 201 Created
+* 404 Not Found
+* 422 Unprocessable Entity
+* 500 Internal Server Error
+
 ## Endpoints
 
 * [Accounts](./endpoints/accounts.md)
