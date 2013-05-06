@@ -8,8 +8,8 @@
 
 Parameter | Description
 --- | --- | ---
-start_date | Start date in ISO 8601 (YYYY-MM-DD).
-end_date | End date in ISO 8601 (YYYY-MM-DD).
+start_date | Start date in ISO 8601 (`YYYY-MM-DD`).
+end_date | End date in ISO 8601 (`YYYY-MM-DD`).
 
 **Example:**
 
