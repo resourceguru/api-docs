@@ -26,7 +26,7 @@ https://api.resourceguruapp.com/v1/example-corp/reports/clients?start_date=2013-
   "clients": [
     {
       "name": "Client A",
-      "color": "#E8CB05",
+      "color": "#FFCC00",
       "booked": 0,
       "waiting_list": 0,
       "url": "https://api.resourceguruapp.com/v1/example-corp/clients/1"
