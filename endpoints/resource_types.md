@@ -21,7 +21,7 @@
           {
             "id": 1,
             "value": "Projector"
-          }
+          },
           {
             "id": 2,
             "value": "Whiteboard"
