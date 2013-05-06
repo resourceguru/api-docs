@@ -8,6 +8,11 @@
     "project_id": 1,
     "notes": "Some notes",
     "resource_id": 1,
+    "booker": {
+      "name": "Name",
+      "email": "Email",
+      "color": "#FFCC00"
+    },
     "durations": [
       {
         "date": "2013-01-01",
@@ -27,12 +32,7 @@
         "start_time": 540,
         "end_time": 720
       }
-    ],
-    "booker": {
-      "name": "Name",
-      "email": "Email",
-      "color": "#FFCC00"
-    }
+    ]
   }
 ]
 ```
