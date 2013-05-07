@@ -120,12 +120,12 @@ offset | integer | Offset in minutes from UTC
   },
   "selected_custom_field_options": [
     {
-      id: 1,
-      value: "Projector"
+      "id": 1,
+      "value": "Projector"
     },
     {
-      id: 2,
-      value: "Whiteboard"
+      "id": 2,
+      "value": "Whiteboard"
     }
   ],
   "timezone": {
