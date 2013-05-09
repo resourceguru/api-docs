@@ -35,12 +35,12 @@ something like this `https://api.resourceguruapp.com/v1/example-corp/resources`.
 ## Endpoints
 
 * [Accounts](./endpoints/accounts.md)
-* Bookings
+* [Bookings](./endpoints/bookings.md)
 * [Clients](./endpoints/clients.md)
 * [Projects](./endpoints/projects.md)
 * [Resources](./endpoints/resources.md)
 * [Resource Types](./endpoints/resource_types.md)
 * Reports
   * [Resources](./endpoints/reports/resources.md)
-  * [Resources](./endpoints/reports/projects.md)
-  * [Resources](./endpoints/reports/clients.md)
+  * [Projects](./endpoints/reports/projects.md)
+  * [Clients](./endpoints/reports/clients.md)
