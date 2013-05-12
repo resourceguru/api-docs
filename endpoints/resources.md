@@ -92,6 +92,7 @@ offset | integer | Offset in minutes from UTC
 {
   "id": 2,
   "archived": false,
+  "bookable": true,
   "available_periods": [
     {
       "week_day": 0,
@@ -139,6 +140,7 @@ Key | Type | Description
 --- | --- | ---
 id | integer | Unique identifier for this Resource.
 archived | boolean | If `true`, then this Resource is archived.
+bookable | boolean | If `true`, then this Resource is bookable.
 color | string | Color used to highlight this Resource.
 email | string | Email address for this Resource. Only applicable to Resources linked to User Accounts.
 image | string | Image of this Resource.
