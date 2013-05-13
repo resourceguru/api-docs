@@ -1,5 +1,28 @@
 # Bookings
 
+## Get Bookings
+
+* `GET /v1/:subdomain/bookings` returns an `Array` of **Bookings**.
+
+### Query String Parameters
+
+Parameter | Default | Description
+--- | --- | --- | ---
+start_date | - | Set a start_date for a range of Bookings
+end_date | - | Set and end_date for a range of Bookings
+limit | 50 | Limit the number of results returned for pagination. To retrieve all the results use `0`.
+offset | 0 | Offset the results for pagination, starting from the given record number.
+
+**Example:**
+
+```
+https://api.resourceguruapp.com/v1/example-corp/bookings?start_date=2013-01-01&end_date=2013-04-10
+```
+
+The above example will return the next Boookings between `2013-01-01` and `2013-  04-10`
+
+### Response
+
 ```json
 [
   {
