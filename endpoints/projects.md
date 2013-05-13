@@ -113,3 +113,30 @@ url | string | URL shortcut to view this Client.
 
 [Account]: ../endpoints/accounts.md "Account Documentation"
 [Client]: ../endpoints/clients.md "Client Documentation"
+
+## Create a Project
+
+* `POST /v1/:subdomain/projects` will create a new Project from the parameters passed.
+
+```json
+{
+  "color:" "#FF00CC",
+  "name": "Project C",
+  "notes:" "Some notes"
+}
+```
+
+This will return `201 Created`, with the location of the new Project in the Location header
+along with the current JSON representation of the Project if the creation was successful.
+If the user does not have access to update the Project, you'll see `403 Forbidden`.
+
+## Update a Project
+
+* `PUT /v1/:subdomain/projects/1` will update the Project from the parameters passed and return
+the JSON representation of the updated Project. If the user does not have access to update
+the Project, you'll see `403 Forbidden`.
+
+## Delete a Project
+
+* `DELETE /v1/:subdomain/projects/1` will delete the Project specified and return `204 No Content`
+if that was successful. If the user does not have access to delete the Project, you'll see `403 Forbidden`.

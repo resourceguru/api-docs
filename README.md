@@ -27,6 +27,7 @@ something like this `https://api.resourceguruapp.com/v1/example-corp/resources`.
 
 * `200` OK
 * `201` Created
+* `204` No Content
 * `401` Unauthorized
 * `403` Forbidden
 * `404` Not Found

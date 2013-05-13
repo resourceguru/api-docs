@@ -90,3 +90,31 @@ duration | string | Duration in minutes for the Booking Duration.
 end_date | string | End time in minutes from midnight for this Booking Duration. (Can be `null`)
 start_date | string | Start time in minutes from midnight for this Booking Duration. (Can be `null`)
 waiting | boolean | If `true`, then this Booking Duration is on the Waiting List.
+
+## Create a Booking
+
+* `POST /v1/:subdomain/bookings` will create a new Booking from the parameters passed.
+
+```json
+{
+  "start_date": "2013-03-01",
+  "end_date": "2013-03-31",
+  "duration": 20,
+  "resouce_id": 1
+}
+```
+
+This will return `201 Created`, with the location of the new Booking in the Location header
+along with the current JSON representation of the Booking if the creation was successful.
+If the user does not have access to update the Booking, you'll see `403 Forbidden`.
+
+## Update a Booking
+
+* `PUT /v1/:subdomain/bookings/1` will update the Booking from the parameters passed and return
+the JSON representation of the updated Booking. If the user does not have access to update
+the Booking, you'll see `403 Forbidden`.
+
+## Delete a Booking
+
+* `DELETE /v1/:subdomain/bookings/1` will delete the Booking specified and return `204 No Content`
+if that was successful. If the user does not have access to delete the Booking, you'll see `403 Forbidden`.
