@@ -6,9 +6,8 @@ This is a REST-style API that uses serialized JSON and OAuth 2 authentication.
 
 ### The Base URL
 
-All requests start with the `https://api.resourceguruapp.com/{version}` base URL.
+All requests start with the `https://api.resourceguruapp.com/` base URL.
 
-* `version`: API version. Current version is `v1`.
 * All requests are done via SSL.
 * All responses are in JSON.
 
@@ -26,11 +25,13 @@ something like this `https://api.resourceguruapp.com/v1/example-corp/resources`.
 
 ## Response Codes
 
-* 200 OK
-* 201 Created
-* 404 Not Found
-* 422 Unprocessable Entity
-* 500 Internal Server Error
+* `200` OK
+* `201` Created
+* `401` Unauthorized
+* `403` Forbidden
+* `404` Not Found
+* `422` Unprocessable Entity
+* `5xx` Resource Guru is having trouble
 
 ## Endpoints
 
@@ -42,5 +43,5 @@ something like this `https://api.resourceguruapp.com/v1/example-corp/resources`.
 * [Resource Types](./endpoints/resource_types.md)
 * Reports
   * [Resources](./endpoints/reports/resources.md)
-  * [Resources](./endpoints/reports/projects.md)
-  * [Resources](./endpoints/reports/clients.md)
+  * [Projects](./endpoints/reports/projects.md)
+  * [Clients](./endpoints/reports/clients.md)
