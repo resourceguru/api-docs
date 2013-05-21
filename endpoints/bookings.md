@@ -86,9 +86,9 @@ name | string | Name of this Booker.
 Key | Type | Description
 --- | --- | ---
 date | string | The date for this booking in ISO 8601.
-duration | string | Duration in minutes for the Booking Duration.
-end_date | string | End time in minutes from midnight for this Booking Duration. (Can be `null`)
-start_date | string | Start time in minutes from midnight for this Booking Duration. (Can be `null`)
+duration | integer | Duration in minutes for the Booking Duration.
+end_time | integer | End time in minutes from midnight for this Booking Duration. (Can be `null`)
+start_time | integer | Start time in minutes from midnight for this Booking Duration. (Can be `null`)
 waiting | boolean | If `true`, then this Booking Duration is on the Waiting List.
 
 ## Create a Booking
@@ -100,12 +100,23 @@ waiting | boolean | If `true`, then this Booking Duration is on the Waiting List
   "start_date": "2013-03-01",
   "end_date": "2013-03-31",
   "duration": 20,
-  "resouce_id": 1
+  "resource_id": 1,
+  "allow_waiting": true
 }
 ```
 
+Key | Type | Description
+--- | --- | ---
+start_date | string | The ISO 8601 formatted first date for the booking.
+end_date | string | The ISO 8601 formatted last date for the booking.
+duration | integer | The length of the booking
+start_time | integer | For time-specific bookings - the time the booking must start, in minutes from midnight.
+resource_id | integer | The resource that is being booked
+allow_waiting | boolean | Optional: The booking will fail validation if it has to go onto the waiting list, unless this parameter is supplied and is `true`
+
 This will return `201 Created`, with the location of the new Booking in the Location header
 along with the current JSON representation of the Booking if the creation was successful.
+If there is a problem with the request, you'll get a `422 Unprocessable Entity` and get a JSON object explaining the validation errors.
 If the user does not have access to update the Booking, you'll see `403 Forbidden`.
 
 ## Update a Booking
