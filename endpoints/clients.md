@@ -56,9 +56,9 @@ url | string | URL to view a Client.
 {
   "id": 1,
   "archived": false,
-  "color:" "#FFCC00",
+  "color": "#FFCC00",
   "name": "Client A",
-  "notes:" "Some notes",
+  "notes": "Some notes",
   "updated_at": "2013-04-30T12:00:00+00:00"
 }
 ```
@@ -78,9 +78,9 @@ updated_at | string | Last updated date and time in ISO 8601.
 
 ```json
 {
-  "color:" "#FF00CC",
+  "color": "#FF00CC",
   "name": "Client C",
-  "notes:" "Some notes"
+  "notes": "Some notes"
 }
 ```
 
