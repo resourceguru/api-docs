@@ -32,9 +32,9 @@ The above example will return the next Boookings between `2013-01-01` and `2013-
     "notes": "Some notes",
     "resource_id": 1,
     "booker": {
-      "color": "#FFCC00"
+      "color": "#FFCC00",
       "email": "Email",
-      "name": "Name",
+      "name": "Name"
     },
     "durations": [
       {
