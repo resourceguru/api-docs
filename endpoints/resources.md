@@ -153,27 +153,3 @@ resource_type | hash | -
 selected_custom_field_options | array | -
 timezone | hash | -
 
-## Create a Resource
-
-* `POST /v1/:subdomain/resources` will create a new Resource from the parameters passed.
-
-```json
-{
-  "name": "Resource Name"
-}
-```
-
-This will return `201 Created`, with the location of the new Resource in the Location header
-along with the current JSON representation of the Resource if the creation was successful.
-If the user does not have access to update the Resource, you'll see `403 Forbidden`.
-
-## Update a Resource
-
-* `PUT /v1/:subdomain/resources/1` will update the Resource from the parameters passed and return
-the JSON representation of the updated Resource. If the user does not have access to update
-the Resource, you'll see `403 Forbidden`.
-
-## Delete a Resource
-
-* `DELETE /v1/:subdomain/resources/1` will delete the Resource specified and return `204 No Content`
-if that was successful. If the user does not have access to delete the Resource, you'll see `403 Forbidden`.
