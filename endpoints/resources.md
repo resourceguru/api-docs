@@ -153,6 +153,6 @@ resource_type | hash | -
 selected_custom_field_options | array | -
 timezone | hash | -
 
-## Get Resource Availability
+## Get Resource Availability, Time Booked, Time Unbooked, Time on Waiting List and Utilization Rate
 
 Use the [Resource Report endpoint](https://github.com/resourceguru/api-docs/blob/fs-v1-docs/endpoints/reports/resources.md "Resource Report endpoint") to get the following for resources - total availability, time booked, time unbooked, time on waiting list and utilization rate.
