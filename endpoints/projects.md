@@ -65,9 +65,9 @@ client_id | integer | [Client] a Project belongs to.
 {
   "id": 1,
   "archived": false,
-  "color:" "#FFCC00",
+  "color": "#FFCC00",
   "name": "Project A",
-  "notes:" "Some notes",
+  "notes": "Some notes",
   "updated_at": "2013-04-30T12:00:00+00:00",
   "account": {
     "id": 1,
@@ -120,9 +120,9 @@ url | string | URL shortcut to view this Client.
 
 ```json
 {
-  "color:" "#FF00CC",
+  "color": "#FF00CC",
   "name": "Project C",
-  "notes:" "Some notes"
+  "notes": "Some notes"
 }
 ```
 
