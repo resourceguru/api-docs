@@ -98,7 +98,7 @@ offset | integer | Offset in minutes from UTC
       "week_day": 0,
       "start_time": 540,
       "end_time": 600,
-      "valid_from": 2013-01-01,
+      "valid_from": "2013-01-01",
       "valid_until": null
     }
   ],
