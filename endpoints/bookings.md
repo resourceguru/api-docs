@@ -91,6 +91,20 @@ end_time | integer | End time in minutes from midnight for this Booking Duration
 start_time | integer | Start time in minutes from midnight for this Booking Duration. (Can be `null`)
 waiting | boolean | If `true`, then this Booking Duration is on the Waiting List.
 
+
+## Get Bookings for a Specific Project
+
+* `GET /v1/:subdomain/projects/:project_id/bookings` returns an `Array` of **Bookings** for the specified project.
+
+## Get Bookings for a Specific Client
+
+* `GET /v1/:subdomain/clients/:project_id/bookings` returns an `Array` of **Bookings** for the specified client.
+
+## Get Bookings for a Specific Resource
+
+* `GET /v1/:subdomain/resources/:project_id/bookings` returns an `Array` of **Bookings** for the specified resource.
+
+
 ## Create a Booking
 
 * `POST /v1/:subdomain/bookings` will create a new Booking from the parameters passed.
