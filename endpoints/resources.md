@@ -161,7 +161,7 @@ Use the [Resource Report endpoint](./reports/resources.md "Resource Report endpo
 
 * `POST /v1/:subdomain/resources` will create a new Resource from the parameters passed.
 
-``` json
+``` javascript
 {
   // For non human resources:
   "name": "Meeting Room One",
