@@ -194,13 +194,13 @@ first_name | string | The first name of a human resource.
 last_name | string | The last name of a human resource.
 phone | string | The phone number for a human resource.
 capacity | integer | The capacity of a meeting room resource.
-resource_type_id | integer | The resource type ID retrieved from the [Resource Types endpoint](./resource_types).
-timezone | string | A valid ActiveSupport::TimeZone name. Complete list.
+resource_type_id | integer | The resource type ID retrieved from the [Resource Types endpoint](./resource_types.md).
+timezone | string | A valid ActiveSupport::TimeZone name. [Complete list](../timezones.md).
 color | string | Color used to highlight this resource.
 bookable | boolean | Determines whether the resource is visible in the bookings calendar.
 notes | string | Notes about this resource.
 archived | boolean | Determines whether the resource is archived.
-custom_field_option_ids | integer array | The custom fields selected for the resource. The list of available options is on the [Resource Types endpoint](./resource_types).
+custom_field_option_ids | integer array | The custom fields selected for the resource. The list of available options is on the [Resource Types endpoint](./resource_types.md).
 
 This will return `201 Created`, along with the current JSON representation of the Resource
 if the creation was successful.
