@@ -156,3 +156,67 @@ timezone | hash | -
 ## Get Resource Availability, Time Booked, Time Unbooked, Time on Waiting List and Utilization Rate
 
 Use the [Resource Report endpoint](./reports/resources.md "Resource Report endpoint") to get the following for resources - total availability, time booked, time unbooked, time on waiting list and utilization rate.
+
+## Create a Resource
+
+* `POST /v1/:subdomain/resources` will create a new Resource from the parameters passed.
+
+``` json
+{
+  // For non human resources:
+  "name": "Meeting Room One",
+
+  // For human resources:
+  "first_name": "John",
+  "last_name": "Doe",
+  "phone": "12345678",
+
+  // Meeting rooms only:
+  "capacity": 25,
+
+  // Other parameters:
+  "resource_type_id": 1, // Retrieved from the resource_types endpoint
+  "timezone": "UTC",
+  "color": "f0f0f0",
+  "bookable": true,
+  "notes": "extra details",
+  "archived": false,
+
+  // Custom fields are shown in the resource_types endpoint
+  "custom_field_option_ids": [ 1, 2, 3 ]
+}
+```
+
+Key | Type | Description
+--- | --- | ---
+name | string | The name for a non-human resource.
+first_name | string | The first name of a human resource.
+last_name | string | The last name of a human resource.
+phone | string | The phone number for a human resource.
+capacity | integer | The capacity of a meeting room resource.
+resource_type_id | integer | The resource type ID retrieved from the [Resource Types endpoint](./resource_types).
+timezone | string | A valid ActiveSupport::TimeZone name. Complete list.
+color | string | Color used to highlight this resource.
+bookable | boolean | Determines whether the resource is visible in the bookings calendar.
+notes | string | Notes about this resource.
+archived | boolean | Determines whether the resource is archived.
+custom_field_option_ids | integer array | The custom fields selected for the resource. The list of available options is on the [Resource Types endpoint](./resource_types).
+
+This will return `201 Created`, along with the current JSON representation of the Resource
+if the creation was successful.
+
+If the user does not have access to create a Resource, you'll see `403 Forbidden`.
+
+If the account has hit its limit for the plan, you'll see `422 Unprocessable Entity`.
+
+## Update a Resource
+* `PUT /v1/:subdomain/resources/:id` will update the Resource from the given parameters and
+return the JSON representation of the updated Resource. If teh user does not have access to
+update the project, you'll see `403 Forbidden`.
+
+You can not change the type of a resource in the Update action.
+
+## Delete a Resource
+
+* `DELETE /v1/:subdomain/:resources` will delete the specified Resource and return `204 No Content`
+if that was successful. If the user does not have permission to delete the resource, you'll see `403 Forbidden`
