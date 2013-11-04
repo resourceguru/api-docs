@@ -23,7 +23,7 @@ You'll need to configure these URLs as well:
 - `https://api.resourceguruapp.com/oauth/token` to retrieve tokens.
 
 
-**3** - Authenticate with the API. Here's a code example using the [intridea/oauth2](https://github.com/intridea/oauth2) library in Ruby.
+**3** - Authenticate with the API. We'll provide code samples using the [intridea/oauth2](https://github.com/intridea/oauth2) library in Ruby.
 
 #### Quick start using client credentials
 
