@@ -63,7 +63,7 @@ Key | Type | Description
 --- | --- | ---
 id | integer | Unique identifier for a Resource.
 color | string | Color used to highlight a Resource.
-name | string | Name of a Resouce.
+name | string | Name of a Resource.
 updated_at | timestamp | Last updated date and time in ISO 8601.
 url | string | URL to view a Resource.
 resource_type | hash | Resource Type information. [(Details)](#resource-type-key)
@@ -211,7 +211,7 @@ If the account has hit its limit for the plan, you'll see `422 Unprocessable Ent
 
 ## Update a Resource
 * `PUT /v1/:subdomain/resources/:id` will update the Resource from the given parameters and
-return the JSON representation of the updated Resource. If teh user does not have access to
+return the JSON representation of the updated Resource. If the user does not have access to
 update the project, you'll see `403 Forbidden`.
 
 You can not change the type of a resource in the Update action.
