@@ -24,6 +24,10 @@ something like this `https://api.resourceguruapp.com/v1/example-corp/resources`.
 In order to make authorized calls to Resource Guru's API, your application must first obtain an OAuth access token.
 To register your app go to https://developers.resourceguruapp.com.
 
+Resource Guru implements OAuth2 with the authentication code flow.
+
+Read our [OAuth2 authentication guide](./sections/authentication.md) to get started.
+
 ## Response Codes
 
 * `200` OK
