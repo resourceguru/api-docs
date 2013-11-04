@@ -25,6 +25,48 @@ You'll need to configure these URLs as well:
 
 **3** - Authenticate with the API. Here's a code example using the [intridea/oauth2](https://github.com/intridea/oauth2) library in Ruby.
 
+#### Quick start using client credentials
+
+This method is only recommended for private apps, such as data imports and exports or internal business reporting.
+It's useful to get started quickly without all of the overhead of OAuth 2 though, which makes it great for exploration. 
+This should not be used for integrating 3rd party apps with Resource Guru as it requires knowing the user's private credentials.
+
+We support the OAuth2 `password` grant type. To authenticate, make an HTTP `POST` to `/oauth/token` with the following:
+
+``` json
+{
+  "grant_type"    : "password",
+  "username"      : "user@example.com",
+  "password"      : "secret",
+  "client_id"     : "the_client_id",
+  "client_secret" : "the_client_secret"
+}
+```
+
+You'll receive the access token back in the response:
+
+``` json
+{
+  "access_token": "the_oauth_access_token",
+  "token_type": "bearer",
+  "expires_in": 604800
+}
+```
+
+To use this with the OAuth2 Ruby library is easy:
+``` ruby
+client = OAuth2::Client.new(client_id, client_secret, site: "https://api.resourceguruapp.com")
+token = client.password.get_token("user@example.com", "secret")
+token.get("/v1/example-corp/resources")
+```
+
+#### Recommended authentication method using token exchange rather than client credentials.
+
+The password grant method shown above is great for getting started quickly, but is impractical for apps that require
+users to authenticate with Resource Guru as you would have to store the user's Resource Guru login credentials.
+
+We support the standard auth code flow as well. Here is a code sample in Ruby of how to authenticate this way.
+
 ``` ruby
 require 'oauth2'
 
