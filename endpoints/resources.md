@@ -196,7 +196,7 @@ first_name | string | The first name of a human resource.
 last_name | string | The last name of a human resource.
 phone | string | The phone number for a human resource.
 email | string | The email for a human resource. Required if inviting the user to the account.
-invite | boolean | If `true`, the user will be invited into the account.
+invite | boolean | If `true`, the user will be invited into the account via email.
 capacity | integer | The capacity of a meeting room resource.
 resource_type_id | integer | The resource type ID retrieved from the [Resource Types endpoint](./resource_types.md).
 timezone | string | A valid ActiveSupport::TimeZone name. [Complete list](../timezones.md).
@@ -213,6 +213,8 @@ If the user does not have access to create a Resource, you'll see `403 Forbidden
 
 If the account has hit its limit for the plan, you'll see `422 Unprocessable Entity`.
 
+The "normal availability" for resources created via the API will be created with the default availability settings found in Settings within the app (menu top right with your name on it > Settings > Resources > Default availability). Unfortunately it is not currently possible to specify custom "normal availability" for a resource via the API.
+
 ## Update a Resource
 * `PUT /v1/:subdomain/resources/:id` will update the Resource from the given parameters and
 return the JSON representation of the updated Resource. If the user does not have access to
@@ -220,7 +222,11 @@ update the project, you'll see `403 Forbidden`.
 
 You can not change the type of a resource in the Update action.
 
+Please note that, unfortunately, it is not currently possible to update the "normal availability" for a resource via the API.
+
 ## Delete a Resource
 
 * `DELETE /v1/:subdomain/:resources` will delete the specified Resource and return `204 No Content`
 if that was successful. If the user does not have permission to delete the resource, you'll see `403 Forbidden`
+
+Please note that, when you delete a resource, any future bookings where the resource is the booker will be transferred to the authenticated user. And any future bookings where the resource has been booked as the resource will be deleted.
