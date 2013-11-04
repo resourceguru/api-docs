@@ -170,6 +170,8 @@ Use the [Resource Report endpoint](./reports/resources.md "Resource Report endpo
   "first_name": "John",
   "last_name": "Doe",
   "phone": "12345678",
+  "email": "user@example.com",
+  "invite": true,
 
   // Meeting rooms only:
   "capacity": 25,
@@ -193,6 +195,8 @@ name | string | The name for a non-human resource.
 first_name | string | The first name of a human resource.
 last_name | string | The last name of a human resource.
 phone | string | The phone number for a human resource.
+email | string | The email for a human resource. Required if inviting the user to the account.
+invite | boolean | If `true`, the user will be invited into the account.
 capacity | integer | The capacity of a meeting room resource.
 resource_type_id | integer | The resource type ID retrieved from the [Resource Types endpoint](./resource_types.md).
 timezone | string | A valid ActiveSupport::TimeZone name. [Complete list](../timezones.md).
