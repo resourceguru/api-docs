@@ -1,13 +1,13 @@
 ## Authenticating with Resource Guru
 
 Getting access to a user's Resource Guru account requires going through a step of
-authentication. We offer OAuth 2 as the standard way to authenticate with our API
+authentication. We offer OAuth2 as the standard way to authenticate with our API
 as this offers a simple flow for users to allow app access without you having to store
 their credentials.
 
 ### Getting started
 
-We recommend using an OAuth 2 library for the platform you're working with, rather than
+We recommend using an OAuth2 library for the platform you're working with, rather than
 working from scratch. A fairly comprehensive list of libraries can be found [here](http://oauth.net/2/).
 
 **1** - Register an app at [developers.resourceguruapp.com](https://developers.resourceguruapp.com).
@@ -28,7 +28,7 @@ You'll need to configure these URLs as well:
 #### Quick start using client credentials
 
 This method is only recommended for private apps, such as data imports and exports or internal business reporting.
-It's useful to get started quickly without all of the overhead of OAuth 2 though, which makes it great for exploration. 
+It's useful to get started quickly without all of the overhead of OAuth2 though, which makes it great for exploration. 
 This should not be used for integrating 3rd party apps with Resource Guru as it requires knowing the user's private credentials.
 
 We support the OAuth2 `password` grant type. To authenticate, make an HTTP `POST` to `/oauth/token` with the following:
