@@ -10,19 +10,20 @@ their credentials.
 We recommend using an OAuth 2 library for the platform you're working with, rather than
 working from scratch. A fairly comprehensive list of libraries can be found [here](http://oauth.net/2/).
 
-1. Register an app at [developers.resourceguruapp.com](https://developers.resourceguruapp.com).
+**1** - Register an app at [developers.resourceguruapp.com](https://developers.resourceguruapp.com).
 Your app will be assigned a `client_id` and `client_secret` that will be used to identify your app
 when users authenticate with the API. You'll need to provide a `redirect_uri` where we'll send the
 verification code for authentication. Just use a fake URL like `http://localhost/oauth` if you haven't
 got one yet.
 
-2. Configure your OAuth2 library to use the `client_id`, `client_secret` and `redirect_uri` for your app.
+**2** - Configure your OAuth2 library to use the `client_id`, `client_secret` and `redirect_uri` for your app.
 You'll need to configure these URLs as well:
 
 - `https://api.resourceguruapp.com/oauth/authorize` to request authorization.
 - `https://api.resourceguruapp.com/oauth/token` to retrieve tokens.
 
-3. Authenticate with the API. Here's a code example using the [intridea/oauth2](https://github.com/intridea/oauth2) library in Ruby.
+
+**3** - Authenticate with the API. Here's a code example using the [intridea/oauth2](https://github.com/intridea/oauth2) library in Ruby.
 
 ``` ruby
 require 'oauth2'
@@ -70,7 +71,7 @@ access_token.get("/v1/example-corp/resources")
 In the above example using the token expiry time stamp is optional, but the OAuth2 library will automatically handle
 refreshing tokens if it is provided.
 
-4. Tokens expire after 7 days and need to be refreshed. When authenticating, a refresh token and expiration
+**4** - Tokens expire after 7 days and need to be refreshed. When authenticating, a refresh token and expiration
 timestamp is provided. Use the refresh token to retrieve a new access token. Most OAuth2 client libraries will handle this automatically.
 
 ``` ruby
