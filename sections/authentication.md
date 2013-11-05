@@ -25,7 +25,7 @@ You'll need to configure these URLs as well:
 
 **3** - Authenticate with the API. We'll provide code samples using the [intridea/oauth2](https://github.com/intridea/oauth2) library in Ruby.
 
-#### Quick start using client credentials
+#### Quick start using user's login credentials
 
 This method is only recommended for private apps, such as data imports and exports or internal business reporting.
 It's useful to get started quickly without all of the overhead of OAuth2 though, which makes it great for exploration. 
@@ -60,7 +60,7 @@ token = client.password.get_token("user@example.com", "secret")
 token.get("/v1/example-corp/resources")
 ```
 
-#### Recommended authentication method using token exchange rather than client credentials.
+#### Recommended authentication method using an authorization code
 
 The password grant method shown above is great for getting started quickly, but is impractical for apps that require
 users to authenticate with Resource Guru as you would have to store the user's Resource Guru login credentials.
