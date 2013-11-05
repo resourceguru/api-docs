@@ -48,6 +48,7 @@ You'll receive the access token back in the response:
 ``` json
 {
   "access_token": "the_oauth_access_token",
+  "refresh_token": "the_oauth_refresh_token",
   "token_type": "bearer",
   "expires_in": 604800
 }
