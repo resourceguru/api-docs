@@ -115,7 +115,10 @@ waiting | boolean | If `true`, then this Booking Duration is on the Waiting List
   "end_date": "2013-03-31",
   "duration": 20,
   "resource_id": 1,
-  "allow_waiting": true
+  "allow_waiting": true,
+  "project_id": 1,
+  "client_id": 2,
+  "details": "Optional details"
 }
 ```
 
@@ -127,7 +130,9 @@ duration | integer | The length of the booking
 start_time | integer | For time-specific bookings - the time the booking must start, in minutes from midnight.
 resource_id | integer | The resource that is being booked
 allow_waiting | boolean | Optional: The booking will fail validation if it has to go onto the waiting list, unless this parameter is supplied and is `true`
-
+project_id | integer | Optional: The project the booking is assigned to. Pass either project_id or client_id, not both.
+client_id | integer | Optional: The client the booking is assigned to. Pass either project_id or client_id, not both.
+details | string | Optional plain text details for the booking.
 This will return `201 Created`, with the location of the new Booking in the Location header
 along with the current JSON representation of the Booking if the creation was successful.
 If there is a problem with the request, you'll get a `422 Unprocessable Entity` and get a JSON object explaining the validation errors.
