@@ -29,7 +29,7 @@ The above example will return the next Boookings between `2013-01-01` and `2013-
     "id": 1,
     "client_id": null,
     "project_id": 1,
-    "notes": "Some notes",
+    "details": "Extra details",
     "resource_id": 1,
     "booker": {
       "color": "#FFCC00",
@@ -68,7 +68,7 @@ Key | Type | Description
 id | integer | Unique identifier for a Booking.
 client_id | integer | Unique identifier of the Client this Booking is for. (Can be `null`)
 project_id | integer | Unique identifier of the Project this Booking is for. (Can be `null`)
-notes | string | Notes about this Booking.
+details | string | Extra details about this Booking.
 project_id | integer | Unique identifier of the Resource this Booking is for.
 booker | hash | Booker information. [(Details)](#booker-key)
 durations | array | Bookings Durations information. [(Details)](#durations-key)
