@@ -140,6 +140,8 @@ along with the current JSON representation of the Booking if the creation was su
 If there is a problem with the request, you'll get a `422 Unprocessable Entity` and get a JSON object explaining the validation errors.
 If the user does not have access to update the Booking, you'll see `403 Forbidden`.
 
+Please note that you do not need to pass an end_time parameter for time-specific bookings. The system will automatically calculate the end_time based on your duration and start_time.
+
 ## Update a Booking
 
 * `PUT /v1/:subdomain/bookings/1` will update the Booking from the parameters passed and return
