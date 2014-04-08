@@ -78,7 +78,7 @@ durations | array | Bookings Durations information. [(Details)](#durations-key)
 
 Key | Type | Description
 --- | --- | ---
-id | integer | The user id of the Booker.
+id | integer | The user id of the Booker. [(Details)](./users.md)
 color | string | Color used to highlight this Booker.
 email | string | Email address of this Booker.
 name | string | Name of this Booker.
