@@ -32,6 +32,7 @@ The above example will return the next Boookings between `2013-01-01` and `2013-
     "details": "Extra details",
     "resource_id": 1,
     "booker": {
+      "id": 1,
       "color": "#FFCC00",
       "email": "Email",
       "name": "Name"
@@ -77,6 +78,7 @@ durations | array | Bookings Durations information. [(Details)](#durations-key)
 
 Key | Type | Description
 --- | --- | ---
+id | integer | The user id of the Booker.
 color | string | Color used to highlight this Booker.
 email | string | Email address of this Booker.
 name | string | Name of this Booker.
