@@ -47,6 +47,7 @@ Read our [OAuth2 authentication guide](./sections/authentication.md) to get star
 * [Projects](./endpoints/projects.md)
 * [Resources](./endpoints/resources.md)
 * [Resource Types](./endpoints/resource_types.md)
+* [Users](./endpoints/users.md)
 * Reports
   * [Resources](./endpoints/reports/resources.md)
   * [Projects](./endpoints/reports/projects.md)
