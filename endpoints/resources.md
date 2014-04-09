@@ -86,7 +86,7 @@ offset | integer | Offset in minutes from UTC
 
 ## Get Resource
 
-* `GET /v1/:subdomain/resource/1` returns the specified Resource.
+* `GET /v1/:subdomain/resources/1` returns the specified Resource.
 
 ```json
 {
