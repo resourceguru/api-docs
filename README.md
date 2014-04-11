@@ -28,6 +28,11 @@ Resource Guru implements OAuth2 with the authentication code flow.
 
 Read our [OAuth2 authentication guide](./sections/authentication.md) to get started.
 
+
+## Rate limiting
+
+You can perform up to 25 requests per 10 second period for the same oauth token for the same account. If you exceed this limit, you'll get a 403 Rate Limit Exceeded response for subsequent requests. Check the Retry-After header to see how many seconds to wait before retrying the request.
+
 ## Response Codes
 
 * `200` OK
