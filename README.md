@@ -28,6 +28,7 @@ Resource Guru implements OAuth2 with the authentication code flow.
 
 Read our [OAuth2 authentication guide](./sections/authentication.md) to get started.
 
+Once you have authenticated, you can get information about the authenticated user by calling `GET https://api.resourceguruapp.com/v1/me`.
 
 ## Rate Limiting
 
