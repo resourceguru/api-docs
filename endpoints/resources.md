@@ -86,7 +86,7 @@ offset | integer | Offset in minutes from UTC
 
 ## Get Resource
 
-* `GET /v1/:subdomain/resources/1` returns the specified Resource.
+* `GET /v1/:subdomain/resources/:id` returns the specified Resource. If the special value `me` is given for the id parameter, it will return the resource for the user that authenticated the request.
 
 ```json
 {

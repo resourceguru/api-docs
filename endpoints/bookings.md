@@ -12,6 +12,7 @@ start_date |  | Set a start_date for a range of Bookings
 end_date |  | Set and end_date for a range of Bookings
 limit | 50 | Limit the number of results returned for pagination. To retrieve all the results use `0`.
 offset | 0 | Offset the results for pagination, starting from the given record number.
+booker_id |  | Only return bookings that were booked by the given [User](./users.md) id
 
 **Example:**
 

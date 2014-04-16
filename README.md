@@ -28,6 +28,7 @@ Resource Guru implements OAuth2 with the authentication code flow.
 
 Read our [OAuth2 authentication guide](./sections/authentication.md) to get started.
 
+Once you have authenticated, you can get information about the authenticated user by calling `GET https://api.resourceguruapp.com/v1/me`. More details about the request and response are available on the [endpoint page](./endpoints/me.md).
 
 ## Rate Limiting
 
@@ -49,6 +50,7 @@ You can perform up to 25 requests per 10 second period on an account with one OA
 * [Accounts](./endpoints/accounts.md)
 * [Bookings](./endpoints/bookings.md)
 * [Clients](./endpoints/clients.md)
+* [Me](./endpoints/me.md)
 * [Projects](./endpoints/projects.md)
 * [Resources](./endpoints/resources.md)
 * [Resource Types](./endpoints/resource_types.md)
