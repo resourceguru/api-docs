@@ -104,6 +104,7 @@ offset | integer | Offset in minutes from UTC
   ],
   "color": "#CCFF00",
   "email": "joesoap@example.com",
+  "phone": "123 456 7890",
   "image": "https://resourceguru.s3.amazonaws.com/images/card_69cb-7f96ae8b2e17.png",
   "job_title": "Developer",
   "name": "Joe Soap",
