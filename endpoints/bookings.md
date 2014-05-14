@@ -71,7 +71,7 @@ id | integer | Unique identifier for a Booking.
 client_id | integer | Unique identifier of the Client this Booking is for. (Can be `null`)
 project_id | integer | Unique identifier of the Project this Booking is for. (Can be `null`)
 details | string | Extra details about this Booking.
-project_id | integer | Unique identifier of the Resource this Booking is for.
+resource_id | integer | Unique identifier of the Resource this Booking is for.
 booker | hash | Booker information. [(Details)](#booker-key)
 durations | array | Bookings Durations information. [(Details)](#durations-key)
 
