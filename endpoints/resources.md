@@ -144,6 +144,7 @@ archived | boolean | If `true`, then this Resource is archived.
 bookable | boolean | If `true`, then this Resource is bookable.
 color | string | Color used to highlight this Resource.
 email | string | Email address for this Resource. Only applicable to Resources linked to User Accounts.
+phone | string | Phone number for this Resource.
 image | string | Image of this Resource.
 job_title | string | Job title on this Resource. Only applicable to Resources linked to User Accounts.
 name | string | Name of this Resource.
