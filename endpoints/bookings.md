@@ -31,7 +31,7 @@ The above example will return the next Boookings between `2013-01-01` and `2013-
     "client_id": null,
     "project_id": 1,
     "resource_id": 1,
-    "notes": "Booking Notes",
+    "notes": "Extra details",
     "details": "Extra details",
     "start_date": "2013-12-02",
     "end_date": "2014-01-03",
@@ -76,7 +76,7 @@ Key | Type | Description
 id | integer | Unique identifier for a Booking.
 client_id | integer | Unique identifier of the Client this Booking is for. (Can be `null`)
 project_id | integer | Unique identifier of the Project this Booking is for. (Can be `null`)
-notes | string | Notes for this Booking.
+notes | string |Extra details about this Booking.
 details | string | Extra details about this Booking.
 start_date | string | Start date for the booking.
 end_date | string | End date for the booking.
