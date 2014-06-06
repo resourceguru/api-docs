@@ -30,8 +30,14 @@ The above example will return the next Boookings between `2013-01-01` and `2013-
     "id": 1,
     "client_id": null,
     "project_id": 1,
-    "details": "Extra details",
     "resource_id": 1,
+    "notes": "Booking Notes",
+    "details": "Extra details",
+    "start_date": "2013-12-02",
+    "end_date": "2014-01-03",
+    "refreshable": false,
+    "created_at": "2013-10-17T14:09:35Z",
+    "updated_at": "2013-11-15T13:14:00Z",
     "booker": {
       "id": 1,
       "color": "#FFCC00",
@@ -70,7 +76,13 @@ Key | Type | Description
 id | integer | Unique identifier for a Booking.
 client_id | integer | Unique identifier of the Client this Booking is for. (Can be `null`)
 project_id | integer | Unique identifier of the Project this Booking is for. (Can be `null`)
+notes | string | Notes for this Booking.
 details | string | Extra details about this Booking.
+start_date | string | Start date for the booking.
+end_date | string | End date for the booking.
+refreshable | boolean | Booking has changed recently.
+created_at | string | Booking creation date and time.
+updated_at | string | Last updated date and time.
 resource_id | integer | Unique identifier of the Resource this Booking is for.
 booker | hash | Booker information. [(Details)](#booker-key)
 durations | array | Bookings Durations information. [(Details)](#durations-key)
