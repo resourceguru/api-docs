@@ -27,12 +27,14 @@ The above example will return the next 30 Clients.
   {
     "id": 1,
     "name": "Client A",
+    "notes": "Client A Notes",
     "updated_at": "2013-04-30T12:00:00+00:00",
     "url": "https://api.resourceguruapp.com/v1/example-corp/clients/1"
   },
   {
     "id": 2,
     "name": "Client B",
+    "notes": "Client B Notes",
     "updated_at": "2013-04-30T12:00:00+00:00",
     "url": "https://api.resourceguruapp.com/v1/example-corp/clients/2"
   }
