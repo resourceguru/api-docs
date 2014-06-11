@@ -228,7 +228,7 @@ Please note that, unfortunately, it is not currently possible to update the "nor
 
 ## Delete a Resource
 
-* `DELETE /v1/:subdomain/:resources` will delete the specified Resource and return `204 No Content`
+* `DELETE /v1/:subdomain/:resources/:id` will delete the specified Resource and return `204 No Content`
 if that was successful. If the user does not have permission to delete the resource, you'll see `403 Forbidden`
 
 Please note that, when you delete a resource, any future bookings where the resource is the booker will be transferred to the authenticated user. And any future bookings where the resource has been booked as the resource will be deleted.
