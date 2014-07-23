@@ -4,6 +4,10 @@ This is a REST-style API that uses serialized JSON and OAuth 2 authentication.
 
 ## Making Requests
 
+### Encoding
+
+The API expects all data to be UTF-8 encoded.
+
 ### The Base URL
 
 All requests start with the `https://api.resourceguruapp.com/` base URL.
