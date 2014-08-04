@@ -133,8 +133,7 @@ offset | integer | Offset in minutes from UTC
   "timezone": {
     "name": "London",
     "offset": 0
-  },
-  "phone": "123 456 7890"
+  }
 }
 ```
 
