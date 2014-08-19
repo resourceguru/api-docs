@@ -11,7 +11,7 @@ Use this endpoint to get information about the currently authenticated user.
   "first_name": "Shaun",
   "last_name": "Prestor",
   "email": "shaun@example.com",
-  "image": "/uploads/development/images/user/1/image/thumb_66343c29-2353-4965-a254-af28ccc53a83.png"
+  "image": "/uploads/development/images/user/1/image/thumb_66343c29-2353-4965-a254-af28ccc53a83.png",
   "timezone": "Pacific Time (US & Canada)",
   "last_login_at": "2014-08-17T21:38:09.000Z",
   "last_logout_at": "2014-08-15T10:56:32.000Z",
