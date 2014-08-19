@@ -14,6 +14,13 @@
     "last_name": "Prestor",
     "email": "shaun@example.com",
     "image": "https://resourceguru.s3.amazonaws.com/images/card_69cb-7f96ae8b2e17.png",
+    "timezone": "Pacific Time (US & Canada)",
+    "last_login_at": "2014-08-17T21:38:09.000Z",
+    "last_logout_at": "2014-08-15T10:56:32.000Z",
+    "last_activity_at": "2013-06-26T17:30:11.000Z",
+    "activation_state": "active",
+    "created_at": "2012-06-05T21:17:19.000Z",
+    "updated_at": "2014-08-19T09:27:52.000Z",
     "color": "#ef247f"
   },
   {
@@ -22,6 +29,13 @@
     "last_name": "Jones",
     "email": "neil@example.com",
     "image": "https://resourceguru.s3.amazonaws.com/images/card_69cb-7f96ae8b2e17.png",
+    "timezone": "London",
+    "last_login_at": "2014-08-17T21:38:09.000Z",
+    "last_logout_at": "2014-08-15T10:56:32.000Z",
+    "last_activity_at": "2013-06-26T17:30:11.000Z",
+    "activation_state": "active",
+    "created_at": "2012-06-05T21:17:19.000Z",
+    "updated_at": "2014-08-19T09:27:52.000Z",
     "color": "#2654ea"
   }
 ]
@@ -34,6 +48,13 @@ first_name | string | First name of a User.
 last_name | string | Last name of a User.
 email | string | Email address of a User.
 image | string | URL to User's image.
+timezone | string | Timezone of a User.
+last_login_at | string | Last login timestamp for a User.
+last_logout_at | string | Last log out timestamp for a User.
+last_activity_at | string | Last activity timestamp for a User.
+activation_state | string | Activation state of a User.
+created_at | string | Timestamp when a User was created.
+updated_at | string | Timestamp when a User was updated.
 color | string | Hex color code of a User.
 
 ## Get User
@@ -48,6 +69,13 @@ color | string | Hex color code of a User.
   "last_name": "Prestor",
   "email": "shaun@example.com",
   "image": "/uploads/development/images/user/1/image/thumb_66343c29-2353-4965-a254-af28ccc53a83.png",
+  "timezone": "Pacific Time (US & Canada)",
+  "last_login_at": "2014-08-17T21:38:09.000Z",
+  "last_logout_at": "2014-08-15T10:56:32.000Z",
+  "last_activity_at": "2013-06-26T17:30:11.000Z",
+  "activation_state": "active",
+  "created_at": "2012-06-05T21:17:19.000Z",
+  "updated_at": "2014-08-19T09:27:52.000Z",  
   "color": "#ffcc00"
 }
 ```
@@ -58,4 +86,11 @@ first_name | string | First name of the User.
 last_name | string | Last name of the User.
 email | string | Email address of the User.
 image | string | URL to the User's image.
+timezone | string | Timezone of a User.
+last_login_at | string | Last login timestamp for a User.
+last_logout_at | string | Last log out timestamp for a User.
+last_activity_at | string | Last activity timestamp for a User.
+activation_state | string | Activation state of a User.
+created_at | string | Timestamp when a User was created.
+updated_at | string | Timestamp when a User was updated.
 color | string | Hex color code of the User.
