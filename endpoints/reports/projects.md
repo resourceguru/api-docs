@@ -23,6 +23,7 @@ https://api.resourceguruapp.com/v1/example-corp/reports/projects?start_date=2013
 {
   "booked": 32640,
   "waiting_list": 0,
+  max_usage: 3180,
   "projects": [
     {
       "name": "Project A",
@@ -54,6 +55,7 @@ Key | Type | Description
 --- | --- | ---
 booked | integer | Total time booked in minutes.
 waiting_list | integer | Total time on waiting list in minutes.
+max_usage | integer | Max Usage for utilization bar 
 projects | array | Report breakdown per Project. [(Details)](#projects-key)
 
 #### Projects Key

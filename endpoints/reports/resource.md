@@ -21,58 +21,43 @@ https://api.resourceguruapp.com/v1/example-corp/reports/resource/1685?start_date
 
 ```json
 {
-  id: 1686,
-  name: "Justinus Adriaanse",
-  image: "/uploads/development/images/human_resource_instance/1686/image/thumb_71fe0036-f9d3-4708-993d-f023037ab71b.jpg",
-  booked: 2040,
-  unbooked: 900,
-  availability: 2940,
-  waiting_list: 360,
-  utilization: 0.6938775510204082,
-  url: "https://api.resourceguruapp.com/v1/platform45/resources/1686",
+  id: 1364,
+  name: "Brendan Gwynne Prettejohn",
+  image: "/images/fallback/resources/person/thumb_default.png",
+  booked: 240,
+  unbooked: 2760,
+  availability: 3000,
+  waiting_list: 0,
+  utilization: 0.08,
+  url: "https://api.resourceguruapp.com/v1/platform45/resources/1364",
+  resource_type: "Person",
+  earliest_available_period: "",
   projects: [
     {
-      name: "asjdjas",
-      client_name: "Apple Green",
-      booked: 60,
-      waiting_list: 0
-    },
-    {
-      name: "Wellness recruit",
-      client_name: "",
-      booked: 0,
-      waiting_list: 0
-    },
-    {
-      name: "Winter Scarfs",
-      client_name: "",
-      booked: 0,
-      waiting_list: 360
+      name: "No project assigned",
+      color: "#bfbfbf",
+      booked: 240,
+      waiting_list: 0,
+      max_usage: 240
     }
   ],
   clients: [
     {
-      name: "Andrew Rogoff",
+      name: "No client assigned",
+      color: "#bfbfbf",
       booked: 240,
-      waiting_list: 0
-    },
-    {
-      name: "Apple Green",
-      booked: 300,
-      waiting_list: 0
-    },
-    {
-      name: "Archived",
-      booked: 240,
-      waiting_list: 0
+      waiting_list: 0,
+      max_usage: 240
     }
   ]
+  }
 }
 ```
 #### Resource Keys
 
 Key | Type | Description
 --- | --- | ---
+id  | string | Id of resource
 name | string | Name of resource
 image | string | Resource Avatar
 booked | integer | Total time booked in minutes.
@@ -81,14 +66,20 @@ availability | integer | Total availability in minutes: `booked + unbooked`.
 waiting_list | integer | Total time on waiting list in minutes.
 utilization | integer | Total Utilization ratio between `0` and `1`.
 url | string | URL shortcut to view this Resource.
+resource_type | string | Resource Type String
+earliest_available_period | string | Resource Earliest Available Period
 
 #### Projects Keys
 name | string | Name of project
 client | string | Name of client if there is one
+color  | string | Color of project
 booked | integer | Total time booked in minutes.
 waiting_list | integer | Total time on waiting list in minutes.
+max_usage | integer | Max Usage for utilization bar 
 
 #### Clients Keys
-name | string | Name of project
+name | string | Name of client
+color  | string | Color of client
 booked | integer | Total time booked in minutes.
 waiting_list | integer | Total time on waiting list in minutes.
+max_usage | integer | Max Usage for utilization bar 
