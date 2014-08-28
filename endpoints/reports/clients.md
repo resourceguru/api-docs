@@ -14,7 +14,7 @@ end_date | End date in ISO 8601 (`YYYY-MM-DD`).
 **Example:**
 
 ```
-https://api.resourceguruapp.com/v1/example-corp/reports/clients?start_date=2013-01-01&end_date=2013-01-07
+https://api.resourceguruapp.com/v1/example/reports/clients?start_date=2013-01-01&end_date=2013-01-07
 ```
 
 ### Client Report Response
