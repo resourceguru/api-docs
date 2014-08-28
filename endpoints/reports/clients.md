@@ -23,7 +23,7 @@ https://api.resourceguruapp.com/v1/example-corp/reports/clients?start_date=2013-
 {
   "booked": 32640,
   "waiting_list": 0,
-  max_usage: 3180,
+  "max_usage": 3180,
   "clients": [
     {
       "name": "Client A",

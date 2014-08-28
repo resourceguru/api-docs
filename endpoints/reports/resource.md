@@ -14,40 +14,40 @@ end_date | End date in ISO 8601 (`YYYY-MM-DD`).
 **Example:**
 
 ```
-https://api.resourceguruapp.com/v1/example-corp/reports/resource/1685?start_date=2013-01-01&end_date=2013-01-07
+https://api.resourceguruapp.com/v1/example/reports/resource/1685?start_date=2013-01-01&end_date=2013-01-07
 ```
 
 ### Resource Report Response
 
 ```json
 {
-  id: 1364,
-  name: "Brendan Gwynne Prettejohn",
-  image: "/images/fallback/resources/person/thumb_default.png",
-  booked: 240,
-  unbooked: 2760,
-  availability: 3000,
-  waiting_list: 0,
-  utilization: 0.08,
-  url: "https://api.resourceguruapp.com/v1/platform45/resources/1364",
-  resource_type: "Person",
-  earliest_available_period: "",
-  projects: [
+  "id": 1364,
+  "name": "Brendan Gwynne Prettejohn",
+  "image": "/images/fallback/resources/person/thumb_default.png",
+  "booked": 240,
+  "unbooked": 2760,
+  "availability": 3000,
+  "waiting_list": 0,
+  "utilization": 0.08,
+  "url": "https://api.resourceguruapp.com/v1/platform45/resources/1364",
+  "resource_type": "Person",
+  "earliest_available_period": "",
+  "projects": [
     {
-      name: "No project assigned",
-      color: "#bfbfbf",
-      booked: 240,
-      waiting_list: 0,
-      max_usage: 240
+      "name": "No project assigned",
+      "color": "#bfbfbf",
+      "booked": 240,
+      "waiting_list": 0,
+      "max_usage": 240
     }
   ],
-  clients: [
+  "clients": [
     {
-      name: "No client assigned",
-      color: "#bfbfbf",
-      booked: 240,
-      waiting_list: 0,
-      max_usage: 240
+      "name": "No client assigned",
+      "color": "#bfbfbf",
+      "booked": 240,
+      "waiting_list": 0,
+      "max_usage": 240
     }
   ]
   }
@@ -70,6 +70,8 @@ resource_type | string | Resource Type String
 earliest_available_period | string | Resource Earliest Available Period
 
 #### Projects Keys
+Key | Type | Description
+--- | --- | ---
 name | string | Name of project
 client | string | Name of client if there is one
 color  | string | Color of project
@@ -78,6 +80,8 @@ waiting_list | integer | Total time on waiting list in minutes.
 max_usage | integer | Max Usage for utilization bar 
 
 #### Clients Keys
+Key | Type | Description
+--- | --- | ---
 name | string | Name of client
 color  | string | Color of client
 booked | integer | Total time booked in minutes.
