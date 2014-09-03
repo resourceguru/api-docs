@@ -59,3 +59,5 @@ color | string | Color used to highlight this Client.
 booked | integer | Time booked in minutes for this Client.
 waiting_list | integer | Time on waiting list in minutes for this Client.
 url | string | URL shortcut to view this Client.
+
+

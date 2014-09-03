@@ -27,6 +27,7 @@ https://api.resourceguruapp.com/v1/example/reports/projects?start_date=2013-01-0
   "projects": [
     {
       "name": "Project A",
+      "notes": "This is a note",
       "color": "#FFCC00",
       "booked": 0,
       "waiting_list": 0,
@@ -38,6 +39,7 @@ https://api.resourceguruapp.com/v1/example/reports/projects?start_date=2013-01-0
     },
     {
       "name": "Project B",
+      "notes": "",
       "color": "#CCFF00",
       "booked": 4800,
       "waiting_list": 0,
@@ -63,6 +65,7 @@ projects | array | Report breakdown per Project. [(Details)](#projects-key)
 Key | Type | Description
 --- | --- | ---
 name | string | Name of this Project.
+notes | string | Any notes on the Project
 color | string | Color used to highlight this Project.
 booked | integer | Time booked in minutes for this Project.
 waiting_list | integer | Time on waiting list in minutes for this Project.
