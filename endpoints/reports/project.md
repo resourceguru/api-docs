@@ -1,8 +1,8 @@
-# Client Report
+# Project Report
 
 ## Get Report
 
-* `GET /v1/:subdomain/reports/clients` returns a **Client Report**.
+* `GET /v1/:subdomain/reports/projects` returns a **Project Report**.
 
 ### Required Query String Parameters
 
@@ -14,20 +14,25 @@ end_date | End date in ISO 8601 (`YYYY-MM-DD`).
 **Example:**
 
 ```
-https://api.resourceguruapp.com/v1/example/reports/clients/242?start_date=2013-01-01&end_date=2013-01-07
+https://api.resourceguruapp.com/v1/example/reports/projects/148?start_date=2013-01-01&end_date=2013-01-07
 ```
 
-### Client Report Response
+### Project Report Response
 
 ```json
 {
-  "id": 242,
-  "name": "Client A",
+  "id": 148,
+  "name": "Project A",
   "notes": "This is a note",
   "color": "#FFCC00",
   "booked": 0,
   "waiting_list": 0,
-  "url": "https://api.resourceguruapp.com/v1/example-corp/clients/1",
+  "url": "https://api.resourceguruapp.com/v1/example-corp/projects/1",
+  "client": {
+    "name": "Client A",
+    "url": "https://api.resourceguruapp.com/v1/example-corp/clients/1"
+  },
+
   "resources": [
     {
       "id": 1685,
@@ -48,13 +53,22 @@ https://api.resourceguruapp.com/v1/example/reports/clients/242?start_date=2013-0
 
 Key | Type | Description
 --- | --- | ---
-id  | integer | Id of client
-name | string | Name of this Client.
-color | string | Color used to highlight this Client.
-booked | integer | Time booked in minutes for this Client.
-waiting_list | integer | Time on waiting list in minutes for this Client.
-url | string | URL shortcut to view this Client.
+name | string | Name of this Project.
+notes | string | Any notes on the Project
+color | string | Color used to highlight this Project.
+booked | integer | Time booked in minutes for this Project.
+waiting_list | integer | Time on waiting list in minutes for this Project.
+url | string | URL shortcut to view this Project.
+client | hash | [Client] this Project belongs to. [(Details)](#client-key)
 resources | array | Report breakdown per Resource. [(Details)](#resources-key)
+
+#### Client Key
+*No `client` key will be returned if a Project has no Client.*
+
+Key | Type | Description
+--- | --- | ---
+name | string | Name of this Client.
+url | string | URL shortcut to view this Client.
 
 #### Resources Key
 
@@ -71,4 +85,3 @@ utilization | integer | Utilization ratio between `0` and `1` for this Resource.
 url | string | URL shortcut to view this Resource.
 resource_type | string | Resource Type String
 earliest_available_period | string | Resource Earlist Available Period
-

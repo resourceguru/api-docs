@@ -27,6 +27,7 @@ https://api.resourceguruapp.com/v1/example/reports/clients?start_date=2013-01-01
   "clients": [
     {
       "name": "Client A",
+      "notes": "This is a note",
       "color": "#FFCC00",
       "booked": 0,
       "waiting_list": 0,
@@ -55,9 +56,8 @@ clients | array | Report breakdown per Client. [(Details)](#clients-key)
 Key | Type | Description
 --- | --- | ---
 name | string | Name of this Client.
+notes | string | Any notes on the Client
 color | string | Color used to highlight this Client.
 booked | integer | Time booked in minutes for this Client.
 waiting_list | integer | Time on waiting list in minutes for this Client.
 url | string | URL shortcut to view this Client.
-
-
