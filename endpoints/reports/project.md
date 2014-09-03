@@ -32,7 +32,6 @@ https://api.resourceguruapp.com/v1/example/reports/projects/148?start_date=2013-
     "name": "Client A",
     "url": "https://api.resourceguruapp.com/v1/example-corp/clients/1"
   },
-
   "resources": [
     {
       "id": 1685,
