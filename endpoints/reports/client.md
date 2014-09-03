@@ -36,11 +36,11 @@ https://api.resourceguruapp.com/v1/example/reports/clients/242?start_date=2013-0
       "booked": 5040,
       "unbooked": 52380,
       "availability": 57420,
-      "waiting_list": 0
+      "waiting_list": 0,
       "utilization": 0.0877742946708464,
       "resource_type": "Person",
       "earliest_available_period": "01 Aug 2014 to 31 Dec 2014 *",
-      "url": "https://api.resourceguruapp.com/v1/platform45/resources/1685",
+      "url": "https://api.resourceguruapp.com/v1/platform45/resources/1685"
     }
   ]
 }
