@@ -34,10 +34,7 @@ https://api.resourceguruapp.com/v1/example/reports/clients/242?start_date=2013-0
       "name": "Gerhard Koekemoer",
       "image": "/images/fallback/resources/person/thumb_default.png",
       "booked": 5040,
-      "unbooked": 52380,
-      "availability": 57420,
       "waiting_list": 0,
-      "utilization": 0.0877742946708464,
       "resource_type": "Person",
       "earliest_available_period": "01 Aug 2014 to 31 Dec 2014 *",
       "url": "https://api.resourceguruapp.com/v1/platform45/resources/1685"
@@ -64,10 +61,7 @@ id | integer | Id of Resource
 name | string | Name of this Resource.
 image | string | Image of this Resource.
 booked | integer | Time booked in minutes for this Resource.
-unbooked | integer | Time unbooked in minutes for this Resource.
-availability | integer | Availability in minutes for this Resource: `booked + unbooked`.
 waiting_list | integer | Time on waiting list in minutes for this Resource.
-utilization | integer | Utilization ratio between `0` and `1` for this Resource.
 url | string | URL shortcut to view this Resource.
 resource_type | string | Resource Type String
 earliest_available_period | string | Resource Earlist Available Period
