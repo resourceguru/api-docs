@@ -2,7 +2,7 @@
 
 ## Get Report
 
-* `GET /v1/:subdomain/reports/resource/resource_id` returns a **Resource Report**.
+* `GET /v1/:subdomain/reports/resource/:resource_id` returns a **Resource Report**.
 
 ### Required Query String Parameters
 
@@ -57,33 +57,35 @@ https://api.resourceguruapp.com/v1/example/reports/resource/1685?start_date=2013
 
 Key | Type | Description
 --- | --- | ---
-id  | string | Id of resource
-name | string | Name of resource
-image | string | Resource Avatar
+id  | string | Unique identifier of resource.
+name | string | Name of resource.
+image | string | Resource Avatar.
 booked | integer | Total time booked in minutes.
 unbooked | integer | Total time unbooked in minutes.
 availability | integer | Total availability in minutes: `booked + unbooked`.
 waiting_list | integer | Total time on waiting list in minutes.
 utilization | integer | Total Utilization ratio between `0` and `1`.
 url | string | URL shortcut to view this Resource.
-resource_type | string | Resource Type String
-earliest_available_period | string | Resource Earliest Available Period
+resource_type | string | Resource Type String.
+earliest_available_period | string | Resource Earliest Available Period.
 
 #### Projects Keys
 Key | Type | Description
 --- | --- | ---
-name | string | Name of project
-client | string | Name of client if there is one
-color  | string | Color of project
+name | string | Name of project.
+notes | string | Extra details about this Project.
+client | string | Name of client if there is one.
+color  | string | Color of project.
 booked | integer | Total time booked in minutes.
 waiting_list | integer | Total time on waiting list in minutes.
-max_usage | integer | Max Usage for utilization bar 
+max_usage | integer | Max Usage for utilization bar.
 
 #### Clients Keys
 Key | Type | Description
 --- | --- | ---
-name | string | Name of client
-color  | string | Color of client
+name | string | Name of client.
+notes | string | Extra details about this Client.
+color  | string | Color of client.
 booked | integer | Total time booked in minutes.
 waiting_list | integer | Total time on waiting list in minutes.
-max_usage | integer | Max Usage for utilization bar 
+max_usage | integer | Max Usage for utilization bar.

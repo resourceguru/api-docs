@@ -2,7 +2,7 @@
 
 ## Get Report
 
-* `GET /v1/:subdomain/reports/clients` returns a **Client Report**.
+* `GET /v1/:subdomain/reports/clients/:client_id` returns a **Client Report**.
 
 ### Required Query String Parameters
 
@@ -45,8 +45,9 @@ https://api.resourceguruapp.com/v1/example/reports/clients/242?start_date=2013-0
 
 Key | Type | Description
 --- | --- | ---
-id  | integer | Id of client
+id  | integer | Unique identifier of Client.
 name | string | Name of this Client.
+notes | string | Extra details about this Client.
 color | string | Color used to highlight this Client.
 booked | integer | Time booked in minutes for this Client.
 waiting_list | integer | Time on waiting list in minutes for this Client.
@@ -57,12 +58,12 @@ resources | array | Report breakdown per Resource. [(Details)](#resources-key)
 
 Key | Type | Description
 --- | --- | ---
-id | integer | Id of Resource
+id | integer | Unique identifier of Resource.
 name | string | Name of this Resource.
 image | string | Image of this Resource.
 booked | integer | Time booked in minutes for this Resource.
 waiting_list | integer | Time on waiting list in minutes for this Resource.
 url | string | URL shortcut to view this Resource.
-resource_type | string | Resource Type String
-earliest_available_period | string | Resource Earlist Available Period
+resource_type | string | Resource Type String.
+earliest_available_period | string | Resource Earlist Available Period.
 

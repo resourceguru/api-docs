@@ -1,8 +1,8 @@
-# Project Report
+# Projects Report
 
 ## Get Report
 
-* `GET /v1/:subdomain/reports/projects` returns a **Project Report**.
+* `GET /v1/:subdomain/reports/projects` returns a **Projects Report**.
 
 ### Required Query String Parameters
 
@@ -17,7 +17,7 @@ end_date | End date in ISO 8601 (`YYYY-MM-DD`).
 https://api.resourceguruapp.com/v1/example/reports/projects?start_date=2013-01-01&end_date=2013-01-07
 ```
 
-### Project Report Response
+### Projects Report Response
 
 ```json
 {
@@ -26,6 +26,7 @@ https://api.resourceguruapp.com/v1/example/reports/projects?start_date=2013-01-0
   "max_usage": 3180,
   "projects": [
     {
+      "id": 148,
       "name": "Project A",
       "notes": "This is a note",
       "color": "#FFCC00",
@@ -38,6 +39,7 @@ https://api.resourceguruapp.com/v1/example/reports/projects?start_date=2013-01-0
       }
     },
     {
+      "id": 149,
       "name": "Project B",
       "notes": "",
       "color": "#CCFF00",
@@ -57,15 +59,16 @@ Key | Type | Description
 --- | --- | ---
 booked | integer | Total time booked in minutes.
 waiting_list | integer | Total time on waiting list in minutes.
-max_usage | integer | Max Usage for utilization bar 
+max_usage | integer | Max Usage for utilization bar. 
 projects | array | Report breakdown per Project. [(Details)](#projects-key)
 
 #### Projects Key
 
 Key | Type | Description
 --- | --- | ---
+id  | integer | Unique identifier of Project.
 name | string | Name of this Project.
-notes | string | Any notes on the Project
+notes | string | Extra details about this Project.
 color | string | Color used to highlight this Project.
 booked | integer | Time booked in minutes for this Project.
 waiting_list | integer | Time on waiting list in minutes for this Project.

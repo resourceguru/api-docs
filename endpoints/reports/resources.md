@@ -1,8 +1,8 @@
-# Resource Report
+# Resources Report
 
 ## Get Report
 
-* `GET /v1/:subdomain/reports/resources` returns a **Resource Report**.
+* `GET /v1/:subdomain/reports/resources` returns a **Resources Report**.
 
 ### Required Query String Parameters
 
@@ -17,7 +17,7 @@ end_date | End date in ISO 8601 (`YYYY-MM-DD`).
 https://api.resourceguruapp.com/v1/example/reports/resources?start_date=2013-01-01&end_date=2013-01-07
 ```
 
-### Resource Report Response
+### Resources Report Response
 
 ```json
 {
@@ -70,7 +70,7 @@ resources | array | Report breakdown per Resource. [(Details)](#resources-key)
 
 Key | Type | Description
 --- | --- | ---
-id | integer | Id of Resource
+id | integer | Unique identifier of Resource.
 name | string | Name of this Resource.
 image | string | Image of this Resource.
 booked | integer | Time booked in minutes for this Resource.
@@ -79,5 +79,5 @@ availability | integer | Availability in minutes for this Resource: `booked + un
 waiting_list | integer | Time on waiting list in minutes for this Resource.
 utilization | integer | Utilization ratio between `0` and `1` for this Resource.
 url | string | URL shortcut to view this Resource.
-resource_type | string | Resource Type String
-earliest_available_period | string | Resource Earlist Available Period
+resource_type | string | Resource Type String.
+earliest_available_period | string | Resource Earlist Available Period.
