@@ -39,7 +39,7 @@ id | integer | Unique identifier for a Webhook.
 name | string | Name of a Webhook.
 payload_url | string | Payload endpoint for the Webhook.
 account_ud | integer | The id of the account to which the Webhook belongs to.
-user_ud | integer | The id of the user who created the Webhook.
+user_id | integer | The id of the user who created the Webhook.
 events | array | The events for the payloads to be sent to the Webhook payload url.
 created_at | timestamp | Created date and time in ISO 8601.
 updated_at | timestamp | Last updated date and time in ISO 8601.
@@ -70,7 +70,7 @@ id | integer | Unique identifier for a Webhook.
 name | string | Name of this Webhook.
 payload_url | string | Payload endpoint for this Webhook.
 account_ud | integer | The id of the account to which this Webhook belongs to.
-user_ud | integer | The id of the user who created this Webhook.
+user_id | integer | The id of the user who created this Webhook.
 events | array | The events for the payloads to be sent to the Webhook payload url.
 created_at | timestamp | Created date and time in ISO 8601.
 updated_at | timestamp | Last updated date and time in ISO 8601.
