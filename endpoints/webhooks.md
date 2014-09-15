@@ -103,3 +103,11 @@ priveleges, you'll see `403 Forbidden`.
 if that was successful. If the user does not have administrative
 priveleges, you'll see `403 Forbidden`.
 
+## Test Webhook
+
+* `GET /v1/:subdomain/webhooks/1/test` sends a test payload to the payload endpoint.
+
+This will return a status code which depends on the endpoint interacting with.
+Some endpoints, such as requestb.in for example, will return either 200 or 201 if successful.
+If unsuccessful, the service should return either 404 or 422.
+
