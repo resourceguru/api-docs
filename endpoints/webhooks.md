@@ -103,7 +103,7 @@ priveleges, you'll see `403 Forbidden`.
 if that was successful. If the user does not have administrative
 priveleges, you'll see `403 Forbidden`.
 
-## Test Webhook
+## Test a Webhook
 
 * `GET /v1/:subdomain/webhooks/1/test` sends a test payload to the payload endpoint.
 
