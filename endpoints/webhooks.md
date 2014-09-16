@@ -8,9 +8,16 @@ and the events for which payloads should be sent.
 
 Payloads are created every minute which include any and all changes made
 within the application for the event types specified within the created
-webhooks. The content type of payloads being sent is JSON, with the following headers:
+webhooks.
+
+The user also has the option of providing an additional secret which
+is a string which is combined with the payload to be delivered to create
+a HMAC SHA256 digest as an added security header.
+
+The content type of payloads being sent is JSON, with the following headers:
 
 Header | Description
+--- | ---
 X-Rate-Limit-Limit | The current rate limit of our API.
 X-Rate-Limit-Remaining | The amount of requests left before rate limiting is triggered.
 X-ResourceGuru-Key | The secret of the created webhook.
@@ -60,7 +67,6 @@ payload_url | string | Payload endpoint for the Webhook.
 account_id | integer | The id of the account to which the Webhook belongs to.
 user_id | integer | The id of the user who created the Webhook.
 events | array | The events for the payloads to be sent to the Webhook payload url.
-secret | string | An optional secret used to create 'X-ResourceGuru-Key' and 'X-ResourceGuru-Signature' headers.
 created_at | timestamp | Created date and time in ISO 8601.
 updated_at | timestamp | Last updated date and time in ISO 8601.
 
