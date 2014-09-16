@@ -2,16 +2,16 @@
 
 Resource Guru supports integration with other services using webhooks.
 Account owners and users with administrative priveledges may create new webhooks
-for services by posting to the webhooks endpointwith a name of the webhook,
+for services by posting to the webhooks endpoint with a name of the webhook,
 the payload url which is the intended endpoint,
 and the events for which payloads should be sent.
 
-Payloads are created every minute which include any and all changes made
+Payloads are created every minute, which includes any and all changes made
 within the application for the event types specified within the created
 webhooks.
 
-The user also has the option of providing an additional secret which
-is a string which is combined with the payload to be delivered to create
+The user also has the option of providing an additional secret string
+which is combined with the payload to be delivered to create
 a HMAC SHA256 digest as an added security header.
 
 The content type of payloads being sent is JSON, with the following headers:
