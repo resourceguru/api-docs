@@ -1,5 +1,24 @@
 # Webhooks
 
+Resource Guru supports integration with other services using webhooks.
+Account owners and users with administrative priveledges may create new webhooks
+for services by posting to the webhooks endpointwith a name of the webhook,
+the payload url which is the intended endpoint,
+and the events for which payloads should be sent.
+
+Payloads are created every minute which include any and all changes made
+within the application for the event types specified within the created
+webhooks. The content type of payloads being sent is JSON, with the following headers:
+
+Header | Description
+X-Rate-Limit-Limit | The current rate limit of our API.
+X-Rate-Limit-Remaining | The amount of requests left before rate limiting is triggered.
+X-ResourceGuru-Key | The secret of the created webhook.
+X-ResourceGuru-Signature | A HMAC SHA256 digest of the webhook secret and the payload to be delivered.
+
+At the end of every minute, all changes made on events for the current account will
+be sent as a payloadto the payload endpoint.
+
 ## Get Webhooks
 
 * `GET /v1/:subdomain/webhooks` returns an `Array` of webhooks.
@@ -41,6 +60,7 @@ payload_url | string | Payload endpoint for the Webhook.
 account_id | integer | The id of the account to which the Webhook belongs to.
 user_id | integer | The id of the user who created the Webhook.
 events | array | The events for the payloads to be sent to the Webhook payload url.
+secret | string | An optional secret used to create 'X-ResourceGuru-Key' and 'X-ResourceGuru-Signature' headers.
 created_at | timestamp | Created date and time in ISO 8601.
 updated_at | timestamp | Last updated date and time in ISO 8601.
 
@@ -83,7 +103,8 @@ updated_at | timestamp | Last updated date and time in ISO 8601.
 {
   "name": "Webhook A",
   "payload_url": "http://www.example-corp.com/endpoint",
-  "events": ["clients", "projects"]
+  "events": ["clients", "projects"],
+  "secret": "optional secret"
 }
 ```
 
