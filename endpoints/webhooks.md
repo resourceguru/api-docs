@@ -5,6 +5,8 @@ Account owners and users with administrative priveledges may create new webhooks
 for services by posting to the webhooks endpoint with a name of the webhook,
 the payload url which is the intended endpoint,
 and the events for which payloads should be sent.
+Event types supported by Resource Guru include Bookings, Clients, Projects,
+Resources, Resource Types and Accounts.
 
 Payloads are created every minute, which includes any and all changes made
 within the application for the event types specified within the created
