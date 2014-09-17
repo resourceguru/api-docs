@@ -26,7 +26,7 @@ X-ResourceGuru-Key | The secret of the created webhook.
 X-ResourceGuru-Signature | A HMAC SHA256 digest of the webhook secret and the payload to be delivered.
 
 At the end of every minute, all changes made on events for the current account will
-be sent as a payloadto the payload endpoint.
+be sent as a payload to the payload endpoint.
 
 ## Get Webhooks
 
