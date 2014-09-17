@@ -42,7 +42,7 @@ be sent as a payloadto the payload endpoint.
     "payload_url:" "http://www.example-corp.com/endpoint",
     "account_id:" 1,
     "user_id:" 3,
-    "events:" ["clients","projects"],
+    "events:" ["clients","projects", "accounts", "resources", "resource_types", "bookings"],
     "url": "https://api.resourceguruapp.com/v1/example-corp/webhooks/1",
     "created_at": "2013-04-30T12:00:00+00:00",
     "updated_at": "2013-04-30T12:00:00+00:00"
@@ -53,7 +53,7 @@ be sent as a payloadto the payload endpoint.
     "payload_url:" "http://www.example-corp.com/endpoint2",
     "account_id:" 1,
     "user_id:" 3,
-    "events:" ["clients","projects"],
+    "events:" ["clients","projects", "accounts", "resources", "resource_types", "bookings"],
     "url": "https://api.resourceguruapp.com/v1/example-corp/webhooks/2",
     "created_at": "2013-04-30T12:00:00+00:00",
     "updated_at": "2013-04-30T12:00:00+00:00"
@@ -85,7 +85,7 @@ updated_at | timestamp | Last updated date and time in ISO 8601.
   "payload_url:" "http://www.example-corp.com/endpoint",
   "account_id:" 1,
   "user_id:" 3,
-  "events:" ["clients","projects"],
+  "events:" ["clients","projects", "accounts", "resources", "resource_types", "bookings"],
   "url": "https://api.resourceguruapp.com/v1/example-corp/webhooks/1",
   "created_at": "2013-04-30T12:00:00+00:00",
   "updated_at": "2013-04-30T12:00:00+00:00"
@@ -111,7 +111,7 @@ updated_at | timestamp | Last updated date and time in ISO 8601.
 {
   "name": "Webhook A",
   "payload_url": "http://www.example-corp.com/endpoint",
-  "events": ["clients", "projects"],
+  "events": ["clients", "projects", "accounts", "resources", "resource_types", "bookings"],
   "secret": "optional secret"
 }
 ```
