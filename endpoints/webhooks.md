@@ -28,6 +28,8 @@ X-ResourceGuru-Signature | A HMAC SHA256 digest of the webhook secret and the pa
 At the end of every minute, all changes made on events for the current account will
 be sent as a payload to the payload endpoint.
 
+**Please note that Webhooks are still currently in beta and that development is still ongoing.**
+
 ## Get Webhooks
 
 * `GET /v1/:subdomain/webhooks` returns an `Array` of webhooks.
@@ -106,6 +108,13 @@ updated_at | timestamp | Last updated date and time in ISO 8601.
 ## Create a Webhook
 
 * `POST /v1/:subdomain/webhooks` will create a new Webhook from the parameters passed.
+* Supported events include:
+  * "accounts"
+  * "bookings"
+  * "clients"
+  * "projecs"
+  * "resources"
+  * "resource_types"
 
 ```json
 {
@@ -125,6 +134,9 @@ If the user does not have administrative priveleges, you'll see `403 Forbidden`.
 * `PUT /v1/:subdomain/webhooks/1` will update the Webhook from the parameters passed and return
 the JSON representation of the updated Webhook. If the user does not have administrative
 priveleges, you'll see `403 Forbidden`.
+If the user tries to specify a user_id when updating the webhook, '422 Unprocessable Entity'
+will be returned as the user_id is the point of reference to the creator of the webhook
+which should not be modified.
 
 ## Delete a Webhook
 
