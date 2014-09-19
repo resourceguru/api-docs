@@ -112,7 +112,7 @@ updated_at | timestamp | Last updated date and time in ISO 8601.
   * "accounts"
   * "bookings"
   * "clients"
-  * "projecs"
+  * "projects"
   * "resources"
   * "resource_types"
 
