@@ -1,5 +1,7 @@
 # Webhooks
 
+**Please note that Webhooks are still currently in beta and that development is still ongoing.**
+
 Resource Guru supports integration with other services using webhooks.
 Account owners and users with administrative priveledges may create new webhooks
 for services by posting to the webhooks endpoint with a name of the webhook,
@@ -27,8 +29,6 @@ X-ResourceGuru-Signature | A HMAC SHA256 digest of the webhook secret and the pa
 
 At the end of every minute, all changes made on events for the current account will
 be sent as a payload to the payload endpoint.
-
-**Please note that Webhooks are still currently in beta and that development is still ongoing.**
 
 ## Get Webhooks
 
