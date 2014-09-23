@@ -1,6 +1,6 @@
 # Webhooks
 
-**Please note that Webhooks are still currently in beta and that development is still ongoing.**
+**Please note that Webhooks are still currently in beta and development is still ongoing.**
 
 Resource Guru supports integration with other services using webhooks.
 Account owners and users with administrative priveledges may create new webhooks
