@@ -21,7 +21,14 @@
     "activation_state": "active",
     "created_at": "2012-06-05T21:17:19.000Z",
     "updated_at": "2014-08-19T09:27:52.000Z",
-    "color": "#ef247f"
+    "color": "#ef247f",
+    "permissions:": "administrator",
+    "booking_rights": "manage_all",
+    "client_rights:" "manage_all",
+    "project_rights:" "manage_all",
+    "resource_rights:" "manage_all",
+    "report_rights:" "view",
+    "owner": "true"
   },
   {
     "id": 2,
@@ -37,6 +44,13 @@
     "created_at": "2012-06-05T21:17:19.000Z",
     "updated_at": "2014-08-19T09:27:52.000Z",
     "color": "#2654ea"
+    "permissions:": "basic_user",
+    "booking_rights": "view",
+    "client_rights:" "view",
+    "project_rights:" "view",
+    "resource_rights:" "view",
+    "report_rights:" "view",
+    "owner:" "false"
   }
 ]
 ```
@@ -56,6 +70,13 @@ activation_state | string | Activation state of a User.
 created_at | string | Timestamp when a User was created.
 updated_at | string | Timestamp when a User was updated.
 color | string | Hex color code of a User.
+permissions | string | Permission level of a User(Basic User, Manager, Administrator, Custom).
+booking_rights | string | Permissions of a User with regards to Bookings.
+client_rights | string | Permissions of a User with regards to Clients.
+project_rights | string | Permissions of a User with regards to Projects.
+resource_rights | string | Permissions of a User with regards to Resources.
+report_rights | string | Permissions of a User with regards to Reports.
+owner | boolean | Boolean representing whether a User is the account owner.
 
 ## Get User
 
@@ -76,7 +97,14 @@ color | string | Hex color code of a User.
   "activation_state": "active",
   "created_at": "2012-06-05T21:17:19.000Z",
   "updated_at": "2014-08-19T09:27:52.000Z",  
-  "color": "#ffcc00"
+  "color": "#ffcc00",
+  "permissions:": "administrator",
+  "booking_rights": "manage_all",
+  "client_rights:" "manage_all",
+  "project_rights:" "manage_all",
+  "resource_rights:" "manage_all",
+  "report_rights:" "view",
+  "owner": "true"
 }
 ```
 Key | Type | Description
@@ -94,3 +122,10 @@ activation_state | string | Activation state of a User.
 created_at | string | Timestamp when a User was created.
 updated_at | string | Timestamp when a User was updated.
 color | string | Hex color code of the User.
+permissions | string | Permission level of a User(Basic User, Manager, Administrator, Custom).
+booking_rights | string | Permissions of a User with regards to Bookings.
+client_rights | string | Permissions of a User with regards to Clients.
+project_rights | string | Permissions of a User with regards to Projects.
+resource_rights | string | Permissions of a User with regards to Resources.
+report_rights | string | Permissions of a User with regards to Reports.
+owner | boolean | Boolean representing whether a User is the account owner.
