@@ -28,28 +28,22 @@ https://api.resourceguruapp.com/v1/example/reports/projects?start_date=2013-01-0
     {
       "id": 148,
       "name": "Project A",
-      "notes": "This is a note",
+      "client_name": "Client A",
+      "client_id": 12,
       "color": "#FFCC00",
       "booked": 0,
       "waiting_list": 0,
       "url": "https://api.resourceguruapp.com/v1/example-corp/projects/1",
-      "client": {
-        "name": "Client A",
-        "url": "https://api.resourceguruapp.com/v1/example-corp/clients/1"
-      }
     },
     {
       "id": 149,
       "name": "Project B",
-      "notes": "",
+      "client_name": "Client A",
+      "client_id": 12,
       "color": "#CCFF00",
       "booked": 4800,
       "waiting_list": 0,
       "url": "https://api.resourceguruapp.com/v1/example-corp/projects/2",
-      "client": {
-        "name": "Client B",
-        "url": "https://api.resourceguruapp.com/v1/example-corp/clients/2"
-      }
     }
   ]
 }
@@ -68,17 +62,9 @@ Key | Type | Description
 --- | --- | ---
 id  | integer | Unique identifier of Project.
 name | string | Name of this Project.
-notes | string | Extra details about this Project.
+client_name | string | Name of Client that this Project belongs to
+client_id | string | Unique identifier of Client that this Project belongs to 
 color | string | Color used to highlight this Project.
 booked | integer | Time booked in minutes for this Project.
 waiting_list | integer | Time on waiting list in minutes for this Project.
 url | string | URL shortcut to view this Project.
-client | hash | [Client] this Project belongs to. [(Details)](#client-key)
-
-#### Client Key
-*No `client` key will be returned if a Project has no Client.*
-
-Key | Type | Description
---- | --- | ---
-name | string | Name of this Client.
-url | string | URL shortcut to view this Client.

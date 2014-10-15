@@ -32,9 +32,11 @@ https://api.resourceguruapp.com/v1/example/reports/resource/1685?start_date=2013
   "url": "https://api.resourceguruapp.com/v1/platform45/resources/1364",
   "resource_type": "Person",
   "earliest_available_period": "",
+  "job_title": ""
   "projects": [
     {
       "name": "No project assigned",
+      "client_name": "",
       "color": "#bfbfbf",
       "booked": 240,
       "waiting_list": 0,
@@ -68,13 +70,15 @@ utilization | integer | Total Utilization ratio between `0` and `1`.
 url | string | URL shortcut to view this Resource.
 resource_type | string | Resource Type String.
 earliest_available_period | string | Resource Earliest Available Period.
+job_title | string | Job Title of the Resource
+projects | array | Report breakdown per Project. [(Details)](#projects-key)
+clients | array | Report breakdown per Clients. [(Details)](#client-key)
 
 #### Projects Keys
 Key | Type | Description
 --- | --- | ---
 name | string | Name of project.
-notes | string | Extra details about this Project.
-client | string | Name of client if there is one.
+client_name | string | Name of client if there is one.
 color  | string | Color of project.
 booked | integer | Total time booked in minutes.
 waiting_list | integer | Total time on waiting list in minutes.
@@ -84,7 +88,6 @@ max_usage | integer | Max Usage for utilization bar.
 Key | Type | Description
 --- | --- | ---
 name | string | Name of client.
-notes | string | Extra details about this Client.
 color  | string | Color of client.
 booked | integer | Total time booked in minutes.
 waiting_list | integer | Total time on waiting list in minutes.

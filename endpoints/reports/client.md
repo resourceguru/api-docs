@@ -35,8 +35,10 @@ https://api.resourceguruapp.com/v1/example/reports/clients/242?start_date=2013-0
       "image": "/images/fallback/resources/person/thumb_default.png",
       "booked": 5040,
       "waiting_list": 0,
+      "job_title": "Developer",
       "resource_type": "Person",
       "earliest_available_period": "01 Aug 2014 to 31 Dec 2014 *",
+      "utilization": 1,
       "url": "https://api.resourceguruapp.com/v1/platform45/resources/1685"
     }
   ]
@@ -63,7 +65,9 @@ name | string | Name of this Resource.
 image | string | Image of this Resource.
 booked | integer | Time booked in minutes for this Resource.
 waiting_list | integer | Time on waiting list in minutes for this Resource.
-url | string | URL shortcut to view this Resource.
+job_title | string | Job Title of the Resource
 resource_type | string | Resource Type String.
 earliest_available_period | string | Resource Earlist Available Period.
+utilization | integer | Utilization ratio between `0` and `1` for this Resource.
+url | string | URL shortcut to view this Resource.
 

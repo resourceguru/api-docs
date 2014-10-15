@@ -38,7 +38,9 @@ https://api.resourceguruapp.com/v1/example/reports/resources?start_date=2013-01-
       "utilization": 0,
       "url": "https://api.resourceguruapp.com/v1/example-corp/resources/1",
       "resource_type": "Person",
-      "earliest_available_period": "25 Aug 2014 - 31 Aug 2014"
+      "earliest_available_period": "25 Aug 2014 - 31 Aug 2014",
+      "job_title": "Developer",
+      "custom_fields": [] 
     },
     {
       "id": "2",
@@ -51,7 +53,13 @@ https://api.resourceguruapp.com/v1/example/reports/resources?start_date=2013-01-
       "utilization": 1,
       "url": "https://api.resourceguruapp.com/v1/example-corp/resources/2",
       "resource_type": "Person",
-      "earliest_available_period": "25 Aug 2014 - 31 Aug 2014"
+      "earliest_available_period": "25 Aug 2014 - 31 Aug 2014",
+      "job_title": null,
+      custom_fields: {
+        22: [
+          "33"
+        ]
+      }
     }
   ]
 }
@@ -81,3 +89,9 @@ utilization | integer | Utilization ratio between `0` and `1` for this Resource.
 url | string | URL shortcut to view this Resource.
 resource_type | string | Resource Type String.
 earliest_available_period | string | Resource Earlist Available Period.
+job_title | string | Resource Job Title
+custom_fields | array | All custom field ids for resource. [(Details)](#custom-fields-key)
+
+#### Custom Fields Key
+
+# The custom fields array contains the id of the custom field and nested within is the selected custom field option for this resource
