@@ -88,13 +88,13 @@ waiting_list | integer | Time on waiting list in minutes for this Resource.
 utilization | integer | Utilization ratio between `0` and `1` for this Resource.
 url | string | URL shortcut to view this Resource.
 resource_type | string | Resource type string.
-earliest_available_period | string | Resource earlist available period.
+earliest_available_period | string | Resource earliest available period.
 job_title | string | Job title of the Resource.
 custom_fields | array | All custom field ids for resource. [(Details)](#custom-fields-key)
 
 #### Custom Fields Key
 
-# The custom fields array contains the id of the custom field and nested within is the selected custom field option for this resource
+#### The custom fields array contains the id of the custom field and nested within is the selected custom field option for this resource
 
 # Resource Report
 
