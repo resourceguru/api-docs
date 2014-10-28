@@ -60,7 +60,6 @@ You can perform up to 25 requests per 10 second period on a registered applicati
 * [Resource Types](./endpoints/resource_types.md)
 * Reports
   * [Resources](./endpoints/reports/resources.md)
-  * [Resource](./endpoints/reports/resource.md)
   * [Projects](./endpoints/reports/projects.md)
   * [Clients](./endpoints/reports/clients.md)
 * [Users](./endpoints/users.md)
