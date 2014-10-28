@@ -14,7 +14,7 @@ end_date | End date in ISO 8601 (`YYYY-MM-DD`).
 **Example:**
 
 ```
-https://api.resourceguruapp.com/v1/example/reports/resource/1685?start_date=2013-01-01&end_date=2013-01-07
+https://api.resourceguruapp.com/v1/example-corp/reports/resource/1685?start_date=2013-01-01&end_date=2013-01-07
 ```
 
 ### Resource Report Response
@@ -22,14 +22,14 @@ https://api.resourceguruapp.com/v1/example/reports/resource/1685?start_date=2013
 ```json
 {
   "id": 1364,
-  "name": "Brendan Gwynne Prettejohn",
+  "name": "Jane Doe",
   "image": "/images/fallback/resources/person/thumb_default.png",
   "booked": 240,
   "unbooked": 2760,
   "availability": 3000,
   "waiting_list": 0,
   "utilization": 0.08,
-  "url": "https://api.resourceguruapp.com/v1/platform45/resources/1364",
+  "url": "https://api.resourceguruapp.com/v1/example-corp/resources/1364",
   "resource_type": "Person",
   "earliest_available_period": "",
   "job_title": ""

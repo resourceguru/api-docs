@@ -14,7 +14,7 @@ end_date | End date in ISO 8601 (`YYYY-MM-DD`).
 **Example:**
 
 ```
-https://api.resourceguruapp.com/v1/example/reports/clients/242?start_date=2013-01-01&end_date=2013-01-07
+https://api.resourceguruapp.com/v1/example-corp/reports/clients/242?start_date=2013-01-01&end_date=2013-01-07
 ```
 
 ### Client Report Response
@@ -31,7 +31,7 @@ https://api.resourceguruapp.com/v1/example/reports/clients/242?start_date=2013-0
   "resources": [
     {
       "id": 1685,
-      "name": "Gerhard Koekemoer",
+      "name": "John Doe",
       "image": "/images/fallback/resources/person/thumb_default.png",
       "booked": 5040,
       "waiting_list": 0,
@@ -39,7 +39,7 @@ https://api.resourceguruapp.com/v1/example/reports/clients/242?start_date=2013-0
       "resource_type": "Person",
       "earliest_available_period": "01 Aug 2014 to 31 Dec 2014 *",
       "utilization": 1,
-      "url": "https://api.resourceguruapp.com/v1/platform45/resources/1685"
+      "url": "https://api.resourceguruapp.com/v1/example-corp/resources/1685"
     }
   ]
 }
