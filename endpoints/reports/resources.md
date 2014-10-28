@@ -140,7 +140,7 @@ https://api.resourceguruapp.com/v1/example-corp/reports/resource/1685?start_date
   "url": "https://api.resourceguruapp.com/v1/example-corp/resources/1364",
   "resource_type": "Person",
   "earliest_available_period": "",
-  "job_title": ""
+  "job_title": "",
   "projects": [
     {
       "name": "No project assigned",
