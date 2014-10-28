@@ -70,7 +70,7 @@ utilization | integer | Total Utilization ratio between `0` and `1`.
 url | string | URL shortcut to view this Resource.
 resource_type | string | Resource Type String.
 earliest_available_period | string | Resource Earliest Available Period.
-job_title | string | Job Title of the Resource
+job_title | string | Job Title of the Resource.
 projects | array | Report breakdown per Project. [(Details)](#projects-key)
 clients | array | Report breakdown per Clients. [(Details)](#client-key)
 
