@@ -89,7 +89,7 @@ utilization | integer | Utilization ratio between `0` and `1` for this Resource.
 url | string | URL shortcut to view this Resource.
 resource_type | string | Resource Type String.
 earliest_available_period | string | Resource Earlist Available Period.
-job_title | string | Resource Job Title
+job_title | string | Resource Job Title.
 custom_fields | array | All custom field ids for resource. [(Details)](#custom-fields-key)
 
 #### Custom Fields Key

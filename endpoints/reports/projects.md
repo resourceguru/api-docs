@@ -62,8 +62,8 @@ Key | Type | Description
 --- | --- | ---
 id  | integer | Unique identifier of Project.
 name | string | Name of this Project.
-client_name | string | Name of Client that this Project belongs to
-client_id | string | Unique identifier of Client that this Project belongs to 
+client_name | string | Name of Client that this Project belongs to.
+client_id | string | Unique identifier of Client that this Project belongs to. 
 color | string | Color used to highlight this Project.
 booked | integer | Time booked in minutes for this Project.
 waiting_list | integer | Time on waiting list in minutes for this Project.

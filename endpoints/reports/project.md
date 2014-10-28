@@ -49,7 +49,7 @@ Key | Type | Description
 --- | --- | ---
 id  | integer | Unique identifier of Project.
 name | string | Name of this Project.
-client_name | string | Name of Client that this Project belongs to
+client_name | string | Name of Client that this Project belongs to.
 color | string | Color used to highlight this Project.
 booked | integer | Time booked in minutes for this Project.
 waiting_list | integer | Time on waiting list in minutes for this Project.
@@ -65,7 +65,7 @@ name | string | Name of this Resource.
 image | string | Image of this Resource.
 booked | integer | Time booked in minutes for this Resource.
 waiting_list | integer | Time on waiting list in minutes for this Resource.
-job_title | string | Job Title of the Resource
+job_title | string | Job Title of the Resource.
 resource_type | string | Resource Type String.
 earliest_available_period | string | Resource Earlist Available Period.
 utilization | integer | Utilization ratio between `0` and `1` for this Resource.
