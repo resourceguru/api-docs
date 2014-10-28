@@ -96,6 +96,15 @@ custom_fields | array | All custom field ids for resource. [(Details)](#custom-f
 
 #### The custom fields array contains the id of the custom field and nested within is the selected custom field option for this resource
 
+** Example:**
+```json
+custom_fields: {
+  108: [
+    "232"
+  ]
+}
+```
+
 # Resource Report
 
 ## Get Report
