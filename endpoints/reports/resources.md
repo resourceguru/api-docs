@@ -55,8 +55,8 @@ https://api.resourceguruapp.com/v1/example-corp/reports/resources?start_date=201
       "resource_type": "Person",
       "earliest_available_period": "25 Aug 2014 - 31 Aug 2014",
       "job_title": null,
-      custom_fields: {
-        22: [
+      "custom_fields": {
+        "22": [
           "33"
         ]
       }
@@ -99,8 +99,8 @@ custom_fields | array | All custom field ids for resource. [(Details)](#custom-f
 **Example:**
 
 ```json
-custom_fields: {
-  108: [
+"custom_fields": {
+  "108": [
     "232"
   ]
 }
@@ -200,5 +200,3 @@ color  | string | Color of client.
 booked | integer | Total time booked in minutes.
 waiting_list | integer | Total time on waiting list in minutes.
 max_usage | integer | Max usage for utilization bar.
-
-
