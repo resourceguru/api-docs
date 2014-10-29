@@ -106,7 +106,7 @@ https://api.resourceguruapp.com/v1/example-corp/reports/projects/148?start_date=
       "image": "/images/fallback/resources/person/thumb_default.png",
       "booked": 5040,
       "waiting_list": 0,
-      "job_title": "Developer"
+      "job_title": "Developer",
       "resource_type": "Person",
       "earliest_available_period": "01 Aug 2014 to 31 Dec 2014 *",
       "utilization": 1,
