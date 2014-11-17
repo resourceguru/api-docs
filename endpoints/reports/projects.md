@@ -116,6 +116,23 @@ https://api.resourceguruapp.com/v1/example-corp/reports/projects/148?start_date=
 }
 ```
 
+### Project Report for 'No Project assigned'
+
+* `GET /v1/:subdomain/reports/projects/0` returns a **Project Report for 'No Project assigned'**.
+
+### Required Query String Parameters
+
+Parameter | Description
+--- | --- | ---
+start_date | Start date in ISO 8601 (`YYYY-MM-DD`).
+end_date | End date in ISO 8601 (`YYYY-MM-DD`).
+
+**Example:**
+
+```
+https://api.resourceguruapp.com/v1/example-corp/reports/projects/0?start_date=2013-01-01&end_date=2013-01-07
+```
+
 Key | Type | Description
 --- | --- | ---
 id  | integer | Unique identifier of Project.
