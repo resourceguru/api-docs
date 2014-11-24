@@ -113,9 +113,9 @@ https://api.resourceguruapp.com/v1/example-corp/reports/clients/242?start_date=2
 }
 ```
 
-### Client Report for 'No Client assigned'
+### Client Report for 'No client assigned'
 
-* `GET /v1/:subdomain/reports/clients/0` returns a **Client Report for 'No Client assigned'**.
+* `GET /v1/:subdomain/reports/clients/0` returns a **Client Report for 'No client assigned'**.
 
 ### Required Query String Parameters
 
