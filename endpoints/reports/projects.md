@@ -116,9 +116,9 @@ https://api.resourceguruapp.com/v1/example-corp/reports/projects/148?start_date=
 }
 ```
 
-### Project Report for 'No Project assigned'
+### Project Report for 'No project assigned'
 
-* `GET /v1/:subdomain/reports/projects/0` returns a **Project Report for 'No Project assigned'**.
+* `GET /v1/:subdomain/reports/projects/0` returns a **Project Report for 'No project assigned'**.
 
 ### Required Query String Parameters
 
