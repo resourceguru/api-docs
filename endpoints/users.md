@@ -43,7 +43,7 @@
     "activation_state": "active",
     "created_at": "2012-06-05T21:17:19.000Z",
     "updated_at": "2014-08-19T09:27:52.000Z",
-    "color": "#2654ea"
+    "color": "#2654ea",
     "permissions": "basic_user",
     "booking_rights": "view",
     "client_rights": "view",
