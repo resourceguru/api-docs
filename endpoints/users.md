@@ -22,12 +22,12 @@
     "created_at": "2012-06-05T21:17:19.000Z",
     "updated_at": "2014-08-19T09:27:52.000Z",
     "color": "#ef247f",
-    "permissions:": "administrator",
+    "permissions": "administrator",
     "booking_rights": "manage_all",
-    "client_rights:" "manage_all",
-    "project_rights:" "manage_all",
-    "resource_rights:" "manage_all",
-    "report_rights:" "view",
+    "client_rights": "manage_all",
+    "project_rights": "manage_all",
+    "resource_rights": "manage_all",
+    "report_rights": "view",
     "owner": "true"
   },
   {
@@ -43,14 +43,14 @@
     "activation_state": "active",
     "created_at": "2012-06-05T21:17:19.000Z",
     "updated_at": "2014-08-19T09:27:52.000Z",
-    "color": "#2654ea"
-    "permissions:": "basic_user",
+    "color": "#2654ea",
+    "permissions": "basic_user",
     "booking_rights": "view",
-    "client_rights:" "view",
-    "project_rights:" "view",
-    "resource_rights:" "view",
-    "report_rights:" "view",
-    "owner:" "false"
+    "client_rights": "view",
+    "project_rights": "view",
+    "resource_rights": "view",
+    "report_rights": "view",
+    "owner": "false"
   }
 ]
 ```
@@ -98,12 +98,12 @@ owner | boolean | Boolean representing whether a User is the account owner.
   "created_at": "2012-06-05T21:17:19.000Z",
   "updated_at": "2014-08-19T09:27:52.000Z",  
   "color": "#ffcc00",
-  "permissions:": "administrator",
+  "permissions": "administrator",
   "booking_rights": "manage_all",
-  "client_rights:" "manage_all",
-  "project_rights:" "manage_all",
-  "resource_rights:" "manage_all",
-  "report_rights:" "view",
+  "client_rights": "manage_all",
+  "project_rights": "manage_all",
+  "resource_rights": "manage_all",
+  "report_rights": "view",
   "owner": "true"
 }
 ```
