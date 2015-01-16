@@ -153,7 +153,7 @@ notes | string | Notes about this Resource.
 updated_at | timestamp | Last updated date and time in ISO 8601.
 account | hash | -
 resource_type | hash | -
-selected_custom_field_options | array | -
+selected_custom_field_options | array | Custom field IDs and values. Please note that these are only returned if a value exists for the custom field.
 timezone | hash | -
 
 ## Get Resource Availability, Time Booked, Time Unbooked, Time on Waiting List and Utilization Rate
