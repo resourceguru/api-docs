@@ -1,7 +1,5 @@
 # Webhooks
 
-**Please note that webhooks are still currently in beta and development is still ongoing.**
-
 Resource Guru supports integration with other services using outgoing webhooks.
 Account owners and users with administrative priveledges can create new webhooks
 for services by posting to the webhooks endpoint with a name of the webhook,
@@ -10,7 +8,7 @@ and the events which should be sent in the payloads.
 Event types supported include Bookings, Clients, Projects,
 Resources, Resource Types and Accounts.
 
-Payloads are created every minute and includes any changes made
+Payloads are created at real time and includes any changes made
 within the application for the event types specified.
 
 For enhanced security, you can provide a secret string
@@ -21,13 +19,11 @@ The content type of payloads being sent is JSON, with the following headers:
 
 Header | Description
 --- | ---
-X-Rate-Limit-Limit | The current rate limit of our API.
-X-Rate-Limit-Remaining | The number of requests left before rate limiting is triggered.
 X-ResourceGuru-Key | The secret of the created webhook.
 X-ResourceGuru-Signature | An HMAC SHA256 digest of the webhook secret and the payload to be delivered.
 
-At the end of every minute, all changes made on events for the relevant account will
-be sent as a payload to the payload (receiving) URL.
+Once a change has been made on an event, the change will be sent sent as a payload
+to the payload (receiving) URL.
 
 ## Get Webhooks
 
@@ -46,7 +42,9 @@ be sent as a payload to the payload (receiving) URL.
     "events": ["clients", "projects", "accounts", "resources", "resource_types", "bookings"],
     "url": "https://api.resourceguruapp.com/v1/example-corp/webhooks/1",
     "created_at": "2013-04-30T12:00:00+00:00",
-    "updated_at": "2013-04-30T12:00:00+00:00"
+    "updated_at": "2013-04-30T12:00:00+00:00",
+    "status": "ready",
+    "paused", false
   },
   {
     "id": 2,
@@ -57,7 +55,9 @@ be sent as a payload to the payload (receiving) URL.
     "events": ["clients", "projects", "accounts", "resources", "resource_types", "bookings"],
     "url": "https://api.resourceguruapp.com/v1/example-corp/webhooks/2",
     "created_at": "2013-04-30T12:00:00+00:00",
-    "updated_at": "2013-04-30T12:00:00+00:00"
+    "updated_at": "2013-04-30T12:00:00+00:00",
+    "status": "ready",
+    "paused": false
   }
 ]
 ```
@@ -72,6 +72,12 @@ user_id | integer | The id of the user who created the webhook.
 events | array | The events for the payloads to be sent to the payload (receiving) URL.
 created_at | timestamp | Date and time created in ISO 8601.
 updated_at | timestamp | Date and time last updated in ISO 8601.
+status | string | Status which identifies what state the current webhook is in.
+paused | boolean | A boolean denoting whether or not the webhook is paused.
+
+### Status
+The status of a webhook is reflective of the latest activity in terms of payloads delivered. The status can be either "ready", which signifies that no payloads have been sent yet, "success", which signifies that the webhook is successfully delivering payloads, "retrying", which signifies that a payload is not being successfully delivered and is being retried, and "failed", which signifies that the payload which is failing has reached the maximum number of
+attempts, which results in this payload not being automatically retried.
 
 ## Get Webhook
 
@@ -89,7 +95,9 @@ updated_at | timestamp | Date and time last updated in ISO 8601.
   "events": ["clients", "projects", "accounts", "resources", "resource_types", "bookings"],
   "url": "https://api.resourceguruapp.com/v1/example-corp/webhooks/1",
   "created_at": "2013-04-30T12:00:00+00:00",
-  "updated_at": "2013-04-30T12:00:00+00:00"
+  "updated_at": "2013-04-30T12:00:00+00:00",
+  "status": "ready",
+  "paused": false
 }
 ```
 
@@ -103,6 +111,8 @@ user_id | integer | The id of the user who created this webhook.
 events | array | The events for the payloads to be sent to the payload (receiving) URL.
 created_at | timestamp | Date and time created in ISO 8601.
 updated_at | timestamp | Date and time last updated in ISO 8601.
+status | string | Status which identifies what state the current webhook is in.
+paused | boolean | A boolean denoting whether or not the webhook is paused.
 
 ## Create a Webhook
 
