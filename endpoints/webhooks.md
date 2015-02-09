@@ -44,7 +44,7 @@ to the payload (receiving) URL.
     "created_at": "2013-04-30T12:00:00+00:00",
     "updated_at": "2013-04-30T12:00:00+00:00",
     "status": "ready",
-    "paused", false
+    "paused": false
   },
   {
     "id": 2,
