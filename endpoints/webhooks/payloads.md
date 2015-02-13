@@ -87,12 +87,21 @@ id | integer | Unique identifier for a payload.
 account_id | integer | The id of the account to which the payload belongs.
 webhook_id | integer | The id of the account to which the webhook belongs.
 model | object | The data which has changed based on the events for the webhook.
-action | string | The action which has taken place which can either be "create", "update" or "delete"
+action | string | The action which has taken place which can either be "create", "update" or "delete".
 attempts | integer | The number of times which the delivery of the payload has been attempted.
-status | string | Status which identifies what state the current payload is in.
-created_at | timestamp | Date and time created in ISO 8601.
-last_sent_on | timestamp | Date and time last sent on in ISO 8601.
-paused | boolean | A boolean denoting whether or not the webhook is paused.
-request_headers | object | The data which is sent along as headers to the payload (receiving) URL.
-response_from_http_client | integer | The response which is received upon sending the payload.
-next_try | timestamp | Date and time of the next sending attempt in ISO 8601.
+status | string | Identifies the state the payload is currently in. One of "pending", "delivered", "failing" or "failed".
+created_at | timestamp | Date and time created in ISO8601.
+last_sent_on | timestamp | Date and time last sent on in ISO8601. `null` if no attempt has been made to send the payload yet.
+paused | boolean | A boolean, `true` if the webhook is paused.
+request_headers | object | The request headers sent with the payload.
+response_from_http_client | integer | The response code received from the remote endpoint.
+next_try | timestamp | Date and time of the next attempt to send the payload formatted as ISO8601. `null` if no further attempt is scheduled.
+
+Payload statuses:
+
+Status | Description
+---    | ---
+Pending   | No attempt has been made to send the payload yet.
+Delivered | The payload has been successfully delivered (The remote server responded with 2XX).
+Failing   | The attempt to send the payload has failed. (The remote server timed out or responded with non-2XX)
+Failed    | The payload delivery has failed 100 times.
