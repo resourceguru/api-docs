@@ -22,7 +22,7 @@ Payloads are sent immediately when changes are made within the application
 and the webhook is subscribed to those changes. Changes made through the API
 will also trigger webhook payloads. We will automatically try to deliver a payload
 100 times before marking it as failed. More detail on payload statuses can be found in the
-[payloads endpoint documentation](webhooks/payloads.md)
+[payloads endpoint documentation](webhooks/payloads.md).
 
 For added security, you can provide a secret string which will be combined 
 with the payload's request body to create a HMAC SHA256 digest and added as a
