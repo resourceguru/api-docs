@@ -27,13 +27,58 @@ Payloads are sent as JSON with the following headers:
 
 Header | Description
 --- | ---
-X-ResourceGuru-Key | The secret of the created webhook.
+X-ResourceGuru-Key | The secret provided when creating the webhook.
 X-ResourceGuru-Signature | A HMAC SHA256 digest of the request body, signed by the webhook secret.
 
 The signature is generated on our side using the OpenSSL library using the following code:
 
 ``` ruby
 OpenSSL::HMAC.hexdigest(OpenSSL::Digest.new('sha256'), webhook_, request_body)
+```
+
+## Payload format
+
+Payloads are sent as JSON.
+
+Key | Type |Description
+--- | --- |---
+id  | Integer | Each payload has a unique incrementing ID
+timestamp | Integer | A UNIX epoch timestamp when the event occurred.
+payload | Object | Format varies based on the type of event. We use the same formatting as in the API for each type of object. The keys `action` and `type` are added.
+
+The payload `action` will be one of:
+
+- create
+- update
+- delete
+
+The payload `type` will be one of:
+
+- account
+- booking
+- client
+- project
+- resource
+- resource_type
+
+An example payload when a new client is created:
+
+``` json
+{
+  "id": 1,
+  "timestamp": 1423472753,
+  "payload": {
+    "id": 1234,
+    "archived": false,
+    "color": null,
+    "name": "A client",
+    "notes": "",
+    "created_at": "2015-02-04T16:40:23.000Z",
+    "updated_at":"2015-02-09T09:05:53.581Z",
+    "action": "delete",
+    "type": "client"
+  }
+}
 ```
 
 ## Get Webhooks
