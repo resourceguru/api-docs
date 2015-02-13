@@ -22,7 +22,8 @@ Payloads are sent immediately when changes are made within the application
 and the webhook is subscribed to those changes. Changes made through the API
 will also trigger webhook payloads. We will automatically try to deliver a payload
 100 times before marking it as failed. More detail on payload statuses can be found in the
-[payloads endpoint documentation](webhooks/payloads.md).
+[payloads endpoint documentation](webhooks/payloads.md). Payloads are dropped from 
+Resource Guru's history after 30 days. **Unsuccessful payloads will be lost after failing for 30 days**.
 
 For added security, you can provide a secret string which will be combined 
 with the payload's request body to create a HMAC SHA256 digest and added as a
@@ -133,14 +134,18 @@ payload_url | string | Payload (receiving) URL for the webhook.
 account_id | integer | The id of the account to which the webhook belongs.
 user_id | integer | The id of the user who created the webhook.
 events | array | The events for the payloads to be sent to the payload (receiving) URL.
-created_at | timestamp | Date and time created in ISO 8601.
-updated_at | timestamp | Date and time last updated in ISO 8601.
-status | string | Status which identifies what state the current webhook is in.
+created_at | timestamp | Date and time created in ISO8601.
+updated_at | timestamp | Date and time last updated in ISO8601.
+status | string | Identifies the state the webhook is currently in. Details in the [Webhook statuses](#webhook-statuses) table below.
 paused | boolean | A boolean denoting whether or not the webhook is paused.
 
-### Status
-The status of a webhook is reflective of the latest activity in terms of payloads delivered. The status can be either "ready", which signifies that no payloads have been sent yet, "success", which signifies that the webhook is successfully delivering payloads, "retrying", which signifies that a payload is not being successfully delivered and is being retried, and "failed", which signifies that the payload which is failing has reached the maximum number of
-attempts, which results in this payload not being automatically retried.
+### Webhook Statuses
+Status | Description
+--- | ---
+Ready | No payloads have been sent yet.
+Success | The last attempted payload has been delivered successfully. (See [Payload Statuses](webhooks/payloads.md#payload-statuses)
+Retrying | The last attempted payload has failed to be delivered.
+Failed | The last attempted payload has failed 100 times and no further attempt will be made to deliver payloads automatically.
 
 ## Get Webhook
 
@@ -172,9 +177,9 @@ payload_url | string | Payload (receiving) URL for this webhook.
 account_id | integer | The id of the account to which this webhook belongs.
 user_id | integer | The id of the user who created this webhook.
 events | array | The events for the payloads to be sent to the payload (receiving) URL.
-created_at | timestamp | Date and time created in ISO 8601.
-updated_at | timestamp | Date and time last updated in ISO 8601.
-status | string | Status which identifies what state the current webhook is in.
+created_at | timestamp | Date and time created in ISO8601.
+updated_at | timestamp | Date and time last updated in ISO8601.
+status | string | Identifies the state the webhook is currently in. Details in the [Webhook statuses](#webhook-statuses) table below.
 paused | boolean | A boolean denoting whether or not the webhook is paused.
 
 ## Create a Webhook
@@ -197,7 +202,7 @@ paused | boolean | A boolean denoting whether or not the webhook is paused.
 }
 ```
 
-This will return `201 Created`, with the location of the new webhook in the Location header
+This will return `201 Created`, with the location of the new webhook in the `Location` header
 along with the current JSON representation of the webhook if the creation was successful.
 If the user does not have administrative privileges, you'll see `403 Forbidden`.
 
@@ -206,20 +211,20 @@ If the user does not have administrative privileges, you'll see `403 Forbidden`.
 * `PUT /v1/:subdomain/webhooks/1` will update the webhook from the parameters passed and return
 the JSON representation of the updated webhook. If the user does not have administrative
 privileges, you'll see `403 Forbidden`.
-If the user tries to specify a user_id when updating the webhook, '422 Unprocessable Entity'
-will be returned as the user_id is the point of reference to the creator of the webhook
-which should not be modified.
+If the user tries to specify a `user_id` when updating the webhook, `422 Unprocessable Entity`
+will be returned as the `user_id` is the read-only point of reference to the creator of the webhook.
 
 ## Delete a Webhook
 
 * `DELETE /v1/:subdomain/webhooks/1` will delete the webhook specified and return `204 No Content`
-if that was successful. If the user does not have administrative
+if the operation was successful. If the user does not have administrative
 privileges, you'll see `403 Forbidden`.
 
 ## Test a Webhook
 
 * `GET /v1/:subdomain/webhooks/1/test` sends a test payload to the payload endpoint.
 
-This will return a status code which depends on the endpoint interacting with.
-Some endpoints, such as requestb.in for example, will return either 200 or 201 if successful.
-If unsuccessful, the service should return either 404 or 422.
+This will return a status code which depends on the endpoint the webhook is interacting with.
+Some services, such as requestb.in, will return either 200 or 201 if successful.
+If unsuccessful, the service should return any non-2XX code. HTTP semantics suggest using 422
+for this purpose.
