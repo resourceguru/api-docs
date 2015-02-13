@@ -143,7 +143,7 @@ paused | boolean | A boolean denoting whether or not the webhook is paused.
 Status | Description
 --- | ---
 Ready | No payloads have been sent yet.
-Success | The last attempted payload has been delivered successfully. (See [Payload Statuses](webhooks/payloads.md#payload-statuses)
+Success | The last attempted payload has been delivered successfully. (See [Payload Statuses](webhooks/payloads.md#payload-statuses))
 Retrying | The last attempted payload has failed to be delivered.
 Failed | The last attempted payload has failed 100 times and no further attempt will be made to deliver payloads automatically.
 
