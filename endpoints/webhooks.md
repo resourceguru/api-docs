@@ -30,8 +30,8 @@ Payloads are sent as JSON with the following headers:
 
 Header | Description
 --- | ---
-User-Agent | The string "ResourceGuru/Webhooks" identifies Resource Guru as the sender.
-Content-Type | The string "application/json" identifies the content type of the payload.
+User-Agent | The string `ResourceGuru/Webhooks` identifies Resource Guru as the sender.
+Content-Type | The string `application/json` identifies the content type of the payload.
 X-ResourceGuru-Key | The secret provided when creating the webhook.
 X-ResourceGuru-Signature | A HMAC SHA256 digest of the request body, signed by the webhook secret.
 
