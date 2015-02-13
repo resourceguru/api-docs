@@ -40,7 +40,7 @@ X-ResourceGuru-Signature | A HMAC SHA256 digest of the request body, signed by t
 The signature is generated on our side using the OpenSSL library using the following code:
 
 ``` ruby
-OpenSSL::HMAC.hexdigest(OpenSSL::Digest.new('sha256'), webhook_, request_body)
+OpenSSL::HMAC.hexdigest(OpenSSL::Digest.new('sha256'), webhook_secret, request_body)
 ```
 
 ## Payload format
