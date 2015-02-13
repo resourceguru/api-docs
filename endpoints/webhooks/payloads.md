@@ -17,76 +17,70 @@ data which has changed.
 ```json
 [
   {
-    "id":1,
-    "account_id":1,
-    "webhook_id":1,
-    "model":
-      {
-        "id":1,
-        "timestamp":1423469363,
-        "payload":
-          {
-            "id":1234,
-            "archived":false,
-            "color":null,
-            "name":"A client",
-            "notes":"",
-            "created_at":"2015-02-05T18:44:36.000Z",
-            "updated_at":"2015-02-09T08:09:22.547Z",
-            "action":"delete",
-            "type":"client"
+    "id": 1,
+    "account_id": 1,
+    "webhook_id": 1,
+    "model": {
+        "id": 1,
+        "timestamp": 1423469363,
+        "payload": {
+            "id": 1234,
+            "archived": false,
+            "color": null,
+            "name": "A client",
+            "notes": "",
+            "created_at": "2015-02-05T18:44:36.000Z",
+            "updated_at": "2015-02-09T08:09:22.547Z",
+            "action": "delete",
+            "type": "client"
           }
       },
-    "action":"delete",
-    "attempts":1,
-    "status":"delivered",
-    "last_sent_on":"2015-02-09T08:09:24.292Z",
-    "created_at":"2015-02-09T08:09:23.047Z",
-    "request_headers":
-      {
-        "User-Agent":"ResourceGuru/Webhooks",
-        "Content-Type":"application/json",
-        "X-ResourceGuru-Key":"secret",
-        "X-ResourceGuru-Signature":"41812cd012a1abd5a594d8633ebb5501a5cb0d3ee56bb4a4069b9f9e3bf962d6"
+    "action": "delete",
+    "attempts": 1,
+    "status": "delivered",
+    "last_sent_on": "2015-02-09T08:09:24.292Z",
+    "created_at": "2015-02-09T08:09:23.047Z",
+    "request_headers": {
+        "User-Agent": "ResourceGuru/Webhooks",
+        "Content-Type": "application/json",
+        "X-ResourceGuru-Key": "secret",
+        "X-ResourceGuru-Signature": "41812cd012a1abd5a594d8633ebb5501a5cb0d3ee56bb4a4069b9f9e3bf962d6"
       },
-    "response_from_http_client":201,
-    "next_try":null
+    "response_from_http_client": 201,
+    "next_try": null
   },
   {
-    "id":2,
-    "account_id":1,
-    "webhook_id":1,
-    "model":
-      {
-        "id":1,
-        "timestamp":1423472753,
-        "payload":
-          {
-            "id":1234,
-            "archived":false,
-            "color":null,
-            "name":"A client",
-            "notes":"",
-            "created_at":"2015-02-04T16:40:23.000Z",
-            "updated_at":"2015-02-09T09:05:53.581Z",
-            "action":"delete",
-            "type":"client"
+    "id": 2,
+    "account_id": 1,
+    "webhook_id": 1,
+    "model": {
+        "id": 1,
+        "timestamp": 1423472753,
+        "payload": {
+            "id": 1234,
+            "archived": false,
+            "color": null,
+            "name": "A client",
+            "notes": "",
+            "created_at": "2015-02-04T16:40:23.000Z",
+            "updated_at": "2015-02-09T09:05:53.581Z",
+            "action": "delete",
+            "type": "client"
           }
       },
-    "action":"delete",
-    "attempts":1,
-    "status":"delivered",
-    "last_sent_on":"2015-02-09T09:05:55.185Z",
-    "created_at":"2015-02-09T09:05:53.684Z",
-    "request_headers":
-      {
-        "User-Agent":"ResourceGuru/Webhooks",
-        "Content-Type":"application/json",
-        "X-ResourceGuru-Key":"secret",
-        "X-ResourceGuru-Signature":"d0537e5b65fdd97c3722f53569ba2e89335889fa25f235c5d864f1d9422ec400"
+    "action": "delete",
+    "attempts": 1,
+    "status": "delivered",
+    "last_sent_on": "2015-02-09T09:05:55.185Z",
+    "created_at": "2015-02-09T09:05:53.684Z",
+    "request_headers": {
+        "User-Agent": "ResourceGuru/Webhooks",
+        "Content-Type": "application/json",
+        "X-ResourceGuru-Key": "secret",
+        "X-ResourceGuru-Signature": "d0537e5b65fdd97c3722f53569ba2e89335889fa25f235c5d864f1d9422ec400"
       },
-    "response_from_http_client":201,
-    "next_try":null
+    "response_from_http_client": 201,
+    "next_try": null
   }
 ]
 ```
