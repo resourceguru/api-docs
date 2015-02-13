@@ -89,7 +89,7 @@ webhook_id | integer | The id of the account to which the webhook belongs.
 model | object | The data which has changed based on the events for the webhook.
 action | string | The action which has taken place which can either be "create", "update" or "delete".
 attempts | integer | The number of times which the delivery of the payload has been attempted.
-status | string | Identifies the state the payload is currently in. Details in the [Payload statuses](#payload_statuses) table below.
+status | string | Identifies the state the payload is currently in. Details in the [Payload statuses](#payload-statuses) table below.
 created_at | timestamp | Date and time created in ISO8601.
 last_sent_on | timestamp | Date and time last sent on in ISO8601. `null` if no attempt has been made to send the payload yet.
 paused | boolean | A boolean, `true` if the webhook is paused.
