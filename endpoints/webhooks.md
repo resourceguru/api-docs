@@ -47,9 +47,9 @@ Payloads are sent as JSON.
 
 Key | Type |Description
 --- | --- |---
-id  | Integer | Each payload has a unique incrementing ID
-timestamp | Integer | A UNIX epoch timestamp when the event occurred.
-payload | Object | Format varies based on the type of event. We use the same formatting as in the API for each type of object. The keys `action` and `type` are added.
+id  | integer | Each payload has a unique incrementing ID
+timestamp | integer | A UNIX epoch timestamp when the event occurred.
+payload | object | Format varies based on the type of event. We use the same formatting as in the API for each type of object. The keys `action` and `type` are added.
 
 The payload `action` will be one of:
 
