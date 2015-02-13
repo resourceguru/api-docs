@@ -1,29 +1,40 @@
 # Webhooks
 
 Resource Guru supports integration with other services using outgoing webhooks.
-Account owners and users with administrative priveledges can create new webhooks
+Account owners and users with administrative privileges can create new webhooks
 for services by posting to the webhooks endpoint with a name of the webhook,
-the payload url which receives the payloads,
-and the events which should be sent in the payloads.
-Event types supported include Bookings, Clients, Projects,
-Resources, Resource Types and Accounts.
+the payload URL which receives the payloads,
+and the types of events which should be sent to the payload URL.
 
-Payloads are created at real time and includes any changes made
-within the application for the event types specified.
+The supported event types are:
 
-For enhanced security, you can provide a secret string
-which will be combined with the payload to create
-an HMAC SHA256 digest as an added security header.
+- Bookings
+- Clients
+- Projects
+- Resources
+- Resource Types
+- Accounts
 
-The content type of payloads being sent is JSON, with the following headers:
+Payloads are sent immediately when changes are made within the application
+and the webhook is subscribed to those changes. Changes made through the API
+will also trigger webhook payloads.
+
+For added security, you can provide a secret string which will be combined 
+with the payload's request body to create a HMAC SHA256 digest and added as a
+request header.
+
+Payloads are sent as JSON with the following headers:
 
 Header | Description
 --- | ---
 X-ResourceGuru-Key | The secret of the created webhook.
-X-ResourceGuru-Signature | An HMAC SHA256 digest of the webhook secret and the payload to be delivered.
+X-ResourceGuru-Signature | A HMAC SHA256 digest of the request body, signed by the webhook secret.
 
-Once a change has been made on an event, the change will be sent sent as a payload
-to the payload (receiving) URL.
+The signature is generated on our side using the OpenSSL library using the following code:
+
+``` ruby
+OpenSSL::HMAC.hexdigest(OpenSSL::Digest.new('sha256'), webhook_, request_body)
+```
 
 ## Get Webhooks
 
