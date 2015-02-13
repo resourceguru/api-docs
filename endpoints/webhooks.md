@@ -199,13 +199,13 @@ paused | boolean | A boolean denoting whether or not the webhook is paused.
 
 This will return `201 Created`, with the location of the new webhook in the Location header
 along with the current JSON representation of the webhook if the creation was successful.
-If the user does not have administrative priveleges, you'll see `403 Forbidden`.
+If the user does not have administrative privileges, you'll see `403 Forbidden`.
 
 ## Update a Webhook
 
 * `PUT /v1/:subdomain/webhooks/1` will update the webhook from the parameters passed and return
 the JSON representation of the updated webhook. If the user does not have administrative
-priveleges, you'll see `403 Forbidden`.
+privileges, you'll see `403 Forbidden`.
 If the user tries to specify a user_id when updating the webhook, '422 Unprocessable Entity'
 will be returned as the user_id is the point of reference to the creator of the webhook
 which should not be modified.
@@ -214,7 +214,7 @@ which should not be modified.
 
 * `DELETE /v1/:subdomain/webhooks/1` will delete the webhook specified and return `204 No Content`
 if that was successful. If the user does not have administrative
-priveleges, you'll see `403 Forbidden`.
+privileges, you'll see `403 Forbidden`.
 
 ## Test a Webhook
 
