@@ -6,6 +6,9 @@ for services by posting to the webhooks endpoint with a name of the webhook,
 the payload URL which receives the payloads,
 and the types of events which should be sent to the payload URL.
 
+**Update:** Account owners and users with administrative privileges can 
+now manage webhooks through the settings page in the Resource Guru application.
+
 The supported event types are:
 
 - Bookings
@@ -173,13 +176,13 @@ paused | boolean | A boolean denoting whether or not the webhook is paused.
 ## Create a Webhook
 
 * `POST /v1/:subdomain/webhooks` will create a new webhook from the parameters passed.
-* Supported events include:
-  * "accounts"
-  * "bookings"
-  * "clients"
-  * "projects"
-  * "resources"
-  * "resource_types"
+* Supported events are:
+  * accounts
+  * bookings
+  * clients
+  * projects
+  * resources
+  * resource_types
 
 ```json
 {
