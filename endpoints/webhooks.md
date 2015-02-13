@@ -32,8 +32,8 @@ Header | Description
 --- | ---
 User-Agent | The string `ResourceGuru/Webhooks` identifies Resource Guru as the sender.
 Content-Type | The string `application/json` identifies the content type of the payload.
-X-ResourceGuru-Key | The secret provided when creating the webhook.
-X-ResourceGuru-Signature | A HMAC SHA256 digest of the request body, signed by the webhook secret.
+X-ResourceGuru-Key | The secret provided when creating the webhook. This is only sent if a webhook secret is set.
+X-ResourceGuru-Signature | A HMAC SHA256 digest of the request body, signed by the webhook secret. This is only sent if a webhook secret is set.
 
 The signature is generated on our side using the OpenSSL library using the following code:
 
