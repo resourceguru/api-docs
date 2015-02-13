@@ -1,12 +1,8 @@
 # Payloads
 
-Payloads are created for webhooks once any interactions with the application have taken place.
-All payloads are created at real time, and consist of a unique id, a webhook id, which references
-the webhook which that payload was created for, an account id, which references which account the
-payload belongs to, the date when it was created, the event which the payload was created for,
-the action which triggered the creation of the payload, the time which the payload was last sent
-on, the response from the webhook's payload (receiving) URL, and the model, which consists of the
-data which has changed.
+Payloads are created for webhooks once any interaction with the application takes place.
+All payloads are created immediately once an action is performed and the webhook is subscribed
+to that action. The format of a payload in the API is detailed below.
 
 ## Get Payloads
 
