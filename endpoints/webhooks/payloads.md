@@ -92,7 +92,7 @@ attempts | integer | The number of times which the delivery of the payload has b
 status | string | Identifies the state the payload is currently in. Details in the [Payload statuses](#payload-statuses) table below.
 created_at | timestamp | Date and time created in ISO8601.
 last_sent_on | timestamp | Date and time last sent on in ISO8601. `null` if no attempt has been made to send the payload yet.
-paused | boolean | A boolean, `true` if the webhook is paused.
+paused | boolean | `true` if the webhook is paused.
 request_headers | object | The request headers sent with the payload.
 response_from_http_client | integer | The response code received from the remote endpoint.
 next_try | timestamp | Date and time of the next attempt to send the payload formatted as ISO8601. `null` if no further attempt is scheduled.
