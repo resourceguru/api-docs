@@ -104,4 +104,4 @@ Status | Description
 Pending   | No attempt has been made to send the payload yet.
 Delivered | The payload has been successfully delivered (The remote server responded with 2XX).
 Failing   | The attempt to send the payload has failed. (The remote server timed out or responded with non-2XX)
-Failed    | The payload delivery has failed 100 times.
+Failed    | The payload delivery has failed 100 times and will not automatically try again.
