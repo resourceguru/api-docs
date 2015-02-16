@@ -1,13 +1,8 @@
 # Webhooks
 
-Resource Guru supports integration with other services using outgoing webhooks.
-Account owners and users with administrative privileges can create new webhooks
-for services by posting to the webhooks endpoint with a name of the webhook,
-the payload URL which receives the payloads,
-and the types of events which should be sent to the payload URL.
+Resource Guru supports integration with other services using outgoing webhooks. In a nutshell, webhooks provide a way for Resource Guru to send real-time information to other apps. For example, when a booking is made in Resource Guru, webhooks can be used to post information (payloads) about that booking to a payload (receiving) URL. Getting this information was always possible via our basic API, but webhooks proactively post the changes instead. This means that apps no longer need to keep polling the API to check what's changed - resulting in much greater efficiency.
 
-**Update:** Account owners and users with administrative privileges can 
-now manage webhooks through the settings page in the Resource Guru application.
+Account owners and users with administrative privileges can create new webhooks either via the API endpoint or via settings in their Resource Guru account. Simply specify the name of the webhook, the payload URL which receives the payloads, and the types of events which should be sent to the payload URL. For added security, you can provide a secret string which will be combined with the payload's request body to create a HMAC SHA256 digest and added as a request header.
 
 The supported event types are:
 
@@ -18,16 +13,7 @@ The supported event types are:
 - Resource Types
 - Accounts
 
-Payloads are sent immediately when changes are made within the application
-and the webhook is subscribed to those changes. Changes made through the API
-will also trigger webhook payloads. We will automatically try to deliver a payload
-100 times before marking it as failed. More detail on payload statuses can be found in the
-[payloads endpoint documentation](webhooks/payloads.md). Payloads are dropped from 
-Resource Guru's history after 30 days. **Unsuccessful payloads will be lost after failing for 30 days**.
-
-For added security, you can provide a secret string which will be combined 
-with the payload's request body to create a HMAC SHA256 digest and added as a
-request header.
+As soon as changes are made within a relevant Resource Guru acccout, payloads are sent immediately for any of the events that have been subscribed to in the webhook. We will automatically try to deliver a payload 100 times before marking it as failed. More detail on payload statuses can be found in the [payloads endpoint documentation](webhooks/payloads.md). Payloads are dropped from Resource Guru's history after 30 days. **Unsuccessful payloads will be lost after failing for 30 days**.
 
 Payloads are sent as JSON with the following headers:
 
@@ -80,10 +66,10 @@ An example payload when a new client is created:
     "archived": false,
     "color": null,
     "name": "A client",
-    "notes": "",
+    "notes": "Some notes",
     "created_at": "2015-02-04T16:40:23.000Z",
     "updated_at":"2015-02-09T09:05:53.581Z",
-    "action": "delete",
+    "action": "create",
     "type": "client"
   }
 }
@@ -133,7 +119,7 @@ name | string | Name of a webhook.
 payload_url | string | Payload (receiving) URL for the webhook.
 account_id | integer | The id of the account to which the webhook belongs.
 user_id | integer | The id of the user who created the webhook.
-events | array | The events for the payloads to be sent to the payload (receiving) URL.
+events | array | The events for which payloads will be sent to the payload (receiving) URL.
 created_at | timestamp | Date and time created in ISO8601.
 updated_at | timestamp | Date and time last updated in ISO8601.
 status | string | Identifies the state the webhook is currently in. Details in the [Webhook statuses](#webhook-statuses) table below.
@@ -176,7 +162,7 @@ name | string | Name of this webhook.
 payload_url | string | Payload (receiving) URL for this webhook.
 account_id | integer | The id of the account to which this webhook belongs.
 user_id | integer | The id of the user who created this webhook.
-events | array | The events for the payloads to be sent to the payload (receiving) URL.
+events | array | The events for which payloads will be sent to the payload (receiving) URL.
 created_at | timestamp | Date and time created in ISO8601.
 updated_at | timestamp | Date and time last updated in ISO8601.
 status | string | Identifies the state the webhook is currently in. Details in the [Webhook statuses](#webhook-statuses) table below.
@@ -225,6 +211,6 @@ privileges, you'll see `403 Forbidden`.
 * `GET /v1/:subdomain/webhooks/1/test` sends a test payload to the payload endpoint.
 
 This will return a status code which depends on the endpoint the webhook is interacting with.
-Some services, such as requestb.in, will return either 200 or 201 if successful.
+Some services, such as http://requestb.in, will return either 200 or 201 if successful.
 If unsuccessful, the service should return any non-2XX code. HTTP semantics suggest using 422
 for this purpose.
