@@ -1,8 +1,6 @@
 # Payloads
 
-Payloads are created for webhooks once any interaction with the application takes place.
-All payloads are created immediately once an action is performed and the webhook is subscribed
-to that action. The format of a payload in the API is detailed below.
+Payloads are created for webhooks once any interaction with the application takes place. All payloads are created immediately once an action is performed for webhooks that are subscribed to that action. The format of a payload in the API is detailed below.
 
 ## Get Payloads
 
