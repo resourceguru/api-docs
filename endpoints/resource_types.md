@@ -28,6 +28,9 @@
           }
         ]
       }
+    ],
+    "custom_attributes": [
+      "capacity"
     ]
   }
 ]
@@ -39,6 +42,7 @@ id | integer | Unique identifier for a Resource Type.
 name | string | Name of a Resouce Type.
 human | boolean | If `true`, then this Resource Type is a person.
 custom_fields | array | Custom Fields for this Resource Type. [(Details)](#custom-fields-key)
+custom_attributes | array | Custom Attributes for this Resource Type. [(Details)](#custom-attributes-key)
 
 #### Custom Fields Key
 
@@ -54,3 +58,11 @@ Key | Type | Description
 --- | --- | ---
 id | integer | Unique identifier for a Custom Field Option.
 name | string | Name of a Custom Field Option.
+
+#### Custom Attributes Key
+
+Name | Resource Type | Type | Description
+--- | --- | --- | ---
+Phone | Person | String | Phone number for a Person.
+Capacity | Meeting Room | Integer | Capacity for a Meeting Room.
+Registration Number | Vehicle | String | Registration Number for a Vehicle.
