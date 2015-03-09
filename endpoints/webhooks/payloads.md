@@ -29,7 +29,7 @@ Payloads are created for webhooks once any interaction with the application take
             "type": "client"
         }
     },
-    "actioner": {
+    "user": {
         "id": 1,
         "name": "Shaun Prestor",
         "email": "shaun@example.com"
@@ -67,7 +67,7 @@ Payloads are created for webhooks once any interaction with the application take
             "type": "client"
         }
     },
-    "actioner": {
+    "user": {
         "id": 1,
         "name": "Shaun Prestor",
         "email": "shaun@example.com"
@@ -95,7 +95,7 @@ id | integer | Unique identifier for a payload.
 account_id | integer | The id of the account to which the payload belongs.
 webhook_id | integer | The id of the account to which the webhook belongs.
 model | object | The data which has changed based on the events for the webhook.
-actioner | object | The User that performed the action described by this payload.
+user | object | The User that performed the action described by this payload.
 action | string | The action which has taken place which can either be "create", "update" or "delete".
 attempts | integer | The number of times which the delivery of the payload has been attempted.
 status | string | Identifies the state the payload is currently in. Details in the [Payload statuses](#payload-statuses) table below.
