@@ -27,8 +27,13 @@ Payloads are created for webhooks once any interaction with the application take
             "updated_at": "2015-02-09T08:09:22.547Z",
             "action": "delete",
             "type": "client"
-          }
-      },
+        }
+    },
+    "actioner": {
+        "id": 1,
+        "name": "Shaun Prestor",
+        "email": "shaun@example.com"
+    },
     "action": "delete",
     "attempts": 1,
     "status": "delivered",
@@ -39,7 +44,7 @@ Payloads are created for webhooks once any interaction with the application take
         "Content-Type": "application/json",
         "X-ResourceGuru-Key": "secret",
         "X-ResourceGuru-Signature": "41812cd012a1abd5a594d8633ebb5501a5cb0d3ee56bb4a4069b9f9e3bf962d6"
-      },
+    },
     "response_from_http_client": 201,
     "next_try": null
   },
@@ -60,8 +65,13 @@ Payloads are created for webhooks once any interaction with the application take
             "updated_at": "2015-02-09T09:05:53.581Z",
             "action": "delete",
             "type": "client"
-          }
-      },
+        }
+    },
+    "actioner": {
+        "id": 1,
+        "name": "Shaun Prestor",
+        "email": "shaun@example.com"
+    },
     "action": "delete",
     "attempts": 1,
     "status": "delivered",
@@ -72,7 +82,7 @@ Payloads are created for webhooks once any interaction with the application take
         "Content-Type": "application/json",
         "X-ResourceGuru-Key": "secret",
         "X-ResourceGuru-Signature": "d0537e5b65fdd97c3722f53569ba2e89335889fa25f235c5d864f1d9422ec400"
-      },
+    },
     "response_from_http_client": 201,
     "next_try": null
   }
@@ -85,6 +95,7 @@ id | integer | Unique identifier for a payload.
 account_id | integer | The id of the account to which the payload belongs.
 webhook_id | integer | The id of the account to which the webhook belongs.
 model | object | The data which has changed based on the events for the webhook.
+actioner | object | The User that performed the action described by this payload.
 action | string | The action which has taken place which can either be "create", "update" or "delete".
 attempts | integer | The number of times which the delivery of the payload has been attempted.
 status | string | Identifies the state the payload is currently in. Details in the [Payload statuses](#payload-statuses) table below.
