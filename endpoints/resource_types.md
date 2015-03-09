@@ -46,7 +46,7 @@ custom_attributes | array | Custom Attributes for this Resource Type. [(Details)
 
 #### Custom Fields Key
 
-Custom fields are created in UI by users and Custom Field Options are the only allowed values.
+Custom fields are created in the UI by users and Custom Field Options are the only allowed values.
 
 Key | Type | Description
 --- | --- | ---
