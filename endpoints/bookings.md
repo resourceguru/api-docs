@@ -119,6 +119,9 @@ waiting | boolean | If `true`, then this Booking Duration is on the Waiting List
 
 * `GET /v1/:subdomain/resources/:resource_id/bookings` returns an `Array` of **Bookings** for the specified resource.
 
+## Get a Specific Booking
+
+* `GET /v1/:subdomain/bookings/:booking_id` returns a single specific **Booking**.
 
 ## Create a Booking
 
