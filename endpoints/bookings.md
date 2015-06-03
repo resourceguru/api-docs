@@ -133,6 +133,7 @@ waiting | boolean | If `true`, then this Booking Duration is on the Waiting List
   "end_date": "2013-03-31",
   "duration": 20,
   "resource_id": 1,
+  "booker_id": 1,
   "allow_waiting": true,
   "project_id": 1,
   "client_id": 2,
@@ -147,6 +148,7 @@ end_date | string | The ISO 8601 formatted last date for the booking.
 duration | integer | The length of the booking
 start_time | integer | For time-specific bookings - the time the booking must start, in minutes from midnight.
 resource_id | integer | The resource that is being booked
+booker_id | integer | Optional: The user ID of the person who requested the booking (defaults to the API user's ID if not provided)
 allow_waiting | boolean | Optional: The booking will fail validation if it has to go onto the waiting list, unless this parameter is supplied and is `true`
 project_id | integer | Optional: The project the booking is assigned to. Pass either project_id or client_id, not both.
 client_id | integer | Optional: The client the booking is assigned to. Pass either project_id or client_id, not both.
