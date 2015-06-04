@@ -76,7 +76,7 @@ Key | Type | Description
 id | integer | Unique identifier for a Booking.
 client_id | integer | Unique identifier of the Client this Booking is for. (Can be `null`)
 project_id | integer | Unique identifier of the Project this Booking is for. (Can be `null`)
-notes | string | Extra details about this Booking.
+notes | string | Extra details about this Booking. **(DEPRECATED: Future versions of the API will include this field)**
 details | string | Extra details about this Booking.
 start_date | string | Start date for the booking.
 end_date | string | End date for the booking.
