@@ -214,3 +214,9 @@ This will return a status code which depends on the endpoint the webhook is inte
 Some services, such as http://requestb.in, will return either 200 or 201 if successful.
 If unsuccessful, the service should return any non-2XX code. HTTP semantics suggest using 422
 for this purpose.
+
+## Deprecations
+
+| Payload type | Field | Note |
+| --- | --- | --- |
+| Bookings | notes | The notes field is deprecated in favour of the details field. Booking notes will not appear in future versions of the API or webhooks |
