@@ -13,7 +13,7 @@ working from scratch. A fairly comprehensive list of libraries can be found [her
 **1** - Register an app at [developers.resourceguruapp.com](https://developers.resourceguruapp.com).
 Your app will be assigned a `client_id` and `client_secret` that will be used to identify your app
 when users authenticate with the API. You'll need to provide a `redirect_uri` where we'll send the
-verification code for authentication. Just use a fake URL like `http://localhost/oauth` if you haven't
+verification code for authentication. Just use a fake URL like `https://localhost/oauth` if you haven't
 got one yet.
 
 **2** - Configure your OAuth2 library to use the `client_id`, `client_secret` and `redirect_uri` for your app.
