@@ -6,6 +6,13 @@ Payloads are created for webhooks once any interaction with the application take
 
 * `GET /v1/:subdomain/webhooks/:id/queue` returns an `Array` of payloads for the specified webhook.
 
+### Query String Parameters
+
+Parameter | Default | Description
+--- | --- | --- | ---
+limit | 1000 | Limit the number of results returned for pagination.
+offset | 0 | Offset the results for pagination, starting from the given record number.
+
 ### Response
 
 ```json
