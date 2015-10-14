@@ -1,5 +1,7 @@
 ## The list of supported timezone options
 
+Use a value from the "Name" column, not the "Offset" column.
+
 Offset | Name
 --- | ---
 (GMT-11:00) | American Samoa
