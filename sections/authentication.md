@@ -19,7 +19,7 @@ got one yet. Any Redirect URI given must be secure (HTTPS) unless it redirects t
 **2** - Configure your OAuth2 library to use the `client_id`, `client_secret` and `redirect_uri` for your app.
 You'll need to configure these URLs as well:
 
-- `https://api.resourceguruapp.com/oauth/authorize` to request authorization (must be requested with an HTTP POST request).
+- `https://api.resourceguruapp.com/oauth/authorize` to request authorization (must be requested with an HTTP GET request).
 - `https://api.resourceguruapp.com/oauth/token` to retrieve tokens (must be requested with an HTTP POST request).
 
 
