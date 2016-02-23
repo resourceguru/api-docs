@@ -110,7 +110,7 @@ custom_fields | array | All custom field ids for resource. [(Details)](#custom-f
 
 ## Get Report
 
-* `GET /v1/:subdomain/reports/resource/:resource_id` returns a **Resource Report**.
+* `GET /v1/:subdomain/reports/resources/:resource_id` returns a **Resource Report**.
 
 ### Required Query String Parameters
 
@@ -122,7 +122,7 @@ end_date | End date in ISO 8601 (`YYYY-MM-DD`).
 **Example:**
 
 ```
-https://api.resourceguruapp.com/v1/example-corp/reports/resource/1685?start_date=2013-01-01&end_date=2013-01-07
+https://api.resourceguruapp.com/v1/example-corp/reports/resources/1685?start_date=2013-01-01&end_date=2013-01-07
 ```
 
 ### Resource Report Response
