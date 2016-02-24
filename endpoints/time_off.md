@@ -152,7 +152,7 @@ start_time | integer | Start time in minutes from midnight for this Downtime dur
 end_time | integer | End time in minutes from midnight for this Downtime duration (Can't be null)
 details | string | Optional plain text details for the Downtime.
 downtime_type_id | integer | Unique identifier of the Downtime Type this Downtime is for. (Can be `null`)
-timezone | string | String denoting the time zone for which the Downtime is created for. [(Details)](#timezones)
+timezone | string | String denoting the time zone for which the Downtime is created for. [(Details)](#time-zones)
 
 #### Time zones
 
