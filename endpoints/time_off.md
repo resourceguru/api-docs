@@ -1,25 +1,25 @@
 # Time Off
 
-## Get Downtimes
+## Get Time Off/Downtime events
 
-* `GET /v1/:subdomain/downtimes` returns an `Array` of **Downtimes**.
+* `GET /v1/:subdomain/downtimes` returns an `Array` of **Time Off/Downtime events**.
 
 ### Query String Parameters
 
 Parameter | Default | Description
 --- | --- | --- | ---
-resource_ids | | Only retrieve Downtimes for the given resources 
+resource_ids | | Only retrieve Time Off/Downtime events for the given resources 
 limit | 50 | Limit the number of results returned for pagination. To retrieve all the results use `0`.
 offset | 0 | Offset the results for pagination, starting from the given record number.
-from | | Set a start date range for Downtimes.
-to | | Set an end date range for Downtimes.
+from | | Set a start date range for Time Off/Downtime events.
+to | | Set an end date range for Time Off/Downtime events.
 
 **Example:**
 
 ```
 https://api.resourceguruapp.com/v1/example-corp/downtimes?resource_ids[]=123&resource_ids[]=122&from=2016-02-16&to=2016-02-22
 ```
-The above example will return the next Downtimes between `2016-02-16` and `2016-02-22` where the resource ids are 123 and 122.
+The above example will return the next Time Off/Downtime events between `2016-02-16` and `2016-02-22` where the resource ids are 123 and 122.
 
 ### Response
 
@@ -91,29 +91,29 @@ The above example will return the next Downtimes between `2016-02-16` and `2016-
 
 Key | Type | Description
 --- | --- | ---
-created_at | string | Downtime creation date and time.
-creator_id | integer | Unique identifier of the User this Downtime was created by.
-deleted | boolean | Denoted whether the Downtime has been deleted.
-details | string | Extra details about this Downtime.
-downtime_type_id | integer | Unique identifier of the Downtime Type this Downtime is for. (Can be `null`)
-end_time | integer | End time in minutes from midnight for this Downtime duration (Can't be null)
-from | string | Start date for the Downtime.
-id | integer | Unique identifier for a Downtime.
-resource_ids| array of intergers | Unique identifiers of the Resources this Downtime is for.
-start_time | integer | Start time in minutes from midnight for this Downtime duration (Can't be null)
-state | string | Status details about the Downtime.
-timezone | string | Specified time zone for the Downtime.
-to | string | End date for the Downtime.
+created_at | string | Time Off/Downtime event creation date and time.
+creator_id | integer | Unique identifier of the User this Time Off/Downtime event was created by.
+deleted | boolean | Denoted whether the Time Off/Downtime event has been deleted.
+details | string | Extra details about this Time Off/Downtime event.
+downtime_type_id | integer | Unique identifier of the Time Off/Downtime event Type this Time Off/Downtime event is for. (Can be `null`)
+end_time | integer | End time in minutes from midnight for this Time Off/Downtime event duration (Can't be null)
+from | string | Start date for the Time Off/Downtime event.
+id | integer | Unique identifier for a Time Off/Downtime event.
+resource_ids| array of intergers | Unique identifiers of the Resources this Time Off/Downtime event is for.
+start_time | integer | Start time in minutes from midnight for this Time Off/Downtime event duration (Can't be null)
+state | string | Status details about the Time Off/Downtime event.
+timezone | string | Specified time zone for the Time Off/Downtime event.
+to | string | End date for the Time Off/Downtime event.
 updated_at | String | Last updated date and time.
 
 
-## Get a Specific Downtime
+## Get a Specific Time Off/Downtime event
 
-*  `GET /v1/:subdomain/downtimes/id` returns a specific Downtime.
+*  `GET /v1/:subdomain/downtimes/id` returns a specific Time Off/Downtime event.
 
-## Create a Downtime
+## Create a Time Off/Downtime event
 
-* `POST /v1/:subdomain/downtimes` will create a new Downtime from the parameters passed.
+* `POST /v1/:subdomain/downtimes` will create a new Time Off/Downtime event from the parameters passed.
 
 ### Response
 
@@ -144,37 +144,37 @@ updated_at | String | Last updated date and time.
 ```
 Key | Type | Description
 --- | --- | --- | ---
-resource_ids| array of intergers | The resources that the Downtime is being created for.
-creator_id | integer | Unique identifier of the User this Downtime is for.
-from | string | The ISO 8601 formatted first date for the Downtime.
-to | string | The ISO 8601 formatted last date for the Downtime.
-start_time | integer | Start time in minutes from midnight for this Downtime duration (Can't be null)
-end_time | integer | End time in minutes from midnight for this Downtime duration (Can't be null)
-details | string | Optional plain text details for the Downtime.
-downtime_type_id | integer | Unique identifier of the Downtime Type this Downtime is for. (Can be `null`)
-timezone | string | String denoting the time zone for which the Downtime is created for. [(Details)](#time-zones)
+resource_ids| array of intergers | The resources that the Time Off/Downtime event is being created for.
+creator_id | integer | Unique identifier of the User this Time Off/Downtime event is for.
+from | string | The ISO 8601 formatted first date for the Time Off/Downtime event.
+to | string | The ISO 8601 formatted last date for the Time Off/Downtime event.
+start_time | integer | Start time in minutes from midnight for this Time Off/Downtime event duration (Can't be null)
+end_time | integer | End time in minutes from midnight for this Time Off/Downtime event duration (Can't be null)
+details | string | Optional plain text details for the Time Off/Downtime event.
+downtime_type_id | integer | Unique identifier of the Time Off/Downtime event Type this Time Off/Downtime event is for. (Can be `null`)
+timezone | string | String denoting the time zone for which the Time Off/Downtime event is created for. [(Details)](#time-zones)
 
 #### Time zones
 
-When creating a new Downtime, a time zone may be specified if the Downtime is being created for multiple resources. If left blank, it will default to the time zone of each resource.
-The time zone values are based off of Ruby On Rails's ActiveSupport::TimeZone's key mappings. For example, to create a Downtime for (GMT +0) London, the value would be "London". See http://api.rubyonrails.org/classes/ActiveSupport/TimeZone.html - Constants.
+When creating a new Time Off/Downtime event, a time zone may be specified if the Time Off/Downtime event is being created for multiple resources. If left blank, it will default to the time zone of each resource.
+The time zone values are based off of Ruby On Rails's ActiveSupport::TimeZone's key mappings. For example, to create a Time Off/Downtime event for (GMT +0) London, the value would be "London". See http://api.rubyonrails.org/classes/ActiveSupport/TimeZone.html - Constants.
 
 
-## Update a Downtime
-* `PUT /v1/:subdomain/downtimes/5` will update the Downtime from the parameters passed and return
-the JSON representation of the updated Downtime. If the user does not have access to update
-the Downtime, you'll see `403 Forbidden`.
+## Update a Time Off/Downtime event
+* `PUT /v1/:subdomain/downtimes/5` will update the Time Off/Downtime event from the parameters passed and return
+the JSON representation of the updated Time Off/Downtime event. If the user does not have access to update
+the Time Off/Downtime event, you'll see `403 Forbidden`.
 
 
-## Delete a Downtime
+## Delete a Time Off/Downtime event
 
-* `DELETE /v1/:subdomain/downtimes/5` will delete the Downtime specified and return `204 No Content`
-if that was successful. If the user does not have access to delete the Downtime, you'll see `403 Forbidden`.
+* `DELETE /v1/:subdomain/downtimes/5` will delete the Time Off/Downtime event specified and return `204 No Content`
+if that was successful. If the user does not have access to delete the Time Off/Downtime event, you'll see `403 Forbidden`.
 
 
-## Get Downtime Types
+## Get Time Off/Downtime event Types
 
-* `GET /v1/:subdomain/downtime_types` returns an `Array` of **Downtimes**.
+* `GET /v1/:subdomain/downtime_types` returns an `Array` of **Time Off/Downtime events**.
 
 ```json
 [
@@ -191,9 +191,9 @@ if that was successful. If the user does not have access to delete the Downtime,
 ```
 Key | Type | Description
 --- | --- | --- | ---
-id | integer | Unique identifier of the Downtime type.
-name | string | Name of this Downtime type.
-account_id | integer | Unique identifier of the Account to which this Downtime type belongs.
-created_at | string | Downtime type creation date and time.
+id | integer | Unique identifier of the Time Off/Downtime event type.
+name | string | Name of this Time Off/Downtime event type.
+account_id | integer | Unique identifier of the Account to which this Time Off/Downtime event type belongs.
+created_at | string | Time Off/Downtime event type creation date and time.
 updated_at | string | Last updated date and time.
-default | boolean | Denotes whether the Downtime type is a default type.
+default | boolean | Denotes whether the Time Off/Downtime event type is a default type.
