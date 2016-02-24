@@ -1,6 +1,6 @@
 # Time Off
 
-## Get Time Off/Downtime events
+## Get Time Off/Downtime Events
 
 * `GET /v1/:subdomain/downtimes` returns an `Array` of **Time Off/Downtime events**.
 
@@ -107,11 +107,11 @@ to | string | End date for the Time Off/Downtime event.
 updated_at | String | Last updated date and time.
 
 
-## Get a Specific Time Off/Downtime event
+## Get a Specific Time Off/Downtime Event
 
-*  `GET /v1/:subdomain/downtimes/id` returns a specific Time Off/Downtime event.
+*  `GET /v1/:subdomain/downtimes/id` returns a specific Time Off/Downtime Event.
 
-## Create a Time Off/Downtime event
+## Create a Time Off/Downtime Event
 
 * `POST /v1/:subdomain/downtimes` will create a new Time Off/Downtime event from the parameters passed.
 
@@ -160,19 +160,19 @@ When creating a new Time Off/Downtime event, a time zone may be specified if the
 The time zone values are based off of Ruby On Rails's ActiveSupport::TimeZone's key mappings. For example, to create a Time Off/Downtime event for (GMT +0) London, the value would be "London". See http://api.rubyonrails.org/classes/ActiveSupport/TimeZone.html - Constants.
 
 
-## Update a Time Off/Downtime event
+## Update a Time Off/Downtime Event
 * `PUT /v1/:subdomain/downtimes/5` will update the Time Off/Downtime event from the parameters passed and return
 the JSON representation of the updated Time Off/Downtime event. If the user does not have access to update
 the Time Off/Downtime event, you'll see `403 Forbidden`.
 
 
-## Delete a Time Off/Downtime event
+## Delete a Time Off/Downtime Event
 
 * `DELETE /v1/:subdomain/downtimes/5` will delete the Time Off/Downtime event specified and return `204 No Content`
 if that was successful. If the user does not have access to delete the Time Off/Downtime event, you'll see `403 Forbidden`.
 
 
-## Get Time Off/Downtime event Types
+## Get Time Off/Downtime Event Types
 
 * `GET /v1/:subdomain/downtime_types` returns an `Array` of **Time Off/Downtime events**.
 
