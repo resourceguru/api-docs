@@ -8,7 +8,7 @@
 
 Parameter | Default | Description
 --- | --- | --- | ---
-resource_ids | | Only retrieve Time Off/Downtime events for the given resources 
+resource_ids | | Only retrieve Time Off/Downtime events for the given resources.
 limit | 50 | Limit the number of results returned for pagination. To retrieve all the results use `0`.
 offset | 0 | Offset the results for pagination, starting from the given record number.
 from | | Set a start date range for Time Off/Downtime events.
@@ -95,12 +95,12 @@ created_at | string | Time Off/Downtime event creation date and time.
 creator_id | integer | Unique identifier of the User this Time Off/Downtime event was created by.
 deleted | boolean | Denoted whether the Time Off/Downtime event has been deleted.
 details | string | Extra details about this Time Off/Downtime event.
-downtime_type_id | integer | Unique identifier of the Time Off/Downtime event Type this Time Off/Downtime event is for. (Can be `null`)
-end_time | integer | End time in minutes from midnight for this Time Off/Downtime event duration (Can't be null)
+downtime_type_id | integer | Unique identifier of the Time Off/Downtime event Type this Time Off/Downtime event is for (can be `null`).
+end_time | integer | End time in minutes from midnight for this Time Off/Downtime event duration (can't be null).
 from | string | Start date for the Time Off/Downtime event.
 id | integer | Unique identifier for a Time Off/Downtime event.
 resource_ids| array of intergers | Unique identifiers of the Resources this Time Off/Downtime event is for.
-start_time | integer | Start time in minutes from midnight for this Time Off/Downtime event duration (Can't be null)
+start_time | integer | Start time in minutes from midnight for this Time Off/Downtime event duration (can't be null).
 state | string | Status details about the Time Off/Downtime event.
 timezone | string | Specified time zone for the Time Off/Downtime event.
 to | string | End date for the Time Off/Downtime event.
@@ -148,10 +148,10 @@ resource_ids| array of intergers | The resources that the Time Off/Downtime even
 creator_id | integer | Unique identifier of the User this Time Off/Downtime event is for.
 from | string | The ISO 8601 formatted first date for the Time Off/Downtime event.
 to | string | The ISO 8601 formatted last date for the Time Off/Downtime event.
-start_time | integer | Start time in minutes from midnight for this Time Off/Downtime event duration (Can't be null)
-end_time | integer | End time in minutes from midnight for this Time Off/Downtime event duration (Can't be null)
+start_time | integer | Start time in minutes from midnight for this Time Off/Downtime event duration (can't be null).
+end_time | integer | End time in minutes from midnight for this Time Off/Downtime event duration (can't be null).
 details | string | Optional plain text details for the Time Off/Downtime event.
-downtime_type_id | integer | Unique identifier of the Time Off/Downtime event Type this Time Off/Downtime event is for. (Can be `null`)
+downtime_type_id | integer | Unique identifier of the Time Off/Downtime event Type this Time Off/Downtime event is for (can be `null`).
 timezone | string | String denoting the time zone for which the Time Off/Downtime event is created for. [(Details)](#time-zones)
 
 #### Time zones
