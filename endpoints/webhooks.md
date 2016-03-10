@@ -55,6 +55,7 @@ The payload `type` will be one of:
 - project
 - resource
 - resource_type
+- downtime (Time Off)
 
 An example payload when a new client is created:
 
@@ -103,7 +104,7 @@ An example payload when a new client is created:
     "payload_url": "http://www.example-corp.com/endpoint2",
     "account_id": 1,
     "user_id": 3,
-    "events": ["clients", "projects", "accounts", "resources", "resource_types", "bookings"],
+    "events": ["clients", "projects", "accounts", "resources", "resource_types", "bookings", "downtimes"],
     "url": "https://api.resourceguruapp.com/v1/example-corp/webhooks/2",
     "created_at": "2013-04-30T12:00:00+00:00",
     "updated_at": "2013-04-30T12:00:00+00:00",
@@ -147,7 +148,7 @@ Failed | The last attempted payload has failed 100 times and no further attempt 
   "payload_url": "http://www.example-corp.com/endpoint",
   "account_id": 1,
   "user_id": 3,
-  "events": ["clients", "projects", "accounts", "resources", "resource_types", "bookings"],
+  "events": ["clients", "projects", "accounts", "resources", "resource_types", "bookings", "downtimes"],
   "url": "https://api.resourceguruapp.com/v1/example-corp/webhooks/1",
   "created_at": "2013-04-30T12:00:00+00:00",
   "updated_at": "2013-04-30T12:00:00+00:00",
