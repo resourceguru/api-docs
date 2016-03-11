@@ -145,7 +145,7 @@ updated_at | String | Last updated date and time.
 Key | Type | Description
 --- | --- | --- | ---
 resource_ids| array of intergers | The resources that the Time Off/Downtime event is being created for.
-creator_id | integer | Unique identifier of the User this Time Off/Downtime event is for.
+creator_id | integer | Unique identifier of the User this Time Off/Downtime event is for (displayed as "Booker" in the UI).
 from | string | The ISO 8601 formatted first date for the Time Off/Downtime event.
 to | string | The ISO 8601 formatted last date for the Time Off/Downtime event.
 start_time | integer | Start time in minutes from midnight for this Time Off/Downtime event duration (can't be null).
