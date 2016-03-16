@@ -90,11 +90,11 @@ creator_id | integer | Unique identifier of the User this Time Off/Downtime even
 deleted | boolean | Indicates whether the Time Off/Downtime event has been deleted.
 details | string | Extra details about this Time Off/Downtime event.
 downtime_type_id | integer | Unique identifier of the Time Off/Downtime event Type this Time Off/Downtime event is for (can be `null`).
-end_time | integer | End time in minutes from midnight for this Time Off/Downtime event duration (can't be null).
+end_time | integer | End time in minutes from midnight for this Time Off/Downtime event duration (can't be `null`).
 from | string | Start date for the Time Off/Downtime event.
 id | integer | Unique identifier for a Time Off/Downtime event.
 resource_ids | array of integers | Unique identifiers of the Resources this Time Off/Downtime event is for.
-start_time | integer | Start time in minutes from midnight for this Time Off/Downtime event duration (can't be null).
+start_time | integer | Start time in minutes from midnight for this Time Off/Downtime event duration (can't be `null`).
 state | string | Status details about the Time Off/Downtime event.
 timezone | string | Specified timezone for the Time Off/Downtime event.
 to | string | End date for the Time Off/Downtime event.
@@ -109,42 +109,31 @@ updated_at | String | Last updated date and time.
 
 * `POST /v1/:subdomain/downtimes` will create a new Time Off/Downtime event from the parameters passed.
 
-### Response
-
 ```json
-[
-	{
-		"account_id": 1,
-		"created_at": "2016-02-16T12:55:19.072Z",
-		"creator_id": 2,
-		"deleted": false,
-		"details": "Christmas Eve",
-		"downtime_type_id": 444,
-		"end_time": 1440,
-		"from": "2016-12-25",
-		"id": 123,
-		"leave": null,
-		"resource_ids": [122],
-		"start_time": 0,
-		"state": "Approved",
-		"timezone": "London",
-		"to": "2016-12-25",
-		"updated_at": "2016-02-16T12:55:19.072Z",
-	}
-]
-
+{
+	"resource_ids": [122, 123],
+	"creator_id": 2,
+	"from": "2016-12-25",
+	"to": "2016-12-25",
+	"start_time": 0,
+	"end_time": 1440,
+	"downtime_type_id": 444,
+	"details": "Christmas Eve",
+	"timezone": "London",
+}
 ```
+
 Key | Type | Description
 --- | --- | --- | ---
 resource_ids| array of integers | The resources that the Time Off/Downtime event is being created for.
 creator_id | integer | Unique identifier of the User this Time Off/Downtime event is for (displayed as "Booker" in the UI).
 from | string | The ISO 8601 formatted first date for the Time Off/Downtime event.
 to | string | The ISO 8601 formatted last date for the Time Off/Downtime event.
-start_time | integer | Start time in minutes from midnight for this Time Off/Downtime event duration (can't be null).
-end_time | integer | End time in minutes from midnight for this Time Off/Downtime event duration (can't be null).
+start_time | integer | Start time in minutes from midnight for this Time Off/Downtime event duration (can't be `null`).
+end_time | integer | End time in minutes from midnight for this Time Off/Downtime event duration (can't be `null`).
 details | string | Optional plain text details for the Time Off/Downtime event.
 downtime_type_id | integer | Unique identifier of the Time Off/Downtime event Type this Time Off/Downtime event is for (can be `null`).
-timezone | string | The timezone which the Time Off/Downtime event is created for. [(Details)](#time-zones)
+timezone | string | The timezone which the Time Off/Downtime event is created for. (`null` for the local resource's timezone) [(Details)](#time-zones)
 
 #### Timezones
 
