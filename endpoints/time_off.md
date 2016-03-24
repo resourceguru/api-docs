@@ -115,7 +115,6 @@ updated_at | String | Last updated date and time.
 ```json
 {
 	"resource_ids": [122, 123],
-	"creator_id": 2,
     "booker_id": 2,
 	"from": "2016-12-25",
 	"to": "2016-12-25",
