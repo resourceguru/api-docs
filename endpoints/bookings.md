@@ -20,7 +20,7 @@ booker_id |  | Only return bookings that were booked by the given [User](./users
 https://api.resourceguruapp.com/v1/example-corp/bookings?start_date=2013-01-01&end_date=2013-04-10
 ```
 
-The above example will return the next Boookings between `2013-01-01` and `2013-04-10`
+The above example will return the next Bookings between `2013-01-01` and `2013-04-10`
 
 ### Response
 
