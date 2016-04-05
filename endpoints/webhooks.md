@@ -12,6 +12,7 @@ The supported event types are:
 - Resources
 - Resource Types
 - Accounts
+- Time Off
 
 As soon as changes are made within a relevant Resource Guru acccout, payloads are sent immediately for any of the events that have been subscribed to in the webhook. We will automatically try to deliver a payload 100 times before marking it as failed. More detail on payload statuses can be found in the [payloads endpoint documentation](webhooks/payloads.md). Payloads are dropped from Resource Guru's history after 30 days. **Unsuccessful payloads will be lost after failing for 30 days**.
 
@@ -54,6 +55,7 @@ The payload `type` will be one of:
 - project
 - resource
 - resource_type
+- downtime (Time Off)
 
 An example payload when a new client is created:
 
@@ -89,7 +91,7 @@ An example payload when a new client is created:
     "payload_url": "http://www.example-corp.com/endpoint",
     "account_id": 1,
     "user_id": 3,
-    "events": ["clients", "projects", "accounts", "resources", "resource_types", "bookings"],
+    "events": ["clients", "projects", "accounts", "resources", "resource_types", "bookings", "downtimes"],
     "url": "https://api.resourceguruapp.com/v1/example-corp/webhooks/1",
     "created_at": "2013-04-30T12:00:00+00:00",
     "updated_at": "2013-04-30T12:00:00+00:00",
@@ -102,7 +104,7 @@ An example payload when a new client is created:
     "payload_url": "http://www.example-corp.com/endpoint2",
     "account_id": 1,
     "user_id": 3,
-    "events": ["clients", "projects", "accounts", "resources", "resource_types", "bookings"],
+    "events": ["clients", "projects", "accounts", "resources", "resource_types", "bookings", "downtimes"],
     "url": "https://api.resourceguruapp.com/v1/example-corp/webhooks/2",
     "created_at": "2013-04-30T12:00:00+00:00",
     "updated_at": "2013-04-30T12:00:00+00:00",
@@ -146,7 +148,7 @@ Failed | The last attempted payload has failed 100 times and no further attempt 
   "payload_url": "http://www.example-corp.com/endpoint",
   "account_id": 1,
   "user_id": 3,
-  "events": ["clients", "projects", "accounts", "resources", "resource_types", "bookings"],
+  "events": ["clients", "projects", "accounts", "resources", "resource_types", "bookings", "downtimes"],
   "url": "https://api.resourceguruapp.com/v1/example-corp/webhooks/1",
   "created_at": "2013-04-30T12:00:00+00:00",
   "updated_at": "2013-04-30T12:00:00+00:00",
@@ -178,12 +180,13 @@ paused | boolean | A boolean denoting whether or not the webhook is paused.
   * projects
   * resources
   * resource_types
+  * downtimes (Time Off)
 
 ```json
 {
   "name": "Webhook A",
   "payload_url": "http://www.example-corp.com/endpoint",
-  "events": ["clients", "projects", "accounts", "resources", "resource_types", "bookings"],
+  "events": ["clients", "projects", "accounts", "resources", "resource_types", "bookings", "downtimes"],
   "secret": "optional secret"
 }
 ```

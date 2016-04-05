@@ -29,6 +29,7 @@ The above example will return the next Time Off/Downtime events between `2016-02
 		"account_id": 1,
 		"created_at": "2016-02-16T12:55:19.072Z",
 		"creator_id": 2,
+        "booker_id": 2,
 		"deleted": false,
 		"details": "Christmas Eve",
 		"downtime_type_id": 3,
@@ -44,41 +45,43 @@ The above example will return the next Time Off/Downtime events between `2016-02
 		"updated_at": "2016-02-16T12:55:19.072Z",
 	},
 	{
-		"account_id": 1,		
+		"account_id": 1,
 		"created_at": "2016-02-04T09:48:24.000Z",
-		"creator_id": 2,		
-		"deleted": false,		
-		"details": "Details",		
-		"downtime_type_id": null,		
-		"end_time": 1440,		
-		"from": "2016-02-22",		
-		"id": 124,		
-		"leave": null,		
+		"creator_id": 2,
+        "booker_id": 2,
+		"deleted": false,
+		"details": "Details",
+		"downtime_type_id": null,
+		"end_time": 1440,
+		"from": "2016-02-22",
+		"id": 124,
+		"leave": null,
 		"resource_ids": [123],
-		"start_time": 0,		
-		"state": "Approved",		
-		"timezone": null,	
-		"to": "2016-02-22",	
+		"start_time": 0,
+		"state": "Approved",
+		"timezone": null,
+		"to": "2016-02-22",
 		"updated_at": "2016-02-12T11:46:54.000Z"
 	}
 
 	{
-		"account_id": 1,		
-		"created_at": "2015-12-17T13:00:40.000Z",		
-		"creator_id": 2,		
-		"deleted": false,		
-		"details": "",		
-		"downtime_type_id": null,		
-		"end_time": 1440,		
-		"from": "2016-02-22",		
-		"id": 125,		
-		"leave": null,		
+		"account_id": 1,
+		"created_at": "2015-12-17T13:00:40.000Z",
+		"creator_id": 2,
+        "booker_id": 2,
+		"deleted": false,
+		"details": "",
+		"downtime_type_id": null,
+		"end_time": 1440,
+		"from": "2016-02-22",
+		"id": 125,
+		"leave": null,
 		"resource_ids": [122],
-		"start_time": 0,		
-		"state": "Approved",		
-		"timezone": null,	
-		"to": "2016-02-22",	
-		"updated_at": "2015-12-17T13:02:01.000Z,	
+		"start_time": 0,
+		"state": "Approved",
+		"timezone": null,
+		"to": "2016-02-22",
+		"updated_at": "2015-12-17T13:02:01.000Z,
 	}
 ]
 ```
@@ -86,8 +89,9 @@ The above example will return the next Time Off/Downtime events between `2016-02
 Key | Type | Description
 --- | --- | ---
 created_at | string | Time Off/Downtime event creation date and time.
-creator_id | integer | Unique identifier of the User this Time Off/Downtime event was created by.
-deleted | boolean | Indicates whether the Time Off/Downtime event has been deleted.
+creator_id | integer | Unique identifier of the User this Time Off/Downtime event was created by. **(DEPRECATED: Use booker_id. Future versions of the API will not include this field)**
+booker_id | integer | Unique identifier of the User this Time Off/Downtime event was created by.
+deleted | boolean | Denoted whether the Time Off/Downtime event has been deleted.
 details | string | Extra details about this Time Off/Downtime event.
 downtime_type_id | integer | Unique identifier of the Time Off/Downtime event Type this Time Off/Downtime event is for (can be `null`).
 end_time | integer | End time in minutes from midnight for this Time Off/Downtime event duration (can't be `null`).
@@ -100,7 +104,6 @@ timezone | string | Specified timezone for the Time Off/Downtime event.
 to | string | End date for the Time Off/Downtime event.
 updated_at | String | Last updated date and time.
 
-
 ## Get a Specific Time Off/Downtime Event
 
 *  `GET /v1/:subdomain/downtimes/:id` returns a specific Time Off/Downtime Event.
@@ -112,7 +115,7 @@ updated_at | String | Last updated date and time.
 ```json
 {
 	"resource_ids": [122, 123],
-	"creator_id": 2,
+    "booker_id": 2,
 	"from": "2016-12-25",
 	"to": "2016-12-25",
 	"start_time": 0,
@@ -126,7 +129,8 @@ updated_at | String | Last updated date and time.
 Key | Type | Description
 --- | --- | --- | ---
 resource_ids| array of integers | The resources that the Time Off/Downtime event is being created for.
-creator_id | integer | Unique identifier of the User this Time Off/Downtime event is for (displayed as "Booker" in the UI).
+creator_id | integer | Unique identifier of the User this Time Off/Downtime event is for (displayed as "Booker" in the UI. )  **(DEPRECATED: Use booker_id)**
+booker_id | integer | Unique identifier of the User this Time Off/Downtime event is for
 from | string | The ISO 8601 formatted first date for the Time Off/Downtime event.
 to | string | The ISO 8601 formatted last date for the Time Off/Downtime event.
 start_time | integer | Start time in minutes from midnight for this Time Off/Downtime event duration (can't be `null`).
