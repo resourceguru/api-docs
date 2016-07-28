@@ -136,7 +136,7 @@ save the new access token, refresh token and expiration timestamps when doing th
 
 ##### More Examples:
 
-###### Python:
+###### Python 3:
 
 ``` python
 from urllib.parse import urlencode
@@ -151,7 +151,7 @@ authorize_url = "https://api.resourceguruapp.com/oauth/authorize?client_id=%(cli
 # Visit the Auth URL -> authorize_url defined above
 # Get code token after authorizing
 
-returned_code = raw_input("Enter the code from the authorization step: ")
+returned_code = input("Enter the code from the authorization step: ")
 
 parameters = {
   'client_id': client_id,
