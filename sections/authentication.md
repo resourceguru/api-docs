@@ -150,7 +150,6 @@ authorize_url = "https://api.resourceguruapp.com/oauth/authorize?client_id=%(cli
 
 # Visit the Auth URL -> authorize_url defined above
 # Get code token after authorizing
-
 returned_code = input("Enter the code from the authorization step: ")
 
 parameters = {
