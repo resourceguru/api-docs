@@ -148,13 +148,10 @@ client_secret = 'APPLICATION_SECRET'
 redirect_uri  = 'REDIRECT_URI'
 authorize_url = "https://api.resourceguruapp.com/oauth/authorize?client_id=%(client_id)s&redirect_uri=%(redirect_uri)s&response_type=code" % locals()
 
-# Now let us play in an interactive console
-import code;code.interact(local=dict(globals(),**locals()))
-
 # Visit the Auth URL -> authorize_url defined above
 # Get code token after authorizing
 
-returned_code = "RETURNED_CODE_FROM_REDIRECT_URI"
+returned_code = raw_input("Enter the code from the authorization step: ")
 
 parameters = {
   'client_id': client_id,
@@ -169,6 +166,9 @@ token     = requests.post(token_url, urlencode(parameters)).json()
 headers   = { "Authorization": "Bearer " + token['access_token'] }
 
 resources = requests.get("https://api.resourceguruapp.com/v1/example-account-subdomain/resources", headers=headers).json()
+
+# Now let's play in an interactive console
+import code;code.interact(local=dict(globals(),**locals()))
 ```
 
 ###### Bash
@@ -216,7 +216,7 @@ access_token = client.auth_code.get_token(code, redirect_uri: redirect_uri)
 
 access_token.get("/v1/example-account-subdomain/resources")
 
-# Now let us play in an interactive console
+# Now let's play in an interactive console
 require "IRB"
 IRB.start
 ```
