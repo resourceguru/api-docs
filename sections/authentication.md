@@ -208,16 +208,16 @@ redirect_uri = "REDIRECT_URI"
 client = OAuth2::Client.new(client_id, client_secret, { site: { url: 'https://api.resourceguruapp.com'}})
 authorize_url = client.auth_code.authorize_url(redirect_uri: redirect_uri)
 
-# Now let us play in an interactive console
-binding.pry
-
-# Visit the Auth URL -> authorize_url defined above
-# Get code token after authorizing
-
-code = "RETURNED_CODE_FROM_REDIRECT_URI"
+# Visit the Auth URL -> authorize_url defined above to get the code
+puts "Enter the code from the authorization step"
+code = gets.strip
 
 access_token = client.auth_code.get_token(code, redirect_uri: redirect_uri)
 
 access_token.get("/v1/example-account-subdomain/resources")
+
+# Now let us play in an interactive console
+require "IRB"
+IRB.start
 ```
 
