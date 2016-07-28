@@ -198,7 +198,6 @@ echo `curl -H "Authorization: Bearer $token" $resources_url`
 
 ``` ruby
 require "oauth2"
-require "pry"
 
 client_id = "APPLICATION_CLIENT_ID"
 client_secret = "APPLICATION_SECRET"
