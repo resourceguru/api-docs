@@ -133,3 +133,89 @@ new_access_token.get("/v1/example-corp/bookings")
 
 The old access token will be expired immediately and the new access token will have to be used from that point on. Make sure you
 save the new access token, refresh token and expiration timestamps when doing this.
+
+##### More Examples:
+
+###### Python 3:
+
+``` python
+from urllib.parse import urlencode
+import json
+import requests
+
+client_id     = 'APPLICATION_CLIENT_ID'
+client_secret = 'APPLICATION_SECRET'
+redirect_uri  = 'REDIRECT_URI'
+authorize_url = "https://api.resourceguruapp.com/oauth/authorize?client_id=%(client_id)s&redirect_uri=%(redirect_uri)s&response_type=code" % locals()
+
+# Visit the Auth URL -> authorize_url defined above
+# Get code token after authorizing
+returned_code = input("Enter the code from the authorization step: ")
+
+parameters = {
+  'client_id': client_id,
+  'client_secret': client_secret,
+  'code': returned_code,
+  'grant_type': "authorization_code",
+  'redirect_uri': redirect_uri
+}
+
+token_url = 'https://api.resourceguruapp.com/oauth/token'
+token     = requests.post(token_url, urlencode(parameters)).json()
+headers   = { "Authorization": "Bearer " + token['access_token'] }
+
+resources = requests.get("https://api.resourceguruapp.com/v1/example-account-subdomain/resources", headers=headers).json()
+
+# Now let's play in an interactive console
+import code;code.interact(local=dict(globals(),**locals()))
+```
+
+###### Bash
+
+``` bash
+#!/bin/bash
+
+client_id='APPLICATION_CLIENT_ID'
+client_secret='APPLICATION_SECRET'
+redirect_uri='REDIRECT_URI'
+authorize_url="https://api.resourceguruapp.com/oauth/authorize?client_id=$client_id&redirect_uri=$redirect_uri&response_type=code"
+token_url='https://api.resourceguruapp.com/oauth/token'
+
+echo "Please follow the given link: $authorize_url"
+echo "Please provide the given code, followed by [ENTER]:"
+
+read code
+
+token_data=`curl --data "grant_type=authorization_code" --data-urlencode "client_id=$client_id" --data-urlencode "client_secret=$client_secret" --data-urlencode "code=$code" --data-urlencode "redirect_uri=$redirect_uri" $token_url`
+token=`echo $token_data | jsawk 'return this.access_token'`
+
+resources_url="https://api.resourceguruapp.com/v1/example-account-subdomain/resources"
+
+echo `curl -H "Authorization: Bearer $token" $resources_url`
+```
+
+###### Ruby
+
+``` ruby
+require "oauth2"
+
+client_id = "APPLICATION_CLIENT_ID"
+client_secret = "APPLICATION_SECRET"
+redirect_uri = "REDIRECT_URI"
+
+client = OAuth2::Client.new(client_id, client_secret, { site: { url: 'https://api.resourceguruapp.com'}})
+authorize_url = client.auth_code.authorize_url(redirect_uri: redirect_uri)
+
+# Visit the Auth URL -> authorize_url defined above to get the code
+puts "Enter the code from the authorization step"
+code = gets.strip
+
+access_token = client.auth_code.get_token(code, redirect_uri: redirect_uri)
+
+access_token.get("/v1/example-account-subdomain/resources")
+
+# Now let's play in an interactive console
+require "IRB"
+IRB.start
+```
+
