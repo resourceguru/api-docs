@@ -164,10 +164,7 @@ token_url = 'https://api.resourceguruapp.com/oauth/token'
 token     = requests.post(token_url, urlencode(parameters)).json()
 headers   = { "Authorization": "Bearer " + token['access_token'] }
 
-resources = requests.get("https://api.resourceguruapp.com/v1/example-account-subdomain/resources", headers=headers).json()
-
-# Now let's play in an interactive console
-import code;code.interact(local=dict(globals(),**locals()))
+print(requests.get("https://api.resourceguruapp.com/v1/example-account-subdomain/resources", headers=headers))
 ```
 
 ###### Bash
@@ -198,7 +195,6 @@ echo `curl -H "Authorization: Bearer $token" $resources_url`
 
 ``` ruby
 require "oauth2"
-require "pry"
 
 client_id = "APPLICATION_CLIENT_ID"
 client_secret = "APPLICATION_SECRET"
@@ -213,9 +209,5 @@ code = gets.strip
 
 access_token = client.auth_code.get_token(code, redirect_uri: redirect_uri)
 
-access_token.get("/v1/example-account-subdomain/resources")
-
-# Now let's play in an interactive console
-binding.pry
+puts access_token.get("/v1/example-account-subdomain/resources")
 ```
-
