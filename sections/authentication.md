@@ -198,6 +198,7 @@ echo `curl -H "Authorization: Bearer $token" $resources_url`
 
 ``` ruby
 require "oauth2"
+require "pry"
 
 client_id = "APPLICATION_CLIENT_ID"
 client_secret = "APPLICATION_SECRET"
@@ -215,7 +216,6 @@ access_token = client.auth_code.get_token(code, redirect_uri: redirect_uri)
 access_token.get("/v1/example-account-subdomain/resources")
 
 # Now let's play in an interactive console
-require "IRB"
-IRB.start
+binding.pry
 ```
 
