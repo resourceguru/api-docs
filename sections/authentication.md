@@ -146,7 +146,7 @@ import requests
 client_id     = 'APPLICATION_CLIENT_ID'
 client_secret = 'APPLICATION_SECRET'
 redirect_uri  = 'REDIRECT_URI'
-authorize_url = "https://api.resourceguruapp.com/oauth/authorize?client_id=%(client_id)s&redirect_uri=%(redirect_uri)s&response_type=code" % locals()
+print("https://api.resourceguruapp.com/oauth/authorize?client_id=%(client_id)s&redirect_uri=%(redirect_uri)s&response_type=code" % locals())
 
 # Visit the Auth URL -> authorize_url defined above
 # Get code token after authorizing
@@ -204,10 +204,10 @@ client_secret = "APPLICATION_SECRET"
 redirect_uri = "REDIRECT_URI"
 
 client = OAuth2::Client.new(client_id, client_secret, { site: { url: 'https://api.resourceguruapp.com'}})
-authorize_url = client.auth_code.authorize_url(redirect_uri: redirect_uri)
+puts "Please follow the given link: " + client.auth_code.authorize_url(redirect_uri: redirect_uri)
 
 # Visit the Auth URL -> authorize_url defined above to get the code
-puts "Enter the code from the authorization step"
+puts "Enter the code from the authorization step: "
 code = gets.strip
 
 access_token = client.auth_code.get_token(code, redirect_uri: redirect_uri)
