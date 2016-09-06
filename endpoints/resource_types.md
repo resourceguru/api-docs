@@ -17,6 +17,7 @@
       {
         "id": 1,
         "name": "Facilities",
+        "required": true,
         "custom_field_options": [
           {
             "id": 1,
@@ -52,6 +53,7 @@ Key | Type | Description
 --- | --- | ---
 id | integer | Unique identifier for a Custom Field.
 name | string | Name of a Custom Field.
+required | boolean | If `true`, then a value for this field is required.
 custom_field_options | array | Custom Field Options for this Custom Field. [(Details)](#custom-field-options-key)
 
 #### Custom Field Options Key
