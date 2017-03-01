@@ -81,7 +81,7 @@ notes | string | Extra details about this Booking. **(DEPRECATED: Future version
 details | string | Extra details about this Booking.
 start_date | string | Start date for the booking.
 end_date | string | End date for the booking.
-billable | boolean | The booking is marked as billable or non-billable.
+billable | boolean | Mark the booking as billable or non-billable.
 refreshable | boolean | Booking has changed recently.
 created_at | string | Booking creation date and time.
 updated_at | string | Last updated date and time.
