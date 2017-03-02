@@ -29,6 +29,7 @@ The above example will return the next 30 Projects.
     "color": "#FFCC00",
     "name": "Project A",
     "notes": "Project A Notes",
+    "default_billable": true,
     "updated_at": "2013-04-30T12:00:00+00:00",
     "url": "https://api.resourceguruapp.com/v1/example-corp/projects/1",
     "account_id": 1,
@@ -39,6 +40,7 @@ The above example will return the next 30 Projects.
     "color": "#CCFF00",
     "name": "Project B",
     "notes": "Project B Notes",
+    "default_billable": true,
     "updated_at": "2013-04-30T12:00:00+00:00",
     "url": "https://api.resourceguruapp.com/v1/example-corp/projects/2",
     "account_id": 1,
@@ -52,6 +54,8 @@ Key | Type | Description
 id | integer | Unique identifier for a Project.
 color | string | Color used to highlight a Project.
 name | string | Name of a Project.
+notes | string | Notes about this Project.
+default_billable | boolean | Bookings for this project should default to billable or non-billable.
 updated_at | timestamp | Last updated date and time in ISO 8601.
 url | string | URL to view a Project.
 account_id | integer | [Account] a Project belongs to.
@@ -70,6 +74,7 @@ client_id | integer | [Client] a Project belongs to.
   "color": "#FFCC00",
   "name": "Project A",
   "notes": "Some notes",
+  "default_billable": true,
   "updated_at": "2013-04-30T12:00:00+00:00",
   "account": {
     "id": 1,
@@ -91,6 +96,7 @@ archived | boolean | If `true`, then this Project is archived.
 color | string | Color used to highlight this Project.
 name | string | Name of this Project.
 notes | string | Notes about this Project.
+default_billable | boolean | Bookings for this project should default to billable or non-billable.
 updated_at | timestamp | Last updated date and time in ISO 8601.
 account | hash | [Account] this Project belongs to. [(Details)](#account-key)
 client | hash | [Client] this Project belongs to. [(Details)](#client-key)
@@ -124,7 +130,8 @@ url | string | URL shortcut to view this Client.
 {
   "color": "#FF00CC",
   "name": "Project C",
-  "notes": "Some notes"
+  "notes": "Some notes",
+  "default_billable": true
 }
 ```
 

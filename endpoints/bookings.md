@@ -35,6 +35,7 @@ The above example will return the next Bookings between `2013-01-01` and `2013-0
     "details": "Extra details",
     "start_date": "2013-12-02",
     "end_date": "2014-01-03",
+    "billable": true,
     "refreshable": false,
     "created_at": "2013-10-17T14:09:35Z",
     "updated_at": "2013-11-15T13:14:00Z",
@@ -80,6 +81,7 @@ notes | string | Extra details about this Booking. **(DEPRECATED: Future version
 details | string | Extra details about this Booking.
 start_date | string | Start date for the booking.
 end_date | string | End date for the booking.
+billable | boolean | Mark the booking as billable or non-billable.
 refreshable | boolean | Booking has changed recently.
 created_at | string | Booking creation date and time.
 updated_at | string | Last updated date and time.
@@ -134,6 +136,7 @@ waiting | boolean | If `true`, then this Booking Duration is on the Waiting List
   "duration": 20,
   "resource_id": 1,
   "booker_id": 1,
+  "billable": true,
   "allow_waiting": true,
   "project_id": 1,
   "client_id": 2,
@@ -149,6 +152,7 @@ duration | integer | The length of the booking
 start_time | integer | For time-specific bookings - the time the booking must start, in minutes from midnight.
 resource_id | integer | The resource that is being booked
 booker_id | integer | Optional: The user ID of the person who requested the booking (defaults to the API user's ID if not provided)
+billable | boolean | Optional: The booking is marked as billable if this is `true`. Defaults to `false` unless booking a billable project.
 allow_waiting | boolean | Optional: The booking will fail validation if it has to go onto the waiting list, unless this parameter is supplied and is `true`
 project_id | integer | Optional: The project the booking is assigned to. Pass either project_id or client_id, not both.
 client_id | integer | Optional: The client the booking is assigned to. Pass either project_id or client_id, not both.
