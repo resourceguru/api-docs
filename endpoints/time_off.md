@@ -127,7 +127,7 @@ updated_at | String | Last updated date and time.
 ```
 
 Key | Type | Description
---- | --- | --- | ---
+--- | --- | ---
 resource_ids| array of integers | The resources that the Time Off/Downtime event is being created for.
 creator_id | integer | Unique identifier of the User this Time Off/Downtime event is for (displayed as "Booker" in the UI. )  **(DEPRECATED: Use booker_id)**
 booker_id | integer | Unique identifier of the User this Time Off/Downtime event is for
