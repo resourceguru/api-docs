@@ -157,6 +157,7 @@ allow_waiting | boolean | Optional: The booking will fail validation if it has t
 project_id | integer | Optional: The project the booking is assigned to. Pass either project_id or client_id, not both.
 client_id | integer | Optional: The client the booking is assigned to. Pass either project_id or client_id, not both.
 details | string | Optional plain text details for the booking.
+
 This will return `201 Created`, with the location of the new Booking in the Location header
 along with the current JSON representation of the Booking if the creation was successful.
 If there is a problem with the request, you'll get a `422 Unprocessable Entity` and get a JSON object explaining the validation errors.
