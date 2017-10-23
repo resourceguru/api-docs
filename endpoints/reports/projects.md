@@ -64,7 +64,7 @@ https://api.resourceguruapp.com/v1/example-corp/reports/projects?start_date=2013
 |---|---|---|
 |id  | integer | Unique identifier of Project.|
 |name | string | Name of this Project.|
-|project_name|string|This project's assigned project code.|
+|project_code|string|This project's assigned project code.|
 |client_name | string | Name of Client that this Project belongs to.|
 |client_id | string | Unique identifier of Client that this Project belongs to. |
 |color | string | Color used to highlight this Project.|
