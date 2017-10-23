@@ -7,10 +7,10 @@
 
 ### Query String Parameters
 
-Parameter | Default | Description
---- | --- | --- | ---
-limit | 50 | Limit the number of results returned for pagination. To retrieve all the results use `0`.
-offset | 0 | Offset the results for pagination, starting from the given record number.
+| Parameter | Default | Description |
+|-----------|---------|-------------|
+|limit | 50 | Limit the number of results returned for pagination. To retrieve all the results use `0`.|
+|offset | 0 | Offset the results for pagination, starting from the given record number.|
 
 **Example:**
 
