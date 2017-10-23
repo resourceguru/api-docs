@@ -6,10 +6,10 @@
 
 ### Required Query String Parameters
 
-Parameter | Description
---- | --- | ---
-start_date | Start date in ISO 8601 (`YYYY-MM-DD`).
-end_date | End date in ISO 8601 (`YYYY-MM-DD`).
+|Parameter | Description|
+|---|---|
+|start_date | Start date in ISO 8601 (`YYYY-MM-DD`).|
+|end_date | End date in ISO 8601 (`YYYY-MM-DD`).|
 
 **Example:**
 
@@ -49,25 +49,25 @@ https://api.resourceguruapp.com/v1/example-corp/reports/projects?start_date=2013
 }
 ```
 
-Key | Type | Description
---- | --- | ---
-booked | integer | Total time booked in minutes.
-waiting_list | integer | Total time on waiting list in minutes.
-max_usage | integer | Max usage for utilization bar. 
-projects | array | Report breakdown per Project. [(Details)](#projects-key)
+|Key | Type | Description|
+|---|---|---|
+|booked | integer | Total time booked in minutes.|
+|waiting_list | integer | Total time on waiting list in minutes.|
+|max_usage | integer | Max usage for utilization bar. |
+|projects | array | Report breakdown per Project. [(Details)](#projects-key)|
 
 #### Projects Key
 
-Key | Type | Description
---- | --- | ---
-id  | integer | Unique identifier of Project.
-name | string | Name of this Project.
-client_name | string | Name of Client that this Project belongs to.
-client_id | string | Unique identifier of Client that this Project belongs to. 
-color | string | Color used to highlight this Project.
-booked | integer | Time booked in minutes for this Project.
-waiting_list | integer | Time on waiting list in minutes for this Project.
-url | string | URL shortcut to view this Project.
+|Key | Type | Description|
+|---|---|---|
+|id  | integer | Unique identifier of Project.|
+|name | string | Name of this Project.|
+|client_name | string | Name of Client that this Project belongs to.|
+|client_id | string | Unique identifier of Client that this Project belongs to. |
+|color | string | Color used to highlight this Project.|
+|booked | integer | Time booked in minutes for this Project.|
+|waiting_list | integer | Time on waiting list in minutes for this Project.|
+|url | string | URL shortcut to view this Project.|
 
 # Project Report
 
@@ -77,10 +77,10 @@ url | string | URL shortcut to view this Project.
 
 ### Required Query String Parameters
 
-Parameter | Description
---- | --- | ---
-start_date | Start date in ISO 8601 (`YYYY-MM-DD`).
-end_date | End date in ISO 8601 (`YYYY-MM-DD`).
+|Parameter | Description|
+|---|---|
+|start_date | Start date in ISO 8601 (`YYYY-MM-DD`).|
+|end_date | End date in ISO 8601 (`YYYY-MM-DD`).|
 
 **Example:**
 
@@ -122,10 +122,10 @@ https://api.resourceguruapp.com/v1/example-corp/reports/projects/148?start_date=
 
 ### Required Query String Parameters
 
-Parameter | Description
---- | --- | ---
-start_date | Start date in ISO 8601 (`YYYY-MM-DD`).
-end_date | End date in ISO 8601 (`YYYY-MM-DD`).
+|Parameter | Description|
+|---|---|
+|start_date | Start date in ISO 8601 (`YYYY-MM-DD`).|
+|end_date | End date in ISO 8601 (`YYYY-MM-DD`).|
 
 **Example:**
 
@@ -133,28 +133,28 @@ end_date | End date in ISO 8601 (`YYYY-MM-DD`).
 https://api.resourceguruapp.com/v1/example-corp/reports/projects/0?start_date=2013-01-01&end_date=2013-01-07
 ```
 
-Key | Type | Description
---- | --- | ---
-id  | integer | Unique identifier of Project.
-name | string | Name of this Project.
-client_name | string | Name of Client that this Project belongs to.
-color | string | Color used to highlight this Project.
-booked | integer | Time booked in minutes for this Project.
-waiting_list | integer | Time on waiting list in minutes for this Project.
-url | string | URL shortcut to view this Project.
-resources | array | Report breakdown per Resource. [(Details)](#resources-key)
+|Key | Type | Description|
+|---|---|---|
+|id  | integer | Unique identifier of Project.|
+|name | string | Name of this Project.|
+|client_name | string | Name of Client that this Project belongs to.|
+|color | string | Color used to highlight this Project.|
+|booked | integer | Time booked in minutes for this Project.|
+|waiting_list | integer | Time on waiting list in minutes for this Project.|
+|url | string | URL shortcut to view this Project.|
+|resources | array | Report breakdown per Resource. [(Details)](#resources-key)|
 
 #### Resources Key
 
-Key | Type | Description
---- | --- | ---
-id | integer | Unique identifier of Resource.
-name | string | Name of this Resource.
-image | string | Image of this Resource.
-booked | integer | Time booked in minutes for this Resource.
-waiting_list | integer | Time on waiting list in minutes for this Resource.
-job_title | string | Job title of the Resource.
-resource_type | string | Resource type string.
-earliest_available_period | string | Resource earlist available period.
-utilization | integer | Utilization ratio between `0` and `1` for this Resource.
-url | string | URL shortcut to view this Resource.
+|Key | Type | Description|
+|---|---|---|
+|id | integer | Unique identifier of Resource.|
+|name | string | Name of this Resource.|
+|image | string | Image of this Resource.|
+|booked | integer | Time booked in minutes for this Resource.|
+|waiting_list | integer | Time on waiting list in minutes for this Resource.|
+|job_title | string | Job title of the Resource.|
+|resource_type | string | Resource type string.|
+|earliest_available_period | string | Resource earlist available period.|
+|utilization | integer | Utilization ratio between `0` and `1` for this Resource.|
+|url | string | URL shortcut to view this Resource.|
