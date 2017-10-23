@@ -28,6 +28,7 @@ https://api.resourceguruapp.com/v1/example-corp/reports/projects?start_date=2013
     {
       "id": 148,
       "name": "Project A",
+      "project_code": "PA01",
       "client_name": "Client A",
       "client_id": 12,
       "color": "#FFCC00",
@@ -38,6 +39,7 @@ https://api.resourceguruapp.com/v1/example-corp/reports/projects?start_date=2013
     {
       "id": 149,
       "name": "Project B",
+      "project_code": "PB02",
       "client_name": "Client A",
       "client_id": 12,
       "color": "#CCFF00",
@@ -62,6 +64,7 @@ https://api.resourceguruapp.com/v1/example-corp/reports/projects?start_date=2013
 |---|---|---|
 |id  | integer | Unique identifier of Project.|
 |name | string | Name of this Project.|
+|project_name|string|This project's assigned project code.|
 |client_name | string | Name of Client that this Project belongs to.|
 |client_id | string | Unique identifier of Client that this Project belongs to. |
 |color | string | Color used to highlight this Project.|
@@ -94,6 +97,7 @@ https://api.resourceguruapp.com/v1/example-corp/reports/projects/148?start_date=
 {
   "id": 148,
   "name": "Project A",
+  "project_code": "PA01",
   "client_name": "",
   "color": "#FFCC00",
   "booked": 0,
@@ -137,6 +141,7 @@ https://api.resourceguruapp.com/v1/example-corp/reports/projects/0?start_date=20
 |---|---|---|
 |id  | integer | Unique identifier of Project.|
 |name | string | Name of this Project.|
+|project_code|string|The project's associated project code.|
 |client_name | string | Name of Client that this Project belongs to.|
 |color | string | Color used to highlight this Project.|
 |booked | integer | Time booked in minutes for this Project.|
