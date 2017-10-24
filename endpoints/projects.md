@@ -7,10 +7,10 @@
 
 ### Query String Parameters
 
-Parameter | Default | Description
---- | --- | --- | ---
-limit | 50 | Limit the number of results returned for pagination. To retrieve all the results use `0`.
-offset | 0 | Offset the results for pagination, starting from the given record number.
+| Parameter | Default | Description |
+|-----------|---------|-------------|
+| limit | 50 | Limit the number of results returned for pagination. To retrieve all the results use `0`. |
+| offset | 0 | Offset the results for pagination, starting from the given record number. |
 
 **Example:**
 
@@ -28,6 +28,7 @@ The above example will return the next 30 Projects.
     "id": 1,
     "color": "#FFCC00",
     "name": "Project A",
+    "project_code": "PA02",
     "notes": "Project A Notes",
     "default_billable": true,
     "updated_at": "2013-04-30T12:00:00+00:00",
@@ -39,6 +40,7 @@ The above example will return the next 30 Projects.
     "id": 2,
     "color": "#CCFF00",
     "name": "Project B",
+    "project_code": "PB05",
     "notes": "Project B Notes",
     "default_billable": true,
     "updated_at": "2013-04-30T12:00:00+00:00",
@@ -49,17 +51,18 @@ The above example will return the next 30 Projects.
 ]
 ```
 
-Key | Type | Description
---- | --- | ---
-id | integer | Unique identifier for a Project.
-color | string | Color used to highlight a Project.
-name | string | Name of a Project.
-notes | string | Notes about this Project.
-default_billable | boolean | Bookings for this project should default to billable or non-billable.
-updated_at | timestamp | Last updated date and time in ISO 8601.
-url | string | URL to view a Project.
-account_id | integer | [Account] a Project belongs to.
-client_id | integer | [Client] a Project belongs to.
+| Key | Type | Description |
+|-----|------|-------------|
+| id | integer | Unique identifier for a Project. |
+| color | string | Color used to highlight a Project. |
+| name | string | Name of a Project. |
+| project_code | string | The project code assigned to the project. |
+| notes | string | Notes about this Project. |
+| default_billable | boolean | Bookings for this project should default to billable or non-billable. |
+| updated_at | timestamp | Last updated date and time in ISO 8601. |
+| url | string | URL to view a Project. |
+| account_id | integer | [Account] a Project belongs to. |
+| client_id | integer | [Client] a Project belongs to. |
 
 ## Get Project
 
@@ -73,6 +76,7 @@ client_id | integer | [Client] a Project belongs to.
   "archived": false,
   "color": "#FFCC00",
   "name": "Project A",
+  "project_code": "PA02",
   "notes": "Some notes",
   "default_billable": true,
   "updated_at": "2013-04-30T12:00:00+00:00",
@@ -89,35 +93,36 @@ client_id | integer | [Client] a Project belongs to.
 }
 ```
 
-Key | Type | Description
---- | --- | ---
-id | integer | Unique identifier for this Project.
-archived | boolean | If `true`, then this Project is archived.
-color | string | Color used to highlight this Project.
-name | string | Name of this Project.
-notes | string | Notes about this Project.
-default_billable | boolean | Bookings for this project should default to billable or non-billable.
-updated_at | timestamp | Last updated date and time in ISO 8601.
-account | hash | [Account] this Project belongs to. [(Details)](#account-key)
-client | hash | [Client] this Project belongs to. [(Details)](#client-key)
+| Key | Type | Description |
+|-----|------|-------------|
+| id | integer | Unique identifier for this Project. |
+| archived | boolean | If `true`, then this Project is archived. |
+| color | string | Color used to highlight this Project. |
+| name | string | Name of this Project. |
+| project_code | string | The project code assigned to this project. |
+| notes | string | Notes about this Project. |
+| default_billable | boolean | Bookings for this project should default to billable or |  |non-billable. |
+| updated_at | timestamp | Last updated date and time in ISO 8601. |
+| account | hash | [Account] this Project belongs to. [(Details)](#account-key) |
+| client | hash | [Client] this Project belongs to. [(Details)](#client-key) |
 
 #### Account Key
 
-Key | Type | Description
---- | --- | ---
-id | integer | Unique identifier for this Account.
-name | string | Name of this Account.
-url | string | URL shortcut to view this Account.
+| Key | Type | Description |
+|-----|------|-------------|
+| id | integer | Unique identifier for this Account. |
+| name | string | Name of this Account. |
+| url | string | URL shortcut to view this Account. |
 
 #### Client Key
 
 *No `client` key will be returned if a Project has no Client.*
 
-Key | Type | Description
---- | --- | ---
-id | integer | Unique identifier for this Client.
-name | string | Name of this Client.
-url | string | URL shortcut to view this Client.
+| Key | Type | Description |
+|-----|------|-------------|
+| id | integer | Unique identifier for this Client. |
+| name | string | Name of this Client. |
+| url | string | URL shortcut to view this Client. |
 
 [Account]: ../endpoints/accounts.md "Account Documentation"
 [Client]: ../endpoints/clients.md "Client Documentation"
