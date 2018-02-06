@@ -7,7 +7,7 @@
 ### Query String Parameters
 
 Parameter | Default | Description
---- | --- | --- | ---
+--- | --- | ---
 start_date |  | Set a start_date for a range of Bookings
 end_date |  | Set and end_date for a range of Bookings
 limit | 50 | Limit the number of results returned for pagination. To retrieve all the results use `0`.
