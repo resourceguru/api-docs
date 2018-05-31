@@ -2,7 +2,7 @@
 
 ## Get Accounts
 
-* `GET /v1/accounts` returns an `Array` of **Active Accounts**.
+* `GET /v1/accounts` returns an `Array` of **Active Accounts** and **Suspended Accounts**.
 
 ### Response
 
@@ -11,12 +11,20 @@
   {
     "id": 1,
     "name": "Example Corp",
-    "url": "https://api.resourceguruapp.com/v1/accounts/1"
+    "subdomain": "example",
+    "rootdomain":  "resourceguruapp.com",
+    "url": "https://api.resourceguruapp.com/v1/accounts/1",
+    "created_at": "2018-05-01T11:52:19.000Z",
+    "updated_at": "2018-05-01T14:21:57.000Z"
   },
   {
     "id": 2,
     "name": "ACME",
-    "url": "https://api.resourceguruapp.com/v1/accounts/2"
+    "subdomain": "acme",
+    "rootdomain":  "resourceguruapp.com",
+    "url": "https://api.resourceguruapp.com/v1/accounts/2",
+    "created_at": "2015-05-01T11:52:19.000Z",
+    "updated_at": "2018-06-01T14:21:57.000Z"
   }
 ]
 ```
@@ -25,7 +33,11 @@ Key | Type | Description
 --- | --- | ---
 id | integer | Unique identifier for an Account.
 name | string | Name of an Account.
+subdomain | string | Subdomain name that was registered for the account
+rootdomain | string | Root domain account is served from
 url | string | URL to view an Account.
+created_at | timestamp | Account created time in ISO 8601.
+updated_at | datetime |  Last updated date and time in ISO 8601.
 
 ## Get Account
 
