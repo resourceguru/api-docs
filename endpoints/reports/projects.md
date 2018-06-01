@@ -161,5 +161,5 @@ https://api.resourceguruapp.com/v1/example-corp/reports/projects/0?start_date=20
 |job_title | string | Job title of the Resource.|
 |resource_type | string | Resource type string.|
 |earliest_available_period | string | Resource earlist available period.|
-|utilization | integer | Utilization ratio between `0` and `1` for this Resource.|
+|utilization | number | Utilization ratio between `0` and `1` for this Resource.|
 |url | string | URL shortcut to view this Resource.|
