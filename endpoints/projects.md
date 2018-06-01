@@ -136,7 +136,9 @@ The above example will return the next 30 Projects.
   "color": "#FF00CC",
   "name": "Project C",
   "notes": "Some notes",
-  "default_billable": true
+  "default_billable": true,
+  "project_code": "PC1",
+  "client_id": 1
 }
 ```
 
