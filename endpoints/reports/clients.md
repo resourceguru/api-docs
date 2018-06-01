@@ -153,7 +153,7 @@ waiting_list | integer | Time on waiting list in minutes for this Resource.
 job_title | string | Job title of the Resource.
 resource_type | string | Resource type string.
 earliest_available_period | string | Resource earlist available period.
-utilization | integer | Utilization ratio between `0` and `1` for this Resource.
+utilization | number | Utilization ratio between `0` and `1` for this Resource.
 url | string | URL shortcut to view this Resource.
 
 
