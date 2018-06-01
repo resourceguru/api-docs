@@ -35,7 +35,7 @@ https://api.resourceguruapp.com/v1/example-corp/reports/resources?start_date=201
       "unbooked": 2400,
       "availability": 2400,
       "waiting_list": 0,
-      "utilization": 0,
+      "utilization": 0.1,
       "url": "https://api.resourceguruapp.com/v1/example-corp/resources/1",
       "resource_type": "Person",
       "earliest_available_period": "25 Aug 2014 - 31 Aug 2014",
@@ -71,7 +71,7 @@ booked | integer | Total time booked in minutes.
 unbooked | integer | Total time unbooked in minutes.
 availability | integer | Total availability in minutes: `booked + unbooked`.
 waiting_list | integer | Total time on waiting list in minutes.
-utilization | integer | Total utilization ratio between `0` and `1`.
+utilization | number | Total utilization ratio between `0` and `1`.
 resources | array | Report breakdown per Resource. [(Details)](#resources-key)
 
 #### Resources Key
