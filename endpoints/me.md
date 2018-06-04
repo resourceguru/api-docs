@@ -36,4 +36,4 @@ last_activity_at | string | Last activity timestamp for a User.
 activation_state | string | Activation state of a User.
 created_at | string | Timestamp when a User was created.
 updated_at | string | Timestamp when a User was updated.
-last_product_update_read_at | timestampe | When user last read a product update
+last_product_update_read_at | timestamp | When user last read a product update
