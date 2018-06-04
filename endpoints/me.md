@@ -19,6 +19,7 @@ Use this endpoint to get information about the currently authenticated user.
   "activation_state": "active",
   "created_at": "2012-06-05T21:17:19.000Z",
   "updated_at": "2014-08-19T09:27:52.000Z",  
+  "last_product_update_read_at": "2018-05-18T10:40:34.000Z"
 }
 ```
 Key | Type | Description
@@ -35,3 +36,4 @@ last_activity_at | string | Last activity timestamp for a User.
 activation_state | string | Activation state of a User.
 created_at | string | Timestamp when a User was created.
 updated_at | string | Timestamp when a User was updated.
+last_product_update_read_at | timestamp | When user last read a product update
