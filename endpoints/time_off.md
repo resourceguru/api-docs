@@ -175,7 +175,7 @@ if that was successful. If the user does not have access to delete the Time Off/
 
 ```
 Key | Type | Description
---- | --- | --- | ---
+--- | --- | ---
 id | integer | Unique identifier of the Time Off/Downtime event type.
 name | string | Name of this Time Off/Downtime event type.
 account_id | integer | Unique identifier of the Account to which this Time Off/Downtime event type belongs.
