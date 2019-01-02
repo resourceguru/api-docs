@@ -26,6 +26,7 @@ The above example will return the next 30 Projects.
 [
   {
     "id": 1,
+    "creator_id": 1,
     "color": "#FFCC00",
     "name": "Project A",
     "project_code": "PA02",
@@ -38,6 +39,7 @@ The above example will return the next 30 Projects.
   },
   {
     "id": 2,
+    "creator_id": 1,
     "color": "#CCFF00",
     "name": "Project B",
     "project_code": "PB05",
@@ -54,6 +56,7 @@ The above example will return the next 30 Projects.
 | Key | Type | Description |
 |-----|------|-------------|
 | id | integer | Unique identifier for a Project. |
+| creator_id | Unique identifier of the User this project was created by. |
 | color | string | Color used to highlight a Project. |
 | name | string | Name of a Project. |
 | project_code | string | The project code assigned to the project. |
