@@ -46,7 +46,7 @@ The above example will return the next 30 Clients.
 Key | Type | Description
 --- | --- | ---
 id | integer | Unique identifier for a Client.
-creator_id | Unique identifier of the User this client was created by.
+creator_id | integer | Unique identifier of the User this client was created by.
 name | string | Name of a Client.
 updated_at | timestamp | Last updated date and time in ISO 8601.
 url | string | URL to view a Client.
