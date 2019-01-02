@@ -56,7 +56,7 @@ The above example will return the next 30 Projects.
 | Key | Type | Description |
 |-----|------|-------------|
 | id | integer | Unique identifier for a Project. |
-| creator_id | Unique identifier of the User this project was created by. |
+| creator_id | integer | Unique identifier of the User this project was created by. |
 | color | string | Color used to highlight a Project. |
 | name | string | Name of a Project. |
 | project_code | string | The project code assigned to the project. |
