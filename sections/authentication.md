@@ -5,7 +5,7 @@ authentication. We offer OAuth2 as the standard way to authenticate with our API
 as this offers a simple flow for users to allow app access without you having to store
 their credentials.
 
-### When Single Sign On is required
+### Considerations when Single Sign On is required
 
 If your account is configured to require SSO for logins, API access through OAuth2
 is only available when authenticating as the account owner. This restriction ensures
