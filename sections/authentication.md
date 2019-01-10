@@ -5,6 +5,13 @@ authentication. We offer OAuth2 as the standard way to authenticate with our API
 as this offers a simple flow for users to allow app access without you having to store
 their credentials.
 
+### When Single Sign On is required
+
+If your account is configured to require SSO for logins, API access through OAuth2
+is only available when authenticating as the account owner. This restriction ensures
+that users who have been removed from your SSO provider aren't able to carry on using
+Resource Guru with unexpired API keys.
+
 ### Getting started
 
 We recommend using an OAuth2 library for the platform you're working with, rather than
@@ -28,7 +35,7 @@ You'll need to configure these URLs as well:
 #### Quick start using user's login credentials
 
 This method is only recommended for private apps, such as data imports and exports or internal business reporting.
-It's useful to get started quickly without all of the overhead of OAuth2 though, which makes it great for exploration. 
+It's useful to get started quickly without all of the overhead of OAuth2 though, which makes it great for exploration.
 This should not be used for integrating 3rd party apps with Resource Guru as it requires knowing the user's private credentials.
 
 We support the OAuth2 `password` grant type. To authenticate, make an HTTP `POST` to `/oauth/token` with the following:
