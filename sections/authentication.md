@@ -9,7 +9,7 @@ their credentials.
 
 If your account is configured to require SSO for logins, API access through OAuth2
 is only available when authenticating as the account owner. This restriction ensures
-that users who have been removed from your IdP aren’t able to continue accessing your
+that users who have been removed from your identity provider (IdP) aren’t able to continue accessing your
 Resource Guru account with unexpired API tokens.
 
 ### Getting started
