@@ -15,7 +15,7 @@ continue accessing your Resource Guru account with unexpired API tokens.
 ### Getting started
 
 We recommend using an OAuth2 library for the platform you're working with, rather than
-working from scratch. A fairly comprehensive list of libraries can be found [here](http://oauth.net/2/).
+working from scratch.
 
 **1** - Register an app at [developers.resourceguruapp.com](https://developers.resourceguruapp.com).
 Your app will be assigned a `client_id` and `client_secret` that will be used to identify your app
