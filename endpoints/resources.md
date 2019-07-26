@@ -11,14 +11,19 @@
 |-----------|---------|-------------|
 |limit | 50 | Limit the number of results returned for pagination. To retrieve all the results use `0`.|
 |offset | 0 | Offset the results for pagination, starting from the given record number.|
+ids[] | null | Only retrieve Resources with the given array of IDs.
 
 **Example:**
 
+To return a page of 30 Resources:
 ```
-https://api.resourceguruapp.com/v1/example-corp/resources?limit=30&offset=30
+https://api.resourceguruapp.com/v1/example-corp/resources?limit=30&offset=0
 ```
 
-The above example will return the next 30 Resources.
+To return resources with IDs 1 and 2:
+```
+https://api.resourceguruapp.com/v1/example-corp/resources?limit=30&offset=30&ids[]=1&ids[]=2
+```
 
 ### Response
 
