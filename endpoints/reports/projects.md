@@ -2,7 +2,7 @@
 
 ## Get Report
 
-* `GET /v1/:subdomain/reports/projects` returns a **Projects Report**.
+* `GET /v1/:account-id/reports/projects` returns a **Projects Report**.
 
 ### Required Query String Parameters
 
@@ -76,7 +76,7 @@ https://api.resourceguruapp.com/v1/example-corp/reports/projects?start_date=2013
 
 ## Get Report
 
-* `GET /v1/:subdomain/reports/projects/:project_id` returns a **Project Report**.
+* `GET /v1/:account-id/reports/projects/:project_id` returns a **Project Report**.
 
 ### Required Query String Parameters
 
@@ -122,7 +122,7 @@ https://api.resourceguruapp.com/v1/example-corp/reports/projects/148?start_date=
 
 ### Project Report for 'No project assigned'
 
-* `GET /v1/:subdomain/reports/projects/0` returns a **Project Report for 'No project assigned'**.
+* `GET /v1/:account-id/reports/projects/0` returns a **Project Report for 'No project assigned'**.
 
 ### Required Query String Parameters
 

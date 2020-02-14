@@ -79,7 +79,7 @@ An example payload when a new client is created:
 
 ## Get Webhooks
 
-* `GET /v1/:subdomain/webhooks` returns an `Array` of webhooks.
+* `GET /v1/:account-id/webhooks` returns an `Array` of webhooks.
 
 ### Response
 
@@ -137,7 +137,7 @@ Failed | The last attempted payload has failed 100 times and no further attempt 
 
 ## Get Webhook
 
-* `GET /v1/:subdomain/webhooks/1` returns the specified webhook.
+* `GET /v1/:account-id/webhooks/1` returns the specified webhook.
 
 ### Response
 
@@ -172,7 +172,7 @@ paused | boolean | A boolean denoting whether or not the webhook is paused.
 
 ## Create a Webhook
 
-* `POST /v1/:subdomain/webhooks` will create a new webhook from the parameters passed.
+* `POST /v1/:account-id/webhooks` will create a new webhook from the parameters passed.
 * Supported events are:
   * accounts
   * bookings
@@ -197,7 +197,7 @@ If the user does not have administrative privileges, you'll see `403 Forbidden`.
 
 ## Update a Webhook
 
-* `PUT /v1/:subdomain/webhooks/1` will update the webhook from the parameters passed and return
+* `PUT /v1/:account-id/webhooks/1` will update the webhook from the parameters passed and return
 the JSON representation of the updated webhook. If the user does not have administrative
 privileges, you'll see `403 Forbidden`.
 If the user tries to specify a `user_id` when updating the webhook, `422 Unprocessable Entity`
@@ -205,13 +205,13 @@ will be returned as the `user_id` is the read-only point of reference to the cre
 
 ## Delete a Webhook
 
-* `DELETE /v1/:subdomain/webhooks/1` will delete the webhook specified and return `204 No Content`
+* `DELETE /v1/:account-id/webhooks/1` will delete the webhook specified and return `204 No Content`
 if the operation was successful. If the user does not have administrative
 privileges, you'll see `403 Forbidden`.
 
 ## Test a Webhook
 
-* `GET /v1/:subdomain/webhooks/1/test` sends a test payload to the payload endpoint.
+* `GET /v1/:account-id/webhooks/1/test` sends a test payload to the payload endpoint.
 
 This will return a status code which depends on the endpoint the webhook is interacting with.
 Some services, such as http://requestb.in, will return either 200 or 201 if successful.

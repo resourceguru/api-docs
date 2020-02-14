@@ -4,7 +4,7 @@ Payloads are created for webhooks once any interaction with the application take
 
 ## Get Payloads
 
-* `GET /v1/:subdomain/webhooks/:id/queue` returns an `Array` of payloads for the specified webhook.
+* `GET /v1/:account-id/webhooks/:id/queue` returns an `Array` of payloads for the specified webhook.
 
 ### Query String Parameters
 

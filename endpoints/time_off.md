@@ -2,7 +2,7 @@
 
 ## Get Time Off/Downtime Events
 
-* `GET /v1/:subdomain/downtimes` returns an `Array` of **Time Off/Downtime events**.
+* `GET /v1/:account-id/downtimes` returns an `Array` of **Time Off/Downtime events**.
 
 ### Query String Parameters
 
@@ -106,11 +106,11 @@ updated_at | String | Last updated date and time.
 
 ## Get a Specific Time Off/Downtime Event
 
-*  `GET /v1/:subdomain/downtimes/:id` returns a specific Time Off/Downtime Event.
+*  `GET /v1/:account-id/downtimes/:id` returns a specific Time Off/Downtime Event.
 
 ## Create a Time Off/Downtime Event
 
-* `POST /v1/:subdomain/downtimes` will create a new Time Off/Downtime event from the parameters passed.
+* `POST /v1/:account-id/downtimes` will create a new Time Off/Downtime event from the parameters passed.
 
 ```json
 {
@@ -146,20 +146,20 @@ The timezone values are based off of Ruby On Rails's ActiveSupport::TimeZone's k
 
 
 ## Update a Time Off/Downtime Event
-* `PUT /v1/:subdomain/downtimes/5` will update the Time Off/Downtime event from the parameters passed and return
+* `PUT /v1/:account-id/downtimes/5` will update the Time Off/Downtime event from the parameters passed and return
 the JSON representation of the updated Time Off/Downtime event. If the user does not have access to update
 the Time Off/Downtime event, you'll see `403 Forbidden`.
 
 
 ## Delete a Time Off/Downtime Event
 
-* `DELETE /v1/:subdomain/downtimes/5` will delete the Time Off/Downtime event specified and return `204 No Content`
+* `DELETE /v1/:account-id/downtimes/5` will delete the Time Off/Downtime event specified and return `204 No Content`
 if that was successful. If the user does not have access to delete the Time Off/Downtime event, you'll see `403 Forbidden`.
 
 
 ## Get Time Off/Downtime Event Types
 
-* `GET /v1/:subdomain/downtime_types` returns an `Array` of **Time Off/Downtime events**.
+* `GET /v1/:account-id/downtime_types` returns an `Array` of **Time Off/Downtime events**.
 
 ```json
 [

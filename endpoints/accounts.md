@@ -33,8 +33,8 @@ Key | Type | Description
 --- | --- | ---
 id | integer | Unique identifier for an Account.
 name | string | Name of an Account.
-subdomain | string | Subdomain name that was registered for the account
-rootdomain | string | Root domain account is served from
+subdomain | string | The Account URL ID for the account. The account could previously be accessed on this subdomain.
+rootdomain | string | Root domain account is served from.
 url | string | URL to view an Account.
 created_at | timestamp | Account created time in ISO 8601.
 updated_at | datetime |  Last updated date and time in ISO 8601.
@@ -64,7 +64,7 @@ Key | Type | Description
 --- | --- | ---
 id | integer | Unique identifier for this Account.
 name | string | Name of this Account.
-subdomain | string | Subdomain for this Account.
+subdomain | string | The Account URL ID for the account. The account could previously be accessed on this subdomain.
 updated_at | timestamp | Last updated date and time in ISO 8601.
 owner | hash | Owner of this Account. [(Details)](#owner-key)
 

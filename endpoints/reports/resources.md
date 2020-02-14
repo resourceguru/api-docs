@@ -2,7 +2,7 @@
 
 ## Get Report
 
-* `GET /v1/:subdomain/reports/resources` returns a **Resources Report**.
+* `GET /v1/:account-id/reports/resources` returns a **Resources Report**.
 
 ### Required Query String Parameters
 
@@ -40,7 +40,7 @@ https://api.resourceguruapp.com/v1/example-corp/reports/resources?start_date=201
       "resource_type": "Person",
       "earliest_available_period": "25 Aug 2014 - 31 Aug 2014",
       "job_title": "Developer",
-      "custom_fields": [] 
+      "custom_fields": []
     },
     {
       "id": "2",
@@ -110,7 +110,7 @@ custom_fields | array | All custom field ids for resource. [(Details)](#custom-f
 
 ## Get Report
 
-* `GET /v1/:subdomain/reports/resources/:resource_id` returns a **Resource Report**.
+* `GET /v1/:account-id/reports/resources/:resource_id` returns a **Resource Report**.
 
 ### Required Query String Parameters
 
