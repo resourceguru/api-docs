@@ -2,7 +2,7 @@
 
 ## Get Users
 
-* `GET /v1/:subdomain/users` returns an `Array` of **Users**.
+* `GET /v1/:account-id/users` returns an `Array` of **Users**.
 
 ### Response
 
@@ -80,7 +80,7 @@ owner | boolean | Boolean representing whether a User is the account owner.
 
 ## Get User
 
-* `GET /v1/:subdomain/users/:id` returns the specified user. If the special value `me` is given for the id, it will return the user that authenticated the request.
+* `GET /v1/:account-id/users/:id` returns the specified user. If the special value `me` is given for the id, it will return the user that authenticated the request.
 
 ### Response
 ``` json
@@ -96,7 +96,7 @@ owner | boolean | Boolean representing whether a User is the account owner.
   "last_activity_at": "2013-06-26T17:30:11.000Z",
   "activation_state": "active",
   "created_at": "2012-06-05T21:17:19.000Z",
-  "updated_at": "2014-08-19T09:27:52.000Z",  
+  "updated_at": "2014-08-19T09:27:52.000Z",
   "color": "#ffcc00",
   "permissions": "administrator",
   "booking_rights": "manage_all",

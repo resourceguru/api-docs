@@ -2,8 +2,8 @@
 
 ## Get Resources
 
-* `GET /v1/:subdomain/resources` returns an `Array` of **Active Resources**.
-* `GET /v1/:subdomain/resources/archived` returns an `Array` of **Archived Resources**.
+* `GET /v1/:account-id/resources` returns an `Array` of **Active Resources**.
+* `GET /v1/:account-id/resources/archived` returns an `Array` of **Archived Resources**.
 
 ### Query String Parameters
 
@@ -91,7 +91,7 @@ offset | integer | Offset in minutes from UTC
 
 ## Get Resource
 
-* `GET /v1/:subdomain/resources/:id` returns the specified Resource. If the special value `me` is given for the id parameter, it will return the resource for the user that authenticated the request.
+* `GET /v1/:account-id/resources/:id` returns the specified Resource. If the special value `me` is given for the id parameter, it will return the resource for the user that authenticated the request.
 
 ```json
 {
@@ -167,7 +167,7 @@ Use the [Resource Report endpoint](./reports/resources.md "Resource Report endpo
 
 ## Create a Resource
 
-* `POST /v1/:subdomain/resources` will create a new Resource from the parameters passed.
+* `POST /v1/:account-id/resources` will create a new Resource from the parameters passed.
 
 ``` javascript
 {
@@ -186,8 +186,8 @@ Use the [Resource Report endpoint](./reports/resources.md "Resource Report endpo
 
   // Vehicles only:
   "registration_number": 'YK02 OML',
-  
-  
+
+
   // Other parameters:
   "resource_type_id": 1, // Retrieved from the resource_types endpoint
   "timezone": "UTC",
@@ -229,7 +229,7 @@ If the account has hit its limit for the plan, you'll see `422 Unprocessable Ent
 The "normal availability" for resources created via the API will be created with the default availability settings found in Settings within the app (menu top right with your name on it > Settings > Resources > Default availability). Unfortunately it is not currently possible to specify custom "normal availability" for a resource via the API.
 
 ## Update a Resource
-* `PUT /v1/:subdomain/resources/:id` will update the Resource from the given parameters and
+* `PUT /v1/:account-id/resources/:id` will update the Resource from the given parameters and
 return the JSON representation of the updated Resource. If the user does not have access to
 update the project, you'll see `403 Forbidden`.
 
@@ -239,7 +239,7 @@ Please note that, unfortunately, it is not currently possible to update the "nor
 
 ## Delete a Resource
 
-* `DELETE /v1/:subdomain/:resources/:id` will delete the specified Resource and return `204 No Content`
+* `DELETE /v1/:account-id/:resources/:id` will delete the specified Resource and return `204 No Content`
 if that was successful. If the user does not have permission to delete the resource, you'll see `403 Forbidden`
 
 Please note that, when you delete a resource, any future bookings where the resource is the booker will be transferred to the authenticated user. And any future bookings where the resource has been booked as the resource will be deleted.

@@ -9,7 +9,7 @@ their credentials.
 
 If your account is configured to require SSO for logins, API access through OAuth2
 is only available when authenticating as the account owner. This restriction ensures
-that users who have been removed from your identity provider (IdP) aren't able to 
+that users who have been removed from your identity provider (IdP) aren't able to
 continue accessing your Resource Guru account with unexpired API tokens.
 
 ### Getting started
@@ -171,7 +171,7 @@ token_url = 'https://api.resourceguruapp.com/oauth/token'
 token     = requests.post(token_url, urlencode(parameters)).json()
 headers   = { "Authorization": "Bearer " + token['access_token'] }
 
-resources = requests.get("https://api.resourceguruapp.com/v1/example-account-subdomain/resources", headers=headers).json()
+resources = requests.get("https://api.resourceguruapp.com/v1/example-account-id/resources", headers=headers).json()
 
 # Now let's play in an interactive console
 import code;code.interact(local=dict(globals(),**locals()))
@@ -196,7 +196,7 @@ read code
 token_data=`curl --data "grant_type=authorization_code" --data-urlencode "client_id=$client_id" --data-urlencode "client_secret=$client_secret" --data-urlencode "code=$code" --data-urlencode "redirect_uri=$redirect_uri" $token_url`
 token=`echo $token_data | jsawk 'return this.access_token'`
 
-resources_url="https://api.resourceguruapp.com/v1/example-account-subdomain/resources"
+resources_url="https://api.resourceguruapp.com/v1/example-account-id/resources"
 
 echo `curl -H "Authorization: Bearer $token" $resources_url`
 ```
@@ -219,7 +219,7 @@ code = gets.strip
 
 access_token = client.auth_code.get_token(code, redirect_uri: redirect_uri)
 
-access_token.get("/v1/example-account-subdomain/resources")
+access_token.get("/v1/example-account-id/resources")
 
 # Now let's play in an interactive console
 require "IRB"

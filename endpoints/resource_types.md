@@ -2,8 +2,8 @@
 
 ## Get Resource Types
 
-* `GET /v1/:subdomain/resource_types` returns an `Array` of **Resource Types**.
-* `GET /v1/:subdomain/resource_types/1` returns a specified **Resource Type**.
+* `GET /v1/:account-id/resource_types` returns an `Array` of **Resource Types**.
+* `GET /v1/:account-id/resource_types/1` returns a specified **Resource Type**.
 
 ### Response
 

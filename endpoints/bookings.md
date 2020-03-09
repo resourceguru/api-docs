@@ -2,7 +2,7 @@
 
 ## Get Bookings
 
-* `GET /v1/:subdomain/bookings` returns an `Array` of **Bookings**.
+* `GET /v1/:account-id/bookings` returns an `Array` of **Bookings**.
 
 ### Query String Parameters
 
@@ -111,23 +111,23 @@ waiting | boolean | If `true`, then this Booking Duration is on the Waiting List
 
 ## Get Bookings for a Specific Project
 
-* `GET /v1/:subdomain/projects/:project_id/bookings` returns an `Array` of **Bookings** for the specified project.
+* `GET /v1/:account-id/projects/:project_id/bookings` returns an `Array` of **Bookings** for the specified project.
 
 ## Get Bookings for a Specific Client
 
-* `GET /v1/:subdomain/clients/:client_id/bookings` returns an `Array` of **Bookings** for the specified client.
+* `GET /v1/:account-id/clients/:client_id/bookings` returns an `Array` of **Bookings** for the specified client.
 
 ## Get Bookings for a Specific Resource
 
-* `GET /v1/:subdomain/resources/:resource_id/bookings` returns an `Array` of **Bookings** for the specified resource.
+* `GET /v1/:account-id/resources/:resource_id/bookings` returns an `Array` of **Bookings** for the specified resource.
 
 ## Get a Specific Booking
 
-* `GET /v1/:subdomain/bookings/:booking_id` returns a single specific **Booking**.
+* `GET /v1/:account-id/bookings/:booking_id` returns a single specific **Booking**.
 
 ## Create a Booking
 
-* `POST /v1/:subdomain/bookings` will create a new Booking from the parameters passed.
+* `POST /v1/:account-id/bookings` will create a new Booking from the parameters passed.
 
 ```json
 {
@@ -167,11 +167,11 @@ Please note that you do not need to pass an end_time parameter for time-specific
 
 ## Update a Booking
 
-* `PUT /v1/:subdomain/bookings/1` will update the Booking from the parameters passed and return
+* `PUT /v1/:account-id/bookings/1` will update the Booking from the parameters passed and return
 the JSON representation of the updated Booking. If the user does not have access to update
 the Booking, you'll see `403 Forbidden`.
 
 ## Delete a Booking
 
-* `DELETE /v1/:subdomain/bookings/1` will delete the Booking specified and return `204 No Content`
+* `DELETE /v1/:account-id/bookings/1` will delete the Booking specified and return `204 No Content`
 if that was successful. If the user does not have access to delete the Booking, you'll see `403 Forbidden`.

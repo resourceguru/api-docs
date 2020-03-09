@@ -2,8 +2,8 @@
 
 ## Get Projects
 
-* `GET /v1/:subdomain/projects` returns an `Array` of **Active Projects**.
-* `GET /v1/:subdomain/projects/archived` returns an `Array` of **Archived Projects**.
+* `GET /v1/:account-id/projects` returns an `Array` of **Active Projects**.
+* `GET /v1/:account-id/projects/archived` returns an `Array` of **Archived Projects**.
 
 ### Query String Parameters
 
@@ -69,7 +69,7 @@ The above example will return the next 30 Projects.
 
 ## Get Project
 
-* `GET /v1/:subdomain/projects/1` returns the specified Project.
+* `GET /v1/:account-id/projects/1` returns the specified Project.
 
 ### Response
 
@@ -132,7 +132,7 @@ The above example will return the next 30 Projects.
 
 ## Create a Project
 
-* `POST /v1/:subdomain/projects` will create a new Project from the parameters passed.
+* `POST /v1/:account-id/projects` will create a new Project from the parameters passed.
 
 ```json
 {
@@ -151,11 +151,11 @@ If the user does not have access to update the Project, you'll see `403 Forbidde
 
 ## Update a Project
 
-* `PUT /v1/:subdomain/projects/1` will update the Project from the parameters passed and return
+* `PUT /v1/:account-id/projects/1` will update the Project from the parameters passed and return
 the JSON representation of the updated Project. If the user does not have access to update
 the Project, you'll see `403 Forbidden`.
 
 ## Delete a Project
 
-* `DELETE /v1/:subdomain/projects/1` will delete the Project specified and return `204 No Content`
+* `DELETE /v1/:account-id/projects/1` will delete the Project specified and return `204 No Content`
 if that was successful. If the user does not have access to delete the Project, you'll see `403 Forbidden`.

@@ -2,7 +2,7 @@
 
 ## Get Report
 
-* `GET /v1/:subdomain/reports/clients` returns a **Clients Report**.
+* `GET /v1/:account-id/reports/clients` returns a **Clients Report**.
 
 ### Required Query String Parameters
 
@@ -51,7 +51,7 @@ Key | Type | Description
 --- | --- | ---
 booked | integer | Total time booked in minutes.
 waiting_list | integer | Total time on waiting list in minutes.
-max_usage | integer | Max usage for utilization bar. 
+max_usage | integer | Max usage for utilization bar.
 clients | array | Report breakdown per Client. [(Details)](#clients-key)
 
 #### Clients Key
@@ -70,7 +70,7 @@ url | string | URL shortcut to view this Client.
 
 ## Get Report
 
-* `GET /v1/:subdomain/reports/clients/:client_id` returns a **Client Report**.
+* `GET /v1/:account-id/reports/clients/:client_id` returns a **Client Report**.
 
 ### Required Query String Parameters
 
@@ -115,7 +115,7 @@ https://api.resourceguruapp.com/v1/example-corp/reports/clients/242?start_date=2
 
 ### Client Report for 'No client assigned'
 
-* `GET /v1/:subdomain/reports/clients/0` returns a **Client Report for 'No client assigned'**.
+* `GET /v1/:account-id/reports/clients/0` returns a **Client Report for 'No client assigned'**.
 
 ### Required Query String Parameters
 
