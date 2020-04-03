@@ -29,7 +29,7 @@ The above example will return the next Time Off/Downtime events between `2016-02
 		"account_id": 1,
 		"created_at": "2016-02-16T12:55:19.072Z",
 		"creator_id": 2,
-        "booker_id": 2,
+		"booker_id": 2,
 		"deleted": false,
 		"details": "Christmas Eve",
 		"downtime_type_id": 3,
@@ -42,13 +42,13 @@ The above example will return the next Time Off/Downtime events between `2016-02
 		"state": "Approved",
 		"timezone": null,
 		"to": "2016-12-25",
-		"updated_at": "2016-02-16T12:55:19.072Z",
+		"updated_at": "2016-02-16T12:55:19.072Z"
 	},
 	{
 		"account_id": 1,
 		"created_at": "2016-02-04T09:48:24.000Z",
 		"creator_id": 2,
-        "booker_id": 2,
+		"booker_id": 2,
 		"deleted": false,
 		"details": "Details",
 		"downtime_type_id": null,
@@ -68,7 +68,7 @@ The above example will return the next Time Off/Downtime events between `2016-02
 		"account_id": 1,
 		"created_at": "2015-12-17T13:00:40.000Z",
 		"creator_id": 2,
-        "booker_id": 2,
+		"booker_id": 2,
 		"deleted": false,
 		"details": "",
 		"downtime_type_id": null,
@@ -81,7 +81,7 @@ The above example will return the next Time Off/Downtime events between `2016-02
 		"state": "Approved",
 		"timezone": null,
 		"to": "2016-02-22",
-		"updated_at": "2015-12-17T13:02:01.000Z,
+		"updated_at": "2015-12-17T13:02:01.000Z
 	}
 ]
 ```
@@ -115,14 +115,14 @@ updated_at | String | Last updated date and time.
 ```json
 {
 	"resource_ids": [122, 123],
-    "booker_id": 2,
+	"booker_id": 2,
 	"from": "2016-12-25",
 	"to": "2016-12-25",
 	"start_time": 0,
 	"end_time": 1440,
 	"downtime_type_id": 444,
 	"details": "Christmas Eve",
-	"timezone": "London",
+	"timezone": "London"
 }
 ```
 
