@@ -35,7 +35,7 @@ Once you have authenticated, you can get information about the authenticated use
 
 ## Rate Limiting
 
-You can perform up to 33 requests per 10 second period on a registered application. If you exceed this limit, you'll get a 403 Rate Limit Exceeded response for subsequent requests. Check the Retry-After header to see how many seconds to wait before retrying the request.
+You can perform up to 33 requests per 10 second period on a registered application. If you exceed this limit, you'll get a 429 Rate Limit Exceeded response for subsequent requests. Check the Retry-After header to see how many seconds to wait before retrying the request.
 
 ## Response Codes
 
