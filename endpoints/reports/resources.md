@@ -115,7 +115,7 @@ custom_fields | array | All custom field ids for resource. [(Details)](#custom-f
 ### Required Query String Parameters
 
 Parameter | Description
---- | --- | ---
+--- | --- | 
 start_date | Start date in ISO 8601 (`YYYY-MM-DD`).
 end_date | End date in ISO 8601 (`YYYY-MM-DD`).
 
