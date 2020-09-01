@@ -211,7 +211,7 @@ privileges, you'll see `403 Forbidden`.
 
 ## Test a Webhook
 
-* `GET /v1/:account-id/webhooks/1/test` sends a test payload to the payload endpoint.
+* `POST /v1/:account-id/webhooks/1/test` sends a test payload to the payload endpoint.
 
 This will return a status code which depends on the endpoint the webhook is interacting with.
 Some services, such as http://requestb.in, will return either 200 or 201 if successful.
