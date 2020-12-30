@@ -81,6 +81,9 @@ notes | string | Extra details about this Booking. **(DEPRECATED: Future version
 details | string | Extra details about this Booking.
 start_date | string | Start date for the booking.
 end_date | string | End date for the booking.
+duration | integer | Duration in minutes for the Booking Duration.
+start_time | integer | Start time in minutes from midnight for this Booking Duration. (Can be `null`)
+end_time | integer | End time in minutes from midnight for this Booking Duration. (Can be `null`)
 billable | boolean | Mark the booking as billable or non-billable.
 refreshable | boolean | Booking has changed recently.
 created_at | string | Booking creation date and time.
@@ -104,8 +107,8 @@ Key | Type | Description
 --- | --- | ---
 date | string | The date for this booking in ISO 8601.
 duration | integer | Duration in minutes for the Booking Duration.
-end_time | integer | End time in minutes from midnight for this Booking Duration. (Can be `null`)
-start_time | integer | Start time in minutes from midnight for this Booking Duration. (Can be `null`)
+end_time | integer | End time in minutes from midnight for this Booking Duration. (Can be `null`) **(DEPRECATED: Future versions of the API will not include this field)**
+start_time | integer | Start time in minutes from midnight for this Booking Duration. (Can be `null`) **(DEPRECATED: Future versions of the API will not include this field)**
 waiting | boolean | If `true`, then this Booking Duration is on the Waiting List.
 
 
