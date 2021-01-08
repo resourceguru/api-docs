@@ -235,8 +235,6 @@ update the project, you'll see `403 Forbidden`.
 
 You can not change the type of a resource in the Update action. You also can not update the timezone directly, instead you can achieve that via the availability endpoint.
 
-Please note that, unfortunately, it is not currently possible to update the "normal availability" for a resource via the API.
-
 ## Delete a Resource
 
 * `DELETE /v1/:account-id/:resources/:id` will delete the specified Resource and return `204 No Content`
