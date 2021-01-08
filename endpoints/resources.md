@@ -273,4 +273,4 @@ Please note that, when you delete a resource, any future bookings where the reso
 | allow_waiting           | boolean | If `true`, bookings that no longer fit the availability changes will be moved to the waiting list. |
 | delete_invalid_bookings | boolean | If `true`, bookings that no longer fit the availability changes will be deleted.                   |
 
-If you call the endpoint without any clash management options and there are booking clashes, the server will respond with a `400 Bad Request` and payload detailing the dates and bookings that are clashing. If there were no clashes or you provided a clash management option the server will respond with `200 OK`.
+If you call the endpoint without any clash management options and there are booking clashes, the server will respond with a `400 Bad Request` and payload detailing the dates and bookings that are clashing. If there were no clashes or you provided a clash management option the server will respond with `201 Created`.
