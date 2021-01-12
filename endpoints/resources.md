@@ -233,9 +233,7 @@ The "normal availability" for resources created via the API will be created with
 return the JSON representation of the updated Resource. If the user does not have access to
 update the project, you'll see `403 Forbidden`.
 
-You can not change the type of a resource in the Update action.
-
-Please note that, unfortunately, it is not currently possible to update the "normal availability" for a resource via the API.
+You can not change the type of a resource in the Update action. You also can not update the timezone directly, instead you can achieve that via the availability endpoint.
 
 ## Delete a Resource
 
@@ -243,3 +241,36 @@ Please note that, unfortunately, it is not currently possible to update the "nor
 if that was successful. If the user does not have permission to delete the resource, you'll see `403 Forbidden`
 
 Please note that, when you delete a resource, any future bookings where the resource is the booker will be transferred to the authenticated user. And any future bookings where the resource has been booked as the resource will be deleted.
+
+## Changing availability
+
+- `POST /v1/:account-id/:resources/:id/availability` will change the normal availability and/or the timezone of the resource.
+
+```javascript
+{
+  "date": "2021-01-01",
+
+  // changing normal weekly availability
+  "available_periods": [{
+    "week_day": 1,
+    "start_time": 540,
+    "end_time": 1020
+  }],
+
+  // changing timezone
+  "timezone": "London",
+
+  // optional clash management options - choose one only
+  "allow_waiting": true,
+  "delete_invalid_bookings": true
+}
+```
+
+| Key                     | Type    | Description                                                                                        |
+| ----------------------- | ------- | -------------------------------------------------------------------------------------------------- |
+| date                    | string  | The ISO 8601 formatted date to apply the availability changes from.                                |
+| timezone                | string  | A valid ActiveSupport::TimeZone name. [Complete list](../timezones.md).                            |
+| allow_waiting           | boolean | If `true`, bookings that no longer fit the availability changes will be moved to the waiting list. |
+| delete_invalid_bookings | boolean | If `true`, bookings that no longer fit the availability changes will be deleted.                   |
+
+If you call the endpoint without any clash management options and there are booking clashes, the server will respond with a `400 Bad Request` and payload detailing the dates and bookings that are clashing. If there were no clashes or you provided a clash management option the server will respond with `201 Created`.
