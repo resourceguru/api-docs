@@ -233,7 +233,7 @@ The "normal availability" for resources created via the API will be created with
 return the JSON representation of the updated Resource. If the user does not have access to
 update the project, you'll see `403 Forbidden`.
 
-You can not change the type of a resource in the Update action. You also can not update the timezone directly, instead you can achieve that via the availability endpoint.
+You can not change the type of a resource in the Update action. You also can not update the timezone directly, instead you can achieve that via the [Availability endpoint](#changing-availability).
 
 ## Delete a Resource
 
