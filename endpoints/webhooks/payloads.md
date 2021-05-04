@@ -1,4 +1,4 @@
-# [Deprecated: Current API documentation can be found at https://resourceguruapp.com/docs/api](https://resourceguruapp.com/docs/api)
+# 🚨 🚨 🚨 Deprecated: please see [Resource Guru API documentation](https://resourceguruapp.com/docs/api) instead
 
 # Payloads
 
