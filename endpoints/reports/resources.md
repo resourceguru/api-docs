@@ -1,4 +1,4 @@
-# [Legacy: please refer to the up to date api documentation at https://resourceguruapp.com/docs/api](https://resourceguruapp.com/docs/api)
+# [Deprecated: Current API documentation can be found at https://resourceguruapp.com/docs/api](https://resourceguruapp.com/docs/api)
 
 # Resources Report
 
