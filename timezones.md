@@ -1,3 +1,5 @@
+# [Legacy: please refer to the up to date api documentation at https://resourceguruapp.com/docs/api](https://resourceguruapp.com/docs/api)
+
 ## The list of supported timezone options
 
 Use a value from the "Name" column, not the "Offset" column.

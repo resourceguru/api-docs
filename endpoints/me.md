@@ -1,3 +1,5 @@
+# [Legacy: please refer to the up to date api documentation at https://resourceguruapp.com/docs/api](https://resourceguruapp.com/docs/api)
+
 ## Get the current User
 
 Use this endpoint to get information about the currently authenticated user.

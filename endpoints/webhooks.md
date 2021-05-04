@@ -1,3 +1,5 @@
+# [Legacy: please refer to the up to date api documentation at https://resourceguruapp.com/docs/api](https://resourceguruapp.com/docs/api)
+
 # Webhooks
 
 Resource Guru supports integration with other services using outgoing webhooks. In a nutshell, webhooks provide a way for Resource Guru to send real-time information to other apps. For example, when a booking is made in Resource Guru, webhooks can be used to post information (payloads) about that booking to a payload (receiving) URL. Getting this information was always possible via our basic API, but webhooks proactively post the changes instead. This means that apps no longer need to keep polling the API to check what's changed - resulting in much greater efficiency.

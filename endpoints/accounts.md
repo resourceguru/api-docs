@@ -1,3 +1,5 @@
+# [Legacy: please refer to the up to date api documentation at https://resourceguruapp.com/docs/api](https://resourceguruapp.com/docs/api)
+
 # Accounts
 
 ## Get Accounts

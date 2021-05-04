@@ -1,3 +1,5 @@
+# [Legacy: please refer to the up to date api documentation at https://resourceguruapp.com/docs/api](https://resourceguruapp.com/docs/api)
+
 # Payloads
 
 Payloads are created for webhooks once any interaction with the application takes place. All payloads are created immediately once an action is performed for webhooks that are subscribed to that action. The format of a payload in the API is detailed below.
